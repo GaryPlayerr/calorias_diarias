@@ -1,10 +1,10 @@
-\name{suma.dos.numeros}
-\alias{suma.dos.numeros}
+\name{resta.dos.numeros}
+\alias{resta.dos.numeros}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{suma.dos.numeros funcion}
-\description{Suma dos numeros enteros.}
+\title{resta.dos.numeros funcion}
+\description{Resta dos numeros enteros.}
 \usage{
-suma.dos.numeros(a, b)
+resta.dos.numeros(a, b)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -24,7 +24,6 @@ suma.dos.numeros(a, b)
 %% ~put references to the literature/web site here ~
 }
 \author{Borja}
-\note{ Ejercicio 
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
@@ -34,8 +33,8 @@ suma.dos.numeros(a, b)
 }
 \examples{
 
-suma.dos.numeros(5,2)
-suma.dos.numeros(1,3)
+resta.dos.numeros(2,2)
+resta.dos.numeros(2,5)
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{suma.dos.numeros}
+\keyword{resta.dos.numeros}
