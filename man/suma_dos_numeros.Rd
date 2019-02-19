@@ -24,7 +24,6 @@ suma.dos.numeros(a, b)
 %% ~put references to the literature/web site here ~
 }
 \author{Borja}
-\note{ Ejercicio 
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
@@ -34,8 +33,8 @@ suma.dos.numeros(a, b)
 }
 \examples{
 
-suma.dos.numeros(5,2)
-suma.dos.numeros(1,3)
+suma.dos.numeros(2,2)
+suma.dos.numeros(2,5)
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
 \keyword{suma.dos.numeros}
