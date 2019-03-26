@@ -31,7 +31,7 @@ calorias.diarias(w, s, a)
 \seealso{
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
-\Formulas y parametros{
+\examples{
 Redondeo de las formulas de Harris-Benedict por Mifflin. 1990
   w = Peso en kilogramos 
   s= Estatura en centímetros 
