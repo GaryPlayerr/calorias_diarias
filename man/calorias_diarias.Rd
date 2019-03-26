@@ -8,7 +8,7 @@ calorias.diarias(w, s, a)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-\item{value}{w = Peso en kilogramos,  s= Estatura en centímetros, a = edad en años }
+\item{value}{w = Peso en kilogramos,  s= Estatura en centimetros, a = edad en anios }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
@@ -34,8 +34,8 @@ calorias.diarias(w, s, a)
 \examples{
 Redondeo de las formulas de Harris-Benedict por Mifflin. 1990
   w = Peso en kilogramos 
-  s= Estatura en centímetros 
-  a = edad en años 
+  s= Estatura en centimetros 
+  a = edad en anios 
   
   Hombres REE = 10 w + 6.25 s -5 a + 5 
   Mujeres REE = REE = 10 w + 6.25 s - 5 a - 161 
