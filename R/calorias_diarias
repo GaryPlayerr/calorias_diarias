@@ -1,4 +1,4 @@
-calorias_diarias <- function(){
+calorias.diarias <- function(){
   n1<-readline(prompt="Sexo(M/F): " )
   n2<-readline(prompt="Edad: " )
   n3<-readline(prompt="Altura: " )
