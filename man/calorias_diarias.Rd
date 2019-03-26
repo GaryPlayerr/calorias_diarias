@@ -46,6 +46,12 @@ Factor de actividad de acuerdo con Metodo Harris-Benedict
   3-Activo. Factor x 1.55
   4-Muy activo. Factor x 1.725
   5-Extremo. Factor x 1.9
+ 
+Sexo(M/F): M (masculino), F(femenino). Por ejmplo M.
+Edad: numero de anios. Por ejemplo 50.
+Altura: estatura en centimetros. 170.
+Peso: peso en Kg. 70
+Ejercicio: Factor de actividad de acuerdo con Metodo Harris-Benedict. Por ejmplo 1.
   
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
