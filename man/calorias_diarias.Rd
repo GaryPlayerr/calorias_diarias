@@ -3,7 +3,9 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Calorias diarias}
 \description{calorias diarias necesarias para una persona en funcion de su sexo, edad, peso, altura y actividad fisica}
-
+\usage{
+calorias.diarias(w, s, a)
+}
 %- maybe also 'usage' for other objects documented here.
 \arguments{
 \item{value}{w = Peso en kilogramos,  s= Estatura en centímetros, a = edad en años }
