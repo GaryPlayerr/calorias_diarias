@@ -51,7 +51,7 @@ Sexo(M/F): M (masculino), F(femenino). Por ejmplo M.
 Edad: numero de anios. Por ejemplo 50.
 Altura: estatura en centimetros. 170.
 Peso: peso en Kg. 70
-Ejercicio: Factor de actividad de acuerdo con Metodo Harris-Benedict. Por ejmplo 1.
+Ejercicio: Factor de actividad de acuerdo con Metodo Harris-Benedict. Por ejemplo 1.
   
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
