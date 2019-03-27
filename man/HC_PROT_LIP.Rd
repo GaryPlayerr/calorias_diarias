@@ -66,9 +66,9 @@ hc.prot.lip(calorias)
 
 \examples{
 
-Proteina: 15 por ciento de las calorías totales diarias.
-Hidratos de carbono: 60 por ciento de las calorías totales diarias.
-Grasa: 25 por ciento de las calorías totales diarias. 70 por ciento de grasas vegetales y 30 por ciento animales. Las grasas saturadas deben ser < 7 por ciento de las calorias totales.
+Proteina: 15 por ciento de las calorias totales diarias.
+Hidratos de carbono: 60 por ciento de las calorias totales diarias.
+Grasa: 25 por ciento de las calorias totales diarias. 70 por ciento de grasas vegetales y 30 por ciento animales. Las grasas saturadas deben ser < 7 por ciento de las calorias totales.
   
 Por ejemplo: Calorias diarias: 2000
 
