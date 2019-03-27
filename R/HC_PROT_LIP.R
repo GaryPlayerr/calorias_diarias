@@ -4,11 +4,6 @@ hc.prot.lip <- function(){
   
   n1<-as.integer(n1)
   
-  if (n1 == ' ')
-    {
-    n1 <- calorias
-    }
-  
   hc <- n1 * 0.6
   prot <- n1 * 0.15
   lip <- n1 * 0.25
