@@ -6,7 +6,7 @@
 
 \title{Calorias diarias en Hidratos, proteinas y lipidos}
 
-\description{calorias diarias necesarias para una persona divididas en hidratos de carbono, proteinas y grasas. A su vez las grasas se dividen en vegetales y animales. Tambien incluye una recomendacon de grasas saturadas.}
+\description{Calorias diarias necesarias para una persona divididas en hidratos de carbono, proteinas y grasas. A su vez las grasas se dividen en vegetales y animales. Tambien incluye una recomendacon de grasas saturadas.}
 
 \usage{
 
@@ -66,11 +66,11 @@ hc.prot.lip(calorias)
 
 \examples{
 
-Proteina: 15% de las calorías totales diarias.
-Hidratos de carbono: 60% de las calorías totales diarias.
-Grasa: 25% de las calorías totales diarias. 70% de grasas vegetales y 30% animales. Las grasas saturadas deben ser <7% de las calorías totales.
+Proteina: 15 por ciento de las calorías totales diarias.
+Hidratos de carbono: 60 por ciento de las calorías totales diarias.
+Grasa: 25 por ciento de las calorías totales diarias. 70 por ciento de grasas vegetales y 30 por ciento animales. Las grasas saturadas deben ser < 7 por ciento de las calorias totales.
   
-Por ejmplo: Calorias diarias: 2000
+Por ejemplo: Calorias diarias: 2000
 
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 
