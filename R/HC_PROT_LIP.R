@@ -4,7 +4,7 @@ hc.prot.lip <- function(){
   
   n1<-as.integer(n1)
   
-  if n1 == ' '
+  if (n1 == ' ')
     {
     n1 <- calorias
     }
