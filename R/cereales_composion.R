@@ -2,7 +2,7 @@ cereales.composicion <- function(){
   install.packages("readxl")
   library("readxl")
 
-  cereales <- read_excel("./ficha_alimentacion.xls", sheet = "Cereales")
+  cereales <- read_excel("../ficha_alimentacion.xls", sheet = "Cereales")
   cereales[, (10:50)] <- NULL
   cereales[, (1:1)] <- NULL
 
