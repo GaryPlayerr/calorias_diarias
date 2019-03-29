@@ -1,6 +1,12 @@
 cereales.composicion <- function(){
   install.packages("readxl")
+  install.packages("gsubfn")
+  install.packages("proto")
+  install.packages("RSQLite")
   library("readxl")
+  library("gsubfn")
+  library("proto")
+  library("RSQLite")
 
   url1<-'https://github.com/BorjaJorge/calorias_diarias/raw/master/R/ficha_alimentacion.xls'
   p1f <- tempfile()
