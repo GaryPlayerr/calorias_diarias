@@ -1,5 +1,7 @@
-cereales.composicion <- function(){
+alimento.composicion <- function(){
 
+  n1<-readline(prompt="Sexo(M/F): " )
+  
   library(sqldf)
 
   db <- dbConnect(SQLite(), dbname="Cereales")
