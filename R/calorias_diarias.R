@@ -1,7 +1,7 @@
 calorias.diarias <- function(){
   n1<-readline(prompt="Sexo(M/F): " )
 
-  while (n1 != 'M' & n1 != 'F')
+  while (n1 != 'M' | n1 != 'F')
 
         message('ERROR, teclea M o F') 
         
