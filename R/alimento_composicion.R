@@ -17,4 +17,15 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        }
+  else if (n1 == 'LEGUMINOSAS')
+       {
+          db <- dbConnect(SQLite(), dbname="Leguminosas")
+  
+          nali<-readline(prompt="Leguminosas patron de busqueda en MAYUSCULAS: " )
+          ali <- paste('%', nali, '%',sep = '') 
+          alimento <- dbGetQuery(db, "select * from Leguminosas where Leguminosas like ?", ali)
+  
+          library(DT)
+          datatable(alimento)
+       } 
 }
