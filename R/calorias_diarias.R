@@ -13,9 +13,13 @@ calorias.diarias <- function(){
     {
     TMB = (10 * n4) + (6.25 * n3) - (5 * n2) + 5 
     }
-  else
+  else if  (n1 == 'F')
     {
     TMB = (10 * n4) + (6.25 * n3) - (5 * n2) - 161   
+    }
+  else
+    {
+      message('ERROR, teclea M o F')  
     }
   
   if  (n5 == '5')
