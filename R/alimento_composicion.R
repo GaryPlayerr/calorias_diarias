@@ -15,6 +15,7 @@ alimento.composicion <- function(){
   
           library(DT)
           datatable(alimento)
+          break
        }
    if  (n1 == 'LEGUMINOSAS')
        {
