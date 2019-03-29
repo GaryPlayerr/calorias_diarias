@@ -19,7 +19,8 @@ calorias.diarias <- function(){
     }
   else
     {
-      message('ERROR, teclea M o F')  
+      cat('ERROR, teclea M o F') 
+      break
     }
   
   if  (n5 == '5')
