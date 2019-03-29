@@ -296,7 +296,7 @@ alimentos.composicion.create <- function(){
 
   res <- dbReadTable(db, "Leguminosas")
   
-  dbWriteTable(conn = db, name = "Leguminosas", value = Leguminosas, append = TRUE)
+  dbWriteTable(conn = db, name = "Leguminosas", value = leguminosas, append = TRUE)
 
   dbGetQuery(db, "select * from Leguminosas")
 
@@ -322,7 +322,7 @@ alimentos.composicion.create <- function(){
 
   res <- dbReadTable(db, "Tuberculos_hortalizas")
   
-  dbWriteTable(conn = db, name = "Tuberculos_hortalizas", value = Tuberculos_hortalizas, append = TRUE)
+  dbWriteTable(conn = db, name = "Tuberculos_hortalizas", value = tuberculos_hortalizas, append = TRUE)
 
   dbGetQuery(db, "select * from Tuberculos_hortalizas")
 
@@ -348,7 +348,7 @@ alimentos.composicion.create <- function(){
 
   res <- dbReadTable(db, "Frutos_frescos")
   
-  dbWriteTable(conn = db, name = "Frutos_frescos", value = Frutos_frescos, append = TRUE)
+  dbWriteTable(conn = db, name = "Frutos_frescos", value = frutos_frescos, append = TRUE)
 
   dbGetQuery(db, "select * from Frutos_frescos")
 
@@ -374,7 +374,7 @@ alimentos.composicion.create <- function(){
 
   res <- dbReadTable(db, "Frutos_secos")
   
-  dbWriteTable(conn = db, name = "Frutos_secos", value = Frutos_secos, append = TRUE)
+  dbWriteTable(conn = db, name = "Frutos_secos", value = frutos_secos, append = TRUE)
 
   dbGetQuery(db, "select * from Frutos_secos")
 
@@ -400,7 +400,7 @@ alimentos.composicion.create <- function(){
 
   res <- dbReadTable(db, "Lacteos")
   
-  dbWriteTable(conn = db, name = "Lacteos", value = Lacteos, append = TRUE)
+  dbWriteTable(conn = db, name = "Lacteos", value = lacteos, append = TRUE)
 
   dbGetQuery(db, "select * from Lacteos")
 
