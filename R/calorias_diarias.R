@@ -7,12 +7,13 @@ calorias.diarias <- function(){
       message('ERROR, teclea M o F')
       n1<-readline(prompt="Sexo(M/F): " )
     
-      if (n1 != 'M' & n1 != 'F')
-      {
+      while (n1 != 'M' & n1 != 'F')
+        {
       
-        break
+         message('ERROR, teclea M o F')
+         n1<-readline(prompt="Sexo(M/F): " )
       
-      }
+        }
     
     }
     
