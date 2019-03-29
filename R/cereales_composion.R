@@ -2,7 +2,10 @@ cereales.composicion <- function(){
   install.packages("readxl")
   library("readxl")
 
-  cereales <- read_excel("https://github.com/BorjaJorge/calorias_diarias/blob/master/R/ficha_alimentacion.xls", sheet = "Cereales")
+  url1<-'https://github.com/BorjaJorge/calorias_diarias/raw/master/R/ficha_alimentacion.xls'
+  p1f <- tempfile()
+  download.file(url1, p1f, mode="wb")
+  cereales<-read_excel(path = p1f, sheet = "Cereales")
   cereales[, (10:50)] <- NULL
   cereales[, (1:1)] <- NULL
 
