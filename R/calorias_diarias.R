@@ -13,6 +13,8 @@ calorias.diarias <- function(){
     else
       {
         message('ERROR, teclea M o F') 
+        
+        n1<-readline(prompt="Sexo(M/F): " )
       }
   
   n2<-readline(prompt="Edad: " )
