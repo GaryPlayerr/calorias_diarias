@@ -1,14 +1,6 @@
 calorias.diarias <- function(){
   n1<-readline(prompt="Sexo(M/F): " )
-  n2<-readline(prompt="Edad: " )
-  n3<-readline(prompt="Altura: " )
-  n4<-readline(prompt="Peso: " )
-  n5<-readline(prompt="Ejercicio(1-Poco, 2-Ligero, 3-Moderado, 4-Fuerte, 5-Muy fuerte) : " )
-  
-  n2<-as.integer(n2)
-  n3<-as.integer(n3)
-  n4<-as.integer(n4)
-  
+
   if  (n1 == 'M')
     {
     TMB = (10 * n4) + (6.25 * n3) - (5 * n2) + 5 
@@ -19,9 +11,18 @@ calorias.diarias <- function(){
     }
   else
     {
-      cat('ERROR, teclea M o F') 
+      message('ERROR, teclea M o F') 
       break
     }
+  
+  n2<-readline(prompt="Edad: " )
+  n3<-readline(prompt="Altura: " )
+  n4<-readline(prompt="Peso: " )
+  n5<-readline(prompt="Ejercicio(1-Poco, 2-Ligero, 3-Moderado, 4-Fuerte, 5-Muy fuerte) : " )
+  
+  n2<-as.integer(n2)
+  n3<-as.integer(n3)
+  n4<-as.integer(n4)
   
   if  (n5 == '5')
     {
