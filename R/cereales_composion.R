@@ -1,5 +1,22 @@
 cereales.composicion <- function(){
+  install.packages("readxl")
+  library("readxl")
 
+  cereales <- read_excel("./ficha_alimentacion.xls", sheet = "Cereales")
+  cereales[, (10:50)] <- NULL
+  cereales[, (1:1)] <- NULL
+
+  colnames(cereales)[colnames(cereales) == '..2'] <- 'Cereales'
+  colnames(cereales)[colnames(cereales) == '..3'] <- 'Estado'
+  colnames(cereales)[colnames(cereales) == 'CAL'] <- 'Calorias'
+  colnames(cereales)[colnames(cereales) == 'PR'] <- 'Proteina'
+  colnames(cereales)[colnames(cereales) == 'GR'] <- 'Grasas'
+  colnames(cereales)[colnames(cereales) == 'HC'] <- 'Carbohidratos'
+  colnames(cereales)[colnames(cereales) == 'H20'] <- 'Agua'
+  colnames(cereales)[colnames(cereales) == 'NE.'] <- 'Cenizas'
+  
+  cereales = as.data.frame(cereales)
+  
   library(sqldf)
 
   db <- dbConnect(SQLite(), dbname="Cereales")
