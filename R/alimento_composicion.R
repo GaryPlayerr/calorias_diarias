@@ -1,8 +1,7 @@
 alimento.composicion <- function(){
 
   n1<-readline(prompt="Tipo de alimemento(CEREALES, LEGUMINOSAS, TUBERCULOS_HORTALIZAS, FRUTOS_FRESCOS,FRUTOS_SECOS, 
-                                          LACTEOS, HUEVOS, DULCES, ACEITES_GRASAS, PESCADOS, CERDO, CORDERO, TERNERA, 
-                                          VACA, EMBUTIDOS, AVES, CAZA):")
+  LACTEOS, HUEVOS, DULCES, ACEITES_GRASAS, PESCADOS, CERDO, CORDERO, TERNERA, VACA, EMBUTIDOS, AVES, CAZA): ")
   
   library(sqldf)
 
@@ -23,7 +22,7 @@ alimento.composicion <- function(){
   
           nali<-readline(prompt="Cereales patron de busqueda en MAYUSCULAS: " )
           ali <- paste('%', nali, '%',sep = '') 
-          alimento <- dbGetQuery(db, "select * from Cereales where Cereales like ?", ali)
+          alimento <- dbGetQuery(db, "select * from Leguminosas where Leguminosas like ?", ali)
   
           library(DT)
           datatable(alimento)
