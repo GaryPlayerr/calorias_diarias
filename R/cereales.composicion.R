@@ -9,7 +9,6 @@ cereales.composicion <- function(){
   dbGetQuery(db, "select * from Cereales where Cereales like ?", cer)
   cereales <- dbGetQuery(db, "select * from Cereales where Cereales like ?", cer)
   
-  install.packages("DT")
   library(DT)
   datatable(cereales)
 
