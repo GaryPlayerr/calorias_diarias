@@ -1,4 +1,4 @@
-cereales.composicion <- function(){
+cereales.composicion.create <- function(){
   install.packages("readxl")
   install.packages("gsubfn")
   install.packages("proto")
@@ -53,8 +53,4 @@ cereales.composicion <- function(){
   dbRemoveTable(db, "Cereales")
   dbListTables(db)
   out <- dbWriteTable(db, "Cereales", cereales)
-  ncer<-readline(prompt="Cereales patron de busqueda: " )
-  cer <- paste('%', ncer, '%',sep = '') 
-  dbGetQuery(db, "select * from Cereales where Cereales like ?", cer)
-  
 }
