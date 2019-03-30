@@ -20,7 +20,23 @@ calorias.diarias <- function(){
   n2<-readline(prompt="Edad: " )
   n3<-readline(prompt="Altura: " )
   n4<-readline(prompt="Peso: " )
-  n5<-readline(prompt="Ejercicio(1-Poco, 2-Ligero, 3-Moderado, 4-Fuerte, 5-Muy fuerte) : " )
+  
+  n6>-readline(prompt="¿Caminas o corres? ¿Conoces la distancia y el tiempo de? (S/N)  : " )
+  
+  if  (n6 == 'N')
+    {
+      n5<-readline(prompt="Ejercicio(1-Poco, 2-Ligero, 3-Moderado, 4-Fuerte, 5-Muy fuerte) : " )
+    }  
+  
+  else if  (n6 == 'S')
+    {
+      n7<-readline(prompt="Distancia(km) : " ) 
+      n8<-readline(prompt="Tiempo(minutos) : " ) 
+    
+      horas = n8 / 60
+      vel = n7 / horas
+    
+    }  
   
   n2<-as.integer(n2)
   n3<-as.integer(n3)
@@ -51,11 +67,20 @@ calorias.diarias <- function(){
       {
         calorias = TMB * 1.375
       }
-  else
+  else if  (n5 == '1')
       {
         calorias = TMB * 1.2
       }
-       
+  
+  if  (n6 == 'S') 
+      {
+  
+      cal = 14.26 * n8 + 46.66 * vel + 8.55 * n4 - 1164.85
+    
+      calorias = TMB + cal 
+  
+      }
+  
   print(calorias)
   
 }
