@@ -21,7 +21,7 @@ calorias.diarias <- function(){
   n3<-readline(prompt="Altura: " )
   n4<-readline(prompt="Peso: " )
   
-  n6>-readline(prompt="¿Caminas o corres? ¿Conoces la distancia y el tiempo de? (S/N)  : " )
+  n6<-readline(prompt="¿Caminas o corres? ¿Conoces la distancia y el tiempo de? (S/N)  : " )
   
   if  (n6 == 'N')
     {
