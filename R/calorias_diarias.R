@@ -32,6 +32,7 @@ calorias.diarias <- function(){
     {
       n7<-readline(prompt="Distancia(km) : " ) 
       n8<-readline(prompt="Tiempo(minutos) : " ) 
+      n5<- 0
       n7<-as.integer(n7)
       n8<-as.integer(n8)
     
