@@ -1,12 +1,12 @@
 alimento.composicion <- function()
 {
 
-  n1<-readline(prompt="Tipo de alimemento(CEREALES, LEGUMINOSAS, TUBERCULOS_HORTALIZAS, FRUTOS_FRESCOS,FRUTOS_SECOS, 
-  LACTEOS, HUEVOS, DULCES, ACEITES_GRASAS, PESCADOS, CERDO, CORDERO, TERNERA, VACA, EMBUTIDOS, AVES, CAZA): ")
+ n1<-readline(prompt="Tipo de alimemento(CEREALES, LEGUMINOSAS, TUBERCULOS_HORTALIZAS, FRUTOS_FRESCOS,FRUTOS_SECOS, 
+ LACTEOS, HUEVOS, DULCES, ACEITES_GRASAS, PESCADOS, CERDO, CORDERO, TERNERA, VACA, EMBUTIDOS, AVES, CAZA): ")
   
-  library(sqldf)
+ library(sqldf)
 
-  if  (n1 == 'CEREALES')
+ if  (n1 == 'CEREALES')
        {
           db <- dbConnect(SQLite(), dbname="Cereales")
   
@@ -17,7 +17,7 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        }
-  else if (n1 == 'LEGUMINOSAS')
+ else if (n1 == 'LEGUMINOSAS')
        {
           db <- dbConnect(SQLite(), dbname="Leguminosas")
   
@@ -28,7 +28,7 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        } 
-    else if (n1 == 'TUBERCULOS_HORTALIZAS')
+ else if (n1 == 'TUBERCULOS_HORTALIZAS')
        {
           db <- dbConnect(SQLite(), dbname="Tuberculos_hortalizas")
   
@@ -39,7 +39,7 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        } 
-      else if (n1 == 'FRUTOS_FRESCOS')
+ else if (n1 == 'FRUTOS_FRESCOS')
        {
           db <- dbConnect(SQLite(), dbname="Frutos_frescos")
   
@@ -50,4 +50,147 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        } 
+ else if (n1 == 'FRUTOS_SECOS')
+       {
+          db <- dbConnect(SQLite(), dbname="Frutos_secos")
+  
+          nali<-readline(prompt="Frutos secos patron de busqueda en MAYUSCULAS: " )
+          ali <- paste('%', nali, '%',sep = '') 
+          alimento <- dbGetQuery(db, "select * from Frutos_secos where Frutos_secos like ?", ali)
+  
+          library(DT)
+          datatable(alimento)
+       } 
+ else if (n1 == 'LACTEOS')
+       {
+          db <- dbConnect(SQLite(), dbname="Lacteos")
+  
+          nali<-readline(prompt="Lacteos patron de busqueda en MAYUSCULAS: " )
+          ali <- paste('%', nali, '%',sep = '') 
+          alimento <- dbGetQuery(db, "select * from Lacteos where Lacteos like ?", ali)
+  
+          library(DT)
+          datatable(alimento)
+       } 
+ else if (n1 == 'HUEVOS')
+       {
+          db <- dbConnect(SQLite(), dbname="Huevos")
+  
+          nali<-readline(prompt="Huevos patron de busqueda en MAYUSCULAS: " )
+          ali <- paste('%', nali, '%',sep = '') 
+          alimento <- dbGetQuery(db, "select * from Huevos where Huevos like ?", ali)
+  
+          library(DT)
+          datatable(alimento)
+       } 
+ else if (n1 == 'DULCES')
+       {
+          db <- dbConnect(SQLite(), dbname="Dulces")
+  
+          nali<-readline(prompt="Dulces patron de busqueda en MAYUSCULAS: " )
+          ali <- paste('%', nali, '%',sep = '') 
+          alimento <- dbGetQuery(db, "select * from Dulces where Dulces like ?", ali)
+  
+          library(DT)
+          datatable(alimento)
+       } 
+ else if (n1 == 'ACEITES_GRASAS')
+       {
+          db <- dbConnect(SQLite(), dbname="aceites_grasas")
+  
+          nali<-readline(prompt="Aceites/grasas patron de busqueda en MAYUSCULAS: " )
+          ali <- paste('%', nali, '%',sep = '') 
+          alimento <- dbGetQuery(db, "select * from aceites_grasas where aceites_grasas like ?", ali)
+  
+          library(DT)
+          datatable(alimento)
+       }  
+ else if (n1 == 'PESCADOS')
+       {
+          db <- dbConnect(SQLite(), dbname="Pescados")
+  
+          nali<-readline(prompt="Pescados patron de busqueda en MAYUSCULAS: " )
+          ali <- paste('%', nali, '%',sep = '') 
+          alimento <- dbGetQuery(db, "select * from Pescados where Pescados like ?", ali)
+  
+          library(DT)
+          datatable(alimento)
+       }  
+ else if (n1 == 'CERDO')
+       {
+          db <- dbConnect(SQLite(), dbname="Cerdo")
+  
+          nali<-readline(prompt="Cerdo patron de busqueda en MAYUSCULAS: " )
+          ali <- paste('%', nali, '%',sep = '') 
+          alimento <- dbGetQuery(db, "select * from Cerdo where Cerdo like ?", ali)
+  
+          library(DT)
+          datatable(alimento)
+       } 
+ else if (n1 == 'CORDERO')
+       {
+          db <- dbConnect(SQLite(), dbname="Cordero")
+  
+          nali<-readline(prompt="Cordero patron de busqueda en MAYUSCULAS: " )
+          ali <- paste('%', nali, '%',sep = '') 
+          alimento <- dbGetQuery(db, "select * from Cordero where Cordero like ?", ali)
+  
+          library(DT)
+          datatable(alimento)
+       } 
+ else if (n1 == 'TERNERA')
+       {
+          db <- dbConnect(SQLite(), dbname="Ternera")
+  
+          nali<-readline(prompt="Ternera patron de busqueda en MAYUSCULAS: " )
+          ali <- paste('%', nali, '%',sep = '') 
+          alimento <- dbGetQuery(db, "select * from Ternera where Ternera like ?", ali)
+  
+          library(DT)
+          datatable(alimento)
+       }  
+ else if (n1 == 'VACA')
+       {
+          db <- dbConnect(SQLite(), dbname="Vaca")
+  
+          nali<-readline(prompt="Vaca patron de busqueda en MAYUSCULAS: " )
+          ali <- paste('%', nali, '%',sep = '') 
+          alimento <- dbGetQuery(db, "select * from Vaca where Vaca like ?", ali)
+  
+          library(DT)
+          datatable(alimento)
+       }  
+ else if (n1 == 'EMBUTIDOS')
+       {
+          db <- dbConnect(SQLite(), dbname="Embutidos")
+  
+          nali<-readline(prompt="Embutidos patron de busqueda en MAYUSCULAS: " )
+          ali <- paste('%', nali, '%',sep = '') 
+          alimento <- dbGetQuery(db, "select * from Embutidos where Embutidos like ?", ali)
+  
+          library(DT)
+          datatable(alimento)
+       }
+ else if (n1 == 'AVES')
+       {
+          db <- dbConnect(SQLite(), dbname="Aves")
+  
+          nali<-readline(prompt="Aves patron de busqueda en MAYUSCULAS: " )
+          ali <- paste('%', nali, '%',sep = '') 
+          alimento <- dbGetQuery(db, "select * from Aves where Aves like ?", ali)
+  
+          library(DT)
+          datatable(alimento)
+       }  
+ else if (n1 == 'CAZA')
+       {
+          db <- dbConnect(SQLite(), dbname="Caza")
+  
+          nali<-readline(prompt="Caza patron de busqueda en MAYUSCULAS: " )
+          ali <- paste('%', nali, '%',sep = '') 
+          alimento <- dbGetQuery(db, "select * from Caza where Caza like ?", ali)
+  
+          library(DT)
+          datatable(alimento)
+       }   
 }
