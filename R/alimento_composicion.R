@@ -28,4 +28,26 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        } 
+    else if (n1 == 'TUBERCULOS_HORTALIZAS')
+       {
+          db <- dbConnect(SQLite(), dbname="Tuberculos_hortalizas")
+  
+          nali<-readline(prompt="Tuberculos/hortalizas patron de busqueda en MAYUSCULAS: " )
+          ali <- paste('%', nali, '%',sep = '') 
+          alimento <- dbGetQuery(db, "select * from Tuberculos_hortalizas where Tuberculos_hortalizas like ?", ali)
+  
+          library(DT)
+          datatable(alimento)
+       } 
+      else if (n1 == 'FRUTOS_FRESCOS')
+       {
+          db <- dbConnect(SQLite(), dbname="Frutos_frescos")
+  
+          nali<-readline(prompt="Frutos frescos patron de busqueda en MAYUSCULAS: " )
+          ali <- paste('%', nali, '%',sep = '') 
+          alimento <- dbGetQuery(db, "select * from Frutos_frescos where Frutos_frescos like ?", ali)
+  
+          library(DT)
+          datatable(alimento)
+       } 
 }
