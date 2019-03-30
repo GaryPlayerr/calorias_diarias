@@ -15,7 +15,11 @@ alimento.composicion <- function()
           alimento <- dbGetQuery(db, "select * from Cereales where Cereales like ?", ali)
   
           n2<-readline(prompt="Cantidad en gramos?")
-          n2
+          n2<-as.integer(n2)
+  
+          por = n2 / 100
+  
+          alimento$Calorias <- alimento$Calorias * por
   
           library(DT)
           datatable(alimento)
