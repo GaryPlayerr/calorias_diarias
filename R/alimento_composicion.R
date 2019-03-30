@@ -36,6 +36,18 @@ alimento.composicion <- function()
           nali<-readline(prompt="Leguminosas patron de busqueda en MAYUSCULAS: " )
           ali <- paste('%', nali, '%',sep = '') 
           alimento <- dbGetQuery(db, "select * from Leguminosas where Leguminosas like ?", ali)
+
+          n2<-readline(prompt="Cantidad en gramos?")
+          n2<-as.integer(n2)
+  
+          por = n2 / 100
+  
+          alimento$Calorias <- alimento$Calorias * por
+          alimento$Proteina <- alimento$Proteina * por
+          alimento$Grasas <- alimento$Grasas * por
+          alimento$Carbohidratos<- alimento$Carbohidratos * por
+          alimento$Agua <- alimento$Agua * por
+          alimento$Cenizas <- alimento$Cenizas * por
   
           library(DT)
           datatable(alimento)
@@ -48,6 +60,18 @@ alimento.composicion <- function()
           ali <- paste('%', nali, '%',sep = '') 
           alimento <- dbGetQuery(db, "select * from Tuberculos_hortalizas where Tuberculos_hortalizas like ?", ali)
   
+          n2<-readline(prompt="Cantidad en gramos?")
+          n2<-as.integer(n2)
+  
+          por = n2 / 100
+  
+          alimento$Calorias <- alimento$Calorias * por
+          alimento$Proteina <- alimento$Proteina * por
+          alimento$Grasas <- alimento$Grasas * por
+          alimento$Carbohidratos<- alimento$Carbohidratos * por
+          alimento$Agua <- alimento$Agua * por
+          alimento$Cenizas <- alimento$Cenizas * por  
+  
           library(DT)
           datatable(alimento)
        } 
@@ -58,6 +82,18 @@ alimento.composicion <- function()
           nali<-readline(prompt="Frutos frescos patron de busqueda en MAYUSCULAS: " )
           ali <- paste('%', nali, '%',sep = '') 
           alimento <- dbGetQuery(db, "select * from Frutos_frescos where Frutos_frescos like ?", ali)
+  
+          n2<-readline(prompt="Cantidad en gramos?")
+          n2<-as.integer(n2)
+  
+          por = n2 / 100
+  
+          alimento$Calorias <- alimento$Calorias * por
+          alimento$Proteina <- alimento$Proteina * por
+          alimento$Grasas <- alimento$Grasas * por
+          alimento$Carbohidratos<- alimento$Carbohidratos * por
+          alimento$Agua <- alimento$Agua * por
+          alimento$Cenizas <- alimento$Cenizas * por  
   
           library(DT)
           datatable(alimento)
@@ -70,6 +106,18 @@ alimento.composicion <- function()
           ali <- paste('%', nali, '%',sep = '') 
           alimento <- dbGetQuery(db, "select * from Frutos_secos where Frutos_secos like ?", ali)
   
+          n2<-readline(prompt="Cantidad en gramos?")
+          n2<-as.integer(n2)
+  
+          por = n2 / 100
+  
+          alimento$Calorias <- alimento$Calorias * por
+          alimento$Proteina <- alimento$Proteina * por
+          alimento$Grasas <- alimento$Grasas * por
+          alimento$Carbohidratos<- alimento$Carbohidratos * por
+          alimento$Agua <- alimento$Agua * por
+          alimento$Cenizas <- alimento$Cenizas * por  
+  
           library(DT)
           datatable(alimento)
        } 
@@ -80,6 +128,18 @@ alimento.composicion <- function()
           nali<-readline(prompt="Lacteos patron de busqueda en MAYUSCULAS: " )
           ali <- paste('%', nali, '%',sep = '') 
           alimento <- dbGetQuery(db, "select * from Lacteos where Lacteos like ?", ali)
+  
+          n2<-readline(prompt="Cantidad en gramos?")
+          n2<-as.integer(n2)
+  
+          por = n2 / 100
+  
+          alimento$Calorias <- alimento$Calorias * por
+          alimento$Proteina <- alimento$Proteina * por
+          alimento$Grasas <- alimento$Grasas * por
+          alimento$Carbohidratos<- alimento$Carbohidratos * por
+          alimento$Agua <- alimento$Agua * por
+          alimento$Cenizas <- alimento$Cenizas * por  
   
           library(DT)
           datatable(alimento)
@@ -92,6 +152,18 @@ alimento.composicion <- function()
           ali <- paste('%', nali, '%',sep = '') 
           alimento <- dbGetQuery(db, "select * from Huevos where Huevos like ?", ali)
   
+          n2<-readline(prompt="Cantidad en gramos?")
+          n2<-as.integer(n2)
+  
+          por = n2 / 100
+  
+          alimento$Calorias <- alimento$Calorias * por
+          alimento$Proteina <- alimento$Proteina * por
+          alimento$Grasas <- alimento$Grasas * por
+          alimento$Carbohidratos<- alimento$Carbohidratos * por
+          alimento$Agua <- alimento$Agua * por
+          alimento$Cenizas <- alimento$Cenizas * por  
+  
           library(DT)
           datatable(alimento)
        } 
@@ -102,6 +174,18 @@ alimento.composicion <- function()
           nali<-readline(prompt="Dulces patron de busqueda en MAYUSCULAS: " )
           ali <- paste('%', nali, '%',sep = '') 
           alimento <- dbGetQuery(db, "select * from Dulces where Dulces like ?", ali)
+  
+          n2<-readline(prompt="Cantidad en gramos?")
+          n2<-as.integer(n2)
+  
+          por = n2 / 100
+  
+          alimento$Calorias <- alimento$Calorias * por
+          alimento$Proteina <- alimento$Proteina * por
+          alimento$Grasas <- alimento$Grasas * por
+          alimento$Carbohidratos<- alimento$Carbohidratos * por
+          alimento$Agua <- alimento$Agua * por
+          alimento$Cenizas <- alimento$Cenizas * por  
   
           library(DT)
           datatable(alimento)
@@ -114,6 +198,18 @@ alimento.composicion <- function()
           ali <- paste('%', nali, '%',sep = '') 
           alimento <- dbGetQuery(db, "select * from aceites_grasas where aceites_grasas like ?", ali)
   
+          n2<-readline(prompt="Cantidad en gramos?")
+          n2<-as.integer(n2)
+  
+          por = n2 / 100
+  
+          alimento$Calorias <- alimento$Calorias * por
+          alimento$Proteina <- alimento$Proteina * por
+          alimento$Grasas <- alimento$Grasas * por
+          alimento$Carbohidratos<- alimento$Carbohidratos * por
+          alimento$Agua <- alimento$Agua * por
+          alimento$Cenizas <- alimento$Cenizas * por  
+  
           library(DT)
           datatable(alimento)
        }  
@@ -124,6 +220,18 @@ alimento.composicion <- function()
           nali<-readline(prompt="Pescados patron de busqueda en MAYUSCULAS: " )
           ali <- paste('%', nali, '%',sep = '') 
           alimento <- dbGetQuery(db, "select * from Pescados where Pescados like ?", ali)
+  
+          n2<-readline(prompt="Cantidad en gramos?")
+          n2<-as.integer(n2)
+  
+          por = n2 / 100
+  
+          alimento$Calorias <- alimento$Calorias * por
+          alimento$Proteina <- alimento$Proteina * por
+          alimento$Grasas <- alimento$Grasas * por
+          alimento$Carbohidratos<- alimento$Carbohidratos * por
+          alimento$Agua <- alimento$Agua * por
+          alimento$Cenizas <- alimento$Cenizas * por  
   
           library(DT)
           datatable(alimento)
@@ -136,6 +244,18 @@ alimento.composicion <- function()
           ali <- paste('%', nali, '%',sep = '') 
           alimento <- dbGetQuery(db, "select * from Cerdo where Cerdo like ?", ali)
   
+          n2<-readline(prompt="Cantidad en gramos?")
+          n2<-as.integer(n2)
+  
+          por = n2 / 100
+  
+          alimento$Calorias <- alimento$Calorias * por
+          alimento$Proteina <- alimento$Proteina * por
+          alimento$Grasas <- alimento$Grasas * por
+          alimento$Carbohidratos<- alimento$Carbohidratos * por
+          alimento$Agua <- alimento$Agua * por
+          alimento$Cenizas <- alimento$Cenizas * por  
+  
           library(DT)
           datatable(alimento)
        } 
@@ -146,6 +266,18 @@ alimento.composicion <- function()
           nali<-readline(prompt="Cordero patron de busqueda en MAYUSCULAS: " )
           ali <- paste('%', nali, '%',sep = '') 
           alimento <- dbGetQuery(db, "select * from Cordero where Cordero like ?", ali)
+  
+          n2<-readline(prompt="Cantidad en gramos?")
+          n2<-as.integer(n2)
+  
+          por = n2 / 100
+  
+          alimento$Calorias <- alimento$Calorias * por
+          alimento$Proteina <- alimento$Proteina * por
+          alimento$Grasas <- alimento$Grasas * por
+          alimento$Carbohidratos<- alimento$Carbohidratos * por
+          alimento$Agua <- alimento$Agua * por
+          alimento$Cenizas <- alimento$Cenizas * por  
   
           library(DT)
           datatable(alimento)
@@ -158,6 +290,18 @@ alimento.composicion <- function()
           ali <- paste('%', nali, '%',sep = '') 
           alimento <- dbGetQuery(db, "select * from Ternera where Ternera like ?", ali)
   
+          n2<-readline(prompt="Cantidad en gramos?")
+          n2<-as.integer(n2)
+  
+          por = n2 / 100
+  
+          alimento$Calorias <- alimento$Calorias * por
+          alimento$Proteina <- alimento$Proteina * por
+          alimento$Grasas <- alimento$Grasas * por
+          alimento$Carbohidratos<- alimento$Carbohidratos * por
+          alimento$Agua <- alimento$Agua * por
+          alimento$Cenizas <- alimento$Cenizas * por  
+  
           library(DT)
           datatable(alimento)
        }  
@@ -168,6 +312,18 @@ alimento.composicion <- function()
           nali<-readline(prompt="Vaca patron de busqueda en MAYUSCULAS: " )
           ali <- paste('%', nali, '%',sep = '') 
           alimento <- dbGetQuery(db, "select * from Vaca where Vaca like ?", ali)
+  
+          n2<-readline(prompt="Cantidad en gramos?")
+          n2<-as.integer(n2)
+  
+          por = n2 / 100
+  
+          alimento$Calorias <- alimento$Calorias * por
+          alimento$Proteina <- alimento$Proteina * por
+          alimento$Grasas <- alimento$Grasas * por
+          alimento$Carbohidratos<- alimento$Carbohidratos * por
+          alimento$Agua <- alimento$Agua * por
+          alimento$Cenizas <- alimento$Cenizas * por  
   
           library(DT)
           datatable(alimento)
@@ -180,6 +336,18 @@ alimento.composicion <- function()
           ali <- paste('%', nali, '%',sep = '') 
           alimento <- dbGetQuery(db, "select * from Embutidos where Embutidos like ?", ali)
   
+          n2<-readline(prompt="Cantidad en gramos?")
+          n2<-as.integer(n2)
+  
+          por = n2 / 100
+  
+          alimento$Calorias <- alimento$Calorias * por
+          alimento$Proteina <- alimento$Proteina * por
+          alimento$Grasas <- alimento$Grasas * por
+          alimento$Carbohidratos<- alimento$Carbohidratos * por
+          alimento$Agua <- alimento$Agua * por
+          alimento$Cenizas <- alimento$Cenizas * por  
+  
           library(DT)
           datatable(alimento)
        }
@@ -191,6 +359,18 @@ alimento.composicion <- function()
           ali <- paste('%', nali, '%',sep = '') 
           alimento <- dbGetQuery(db, "select * from Aves where Aves like ?", ali)
   
+          n2<-readline(prompt="Cantidad en gramos?")
+          n2<-as.integer(n2)
+  
+          por = n2 / 100
+  
+          alimento$Calorias <- alimento$Calorias * por
+          alimento$Proteina <- alimento$Proteina * por
+          alimento$Grasas <- alimento$Grasas * por
+          alimento$Carbohidratos<- alimento$Carbohidratos * por
+          alimento$Agua <- alimento$Agua * por
+          alimento$Cenizas <- alimento$Cenizas * por  
+  
           library(DT)
           datatable(alimento)
        }  
@@ -201,6 +381,18 @@ alimento.composicion <- function()
           nali<-readline(prompt="Caza patron de busqueda en MAYUSCULAS: " )
           ali <- paste('%', nali, '%',sep = '') 
           alimento <- dbGetQuery(db, "select * from Caza where Caza like ?", ali)
+  
+          n2<-readline(prompt="Cantidad en gramos?")
+          n2<-as.integer(n2)
+  
+          por = n2 / 100
+  
+          alimento$Calorias <- alimento$Calorias * por
+          alimento$Proteina <- alimento$Proteina * por
+          alimento$Grasas <- alimento$Grasas * por
+          alimento$Carbohidratos<- alimento$Carbohidratos * por
+          alimento$Agua <- alimento$Agua * por
+          alimento$Cenizas <- alimento$Cenizas * por  
   
           library(DT)
           datatable(alimento)
