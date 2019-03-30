@@ -40,7 +40,7 @@ Redondeo de las formulas de Harris-Benedict por Mifflin. 1990
   Hombres REE = 10 w + 6.25 s -5 a + 5 
   Mujeres REE = REE = 10 w + 6.25 s - 5 a - 161 
  
-Si caminas o corres y cooces la distancia y el tiempo de actividad aplicamos la siguiente ecuacion calculada mediante regresion multiple:
+Si caminas o corres y conoces la distancia y el tiempo de entrenamiento aplicamos la siguiente ecuacion calculada mediante regresion multiple:
   14,26 * tiempo(min) + 46,66 * km/h + 8,55 * peso(kg) - 1164,85
   
 En caso contrario utilizamos el factor de actividad de acuerdo con Metodo Harris-Benedict
