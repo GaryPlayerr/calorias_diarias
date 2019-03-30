@@ -20,6 +20,11 @@ alimento.composicion <- function()
           por = n2 / 100
   
           alimento$Calorias <- alimento$Calorias * por
+          alimento$Proteina <- alimento$Proteina * por
+          alimento$Grasas <- alimento$Grasas * por
+          alimento$Carbohidratos<- alimento$Carbohidratos * por
+          alimento$Agua <- alimento$Agua * por
+          alimento$Cenizas <- alimento$Cenizas * por
   
           library(DT)
           datatable(alimento)
