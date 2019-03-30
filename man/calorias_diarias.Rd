@@ -39,8 +39,11 @@ Redondeo de las formulas de Harris-Benedict por Mifflin. 1990
   
   Hombres REE = 10 w + 6.25 s -5 a + 5 
   Mujeres REE = REE = 10 w + 6.25 s - 5 a - 161 
+ 
+Si caminas o corres y cooces la distancia y el tiempo de actividad aplicamos la siguiente ecuacion calculada mediante regresion multiple:
+  14,26 * tiempo(min) + 46,66 * km/h + 8,55 * peso(kg) - 1164,85
   
-Factor de actividad de acuerdo con Metodo Harris-Benedict
+En caso contrario utilizamos el factor de actividad de acuerdo con Metodo Harris-Benedict
   1-Sedentario. Factor x 1.2 
   2-Ligero. Factor x 1.375
   3-Activo. Factor x 1.55
@@ -51,7 +54,9 @@ Sexo(M/F): M (masculino), F(femenino). Por ejmplo M.
 Edad: numero de anios. Por ejemplo 50.
 Altura: estatura en centimetros. 170.
 Peso: peso en Kg. 70
-Ejercicio: Factor de actividad de acuerdo con Metodo Harris-Benedict. Por ejemplo 1.
+Caminas o corres?, Conoces la distancia y el tiempo de entrenamiento? (S/N)  
+  - N: Ejercicio: Factor de actividad de acuerdo con Metodo Harris-Benedict. Por ejemplo 1.
+  - S
   
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
