@@ -32,6 +32,8 @@ calorias.diarias <- function(){
     {
       n7<-readline(prompt="Distancia(km) : " ) 
       n8<-readline(prompt="Tiempo(minutos) : " ) 
+      n7<-as.integer(n7)
+      n8<-as.integer(n8)
     
       horas = n8 / 60
       vel = n7 / horas
