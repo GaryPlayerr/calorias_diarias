@@ -14,6 +14,9 @@ alimento.composicion <- function()
           ali <- paste('%', nali, '%',sep = '') 
           alimento <- dbGetQuery(db, "select * from Cereales where Cereales like ?", ali)
   
+          n2<-readline(prompt="Cantidad en gramos?")
+          n2
+  
           library(DT)
           datatable(alimento)
        }
