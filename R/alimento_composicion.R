@@ -20,13 +20,13 @@ alimento.composicion <- function()
           por = n2 / 100
   
           alimento$Calorias <- NULL
-          alimento$Proteina <- NULL
-          alimento$Grasas <- NULL
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
+          alimento$Proteina <- NULL
+          alimento$Grasas <- NULL
   
           library(DT)
           datatable(alimento)
@@ -45,13 +45,13 @@ alimento.composicion <- function()
           por = n2 / 100
   
           alimento$Calorias <- NULL
-          alimento$Proteina <- NULL
-          alimento$Grasas <- NULL
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
+          alimento$Proteina <- NULL
+          alimento$Grasas <- NULL
   
           library(DT)
           datatable(alimento)
@@ -70,13 +70,13 @@ alimento.composicion <- function()
           por = n2 / 100
   
           alimento$Calorias <- NULL
-          alimento$Proteina <- NULL
-          alimento$Grasas <- NULL
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
+          alimento$Proteina <- NULL
+          alimento$Grasas <- NULL
   
           library(DT)
           datatable(alimento)
@@ -95,13 +95,13 @@ alimento.composicion <- function()
           por = n2 / 100
   
           alimento$Calorias <- NULL
-          alimento$Proteina <- NULL
-          alimento$Grasas <- NULL
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
+          alimento$Proteina <- NULL
+          alimento$Grasas <- NULL
   
           library(DT)
           datatable(alimento)
@@ -120,13 +120,13 @@ alimento.composicion <- function()
           por = n2 / 100
   
           alimento$Calorias <- NULL
-          alimento$Proteina <- NULL
-          alimento$Grasas <- NULL
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
+          alimento$Proteina <- NULL
+          alimento$Grasas <- NULL
   
           library(DT)
           datatable(alimento)
@@ -145,13 +145,13 @@ alimento.composicion <- function()
           por = n2 / 100
   
           alimento$Calorias <- NULL
-          alimento$Proteina <- NULL
-          alimento$Grasas <- NULL
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
+          alimento$Proteina <- NULL
+          alimento$Grasas <- NULL
   
           library(DT)
           datatable(alimento)
@@ -170,13 +170,13 @@ alimento.composicion <- function()
           por = n2 / 100
   
           alimento$Calorias <- NULL
-          alimento$Proteina <- NULL
-          alimento$Grasas <- NULL
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
+          alimento$Proteina <- NULL
+          alimento$Grasas <- NULL
   
           library(DT)
           datatable(alimento)
@@ -195,13 +195,13 @@ alimento.composicion <- function()
           por = n2 / 100
   
           alimento$Calorias <- NULL
-          alimento$Proteina <- NULL
-          alimento$Grasas <- NULL
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
+          alimento$Proteina <- NULL
+          alimento$Grasas <- NULL
   
           library(DT)
           datatable(alimento)
@@ -220,13 +220,13 @@ alimento.composicion <- function()
           por = n2 / 100
   
           alimento$Calorias <- NULL
-          alimento$Proteina <- NULL
-          alimento$Grasas <- NULL
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
+          alimento$Proteina <- NULL
+          alimento$Grasas <- NULL
   
           library(DT)
           datatable(alimento)
@@ -245,13 +245,13 @@ alimento.composicion <- function()
           por = n2 / 100
   
           alimento$Calorias <- NULL
-          alimento$Proteina <- NULL
-          alimento$Grasas <- NULL
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
+          alimento$Proteina <- NULL
+          alimento$Grasas <- NULL
   
           library(DT)
           datatable(alimento)
@@ -270,13 +270,13 @@ alimento.composicion <- function()
           por = n2 / 100
   
           alimento$Calorias <- NULL
-          alimento$Proteina <- NULL
-          alimento$Grasas <- NULL
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
+          alimento$Proteina <- NULL
+          alimento$Grasas <- NULL
   
           library(DT)
           datatable(alimento)
@@ -295,13 +295,13 @@ alimento.composicion <- function()
           por = n2 / 100
   
           alimento$Calorias <- NULL
-          alimento$Proteina <- NULL
-          alimento$Grasas <- NULL
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
+          alimento$Proteina <- NULL
+          alimento$Grasas <- NULL
   
           library(DT)
           datatable(alimento)
@@ -320,13 +320,13 @@ alimento.composicion <- function()
           por = n2 / 100
   
           alimento$Calorias <- NULL
-          alimento$Proteina <- NULL
-          alimento$Grasas <- NULL
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
+          alimento$Proteina <- NULL
+          alimento$Grasas <- NULL
   
           library(DT)
           datatable(alimento)
@@ -345,13 +345,13 @@ alimento.composicion <- function()
           por = n2 / 100
   
           alimento$Calorias <- NULL
-          alimento$Proteina <- NULL
-          alimento$Grasas <- NULL
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
+          alimento$Proteina <- NULL
+          alimento$Grasas <- NULL
   
           library(DT)
           datatable(alimento)
@@ -370,13 +370,13 @@ alimento.composicion <- function()
           por = n2 / 100
   
           alimento$Calorias <- NULL
-          alimento$Proteina <- NULL
-          alimento$Grasas <- NULL
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
+          alimento$Proteina <- NULL
+          alimento$Grasas <- NULL
   
           library(DT)
           datatable(alimento)
@@ -395,13 +395,13 @@ alimento.composicion <- function()
           por = n2 / 100
   
           alimento$Calorias <- NULL
-          alimento$Proteina <- NULL
-          alimento$Grasas <- NULL
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
+          alimento$Proteina <- NULL
+          alimento$Grasas <- NULL
   
           library(DT)
           datatable(alimento)
@@ -420,13 +420,13 @@ alimento.composicion <- function()
           por = n2 / 100
   
           alimento$Calorias <- NULL
-          alimento$Proteina <- NULL
-          alimento$Grasas <- NULL
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
+          alimento$Proteina <- NULL
+          alimento$Grasas <- NULL
   
           library(DT)
           datatable(alimento)
