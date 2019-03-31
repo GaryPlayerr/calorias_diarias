@@ -86,6 +86,16 @@ calorias.diarias <- function(){
   
   print(calorias)
   
+  modif<-readline(prompt="Quieres modificar tus calorias(S/N)?: " )
+  
+  if  (modif == 'S')
+      {
+    
+        calorias<-readline(prompt="Introduce nuevo valor de calorias: " )
+        calorias<-as.integer(calorias)
+    
+      }
+  
   hc <- calorias * 0.6
   prot <- calorias * 0.15
   lip <- calorias * 0.25
