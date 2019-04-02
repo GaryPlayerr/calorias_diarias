@@ -1,9 +1,7 @@
 alimentos.composicion.create <- function(){
-  install.packages("readxl")
   install.packages("gsubfn")
   install.packages("proto")
   install.packages("RSQLite")
-  library("readxl")
   library("gsubfn")
   library("proto")
   library("RSQLite")
