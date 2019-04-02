@@ -21,9 +21,9 @@ calorias.diarias <- function(){
   n3<-readline(prompt="Altura: " )
   n4<-readline(prompt="Peso: " )
   
-  n6<-readline(prompt="Caminas o corres?, Conoces la distancia y el tiempo de entrenamiento? (S/N)  : " )
+  n6<-readline(prompt="Conoces la distancia y el tiempo de entrenamiento? (S/N)  : " )
   
-  if  (n6 == 'N')
+  if  (n6 == 'N' != n6 == ' ')
     {
       n5<-readline(prompt="Ejercicio(1-Poco, 2-Ligero, 3-Moderado, 4-Fuerte, 5-Muy fuerte) : " )
     }  
@@ -70,16 +70,43 @@ calorias.diarias <- function(){
       {
         calorias = TMB * 1.375
       }
-  else if  (n5 == '1')
+  else if  (n5 == '1' != n5 == ' ')
       {
         calorias = TMB * 1.2
       }
   
   if  (n6 == 'S') 
       {
-  
-      cal = 14.26 * n8 + 46.66 * vel + 8.55 * n4 - 1164.85
-    
+      n9<-readline(prompt="Caminas o corres?(S/N) : " ) 
+      if  (n9 == 'S')
+           {
+            cal = 14.26 * n8 + 46.66 * vel + 8.55 * n4 - 1164.85
+           }
+      else if (n9 == 'N')
+           {
+            n10<-readline(prompt="Montas en bici?(S/N) : " ) 
+        
+              if  (n10 == 'S')
+                  {
+                    if  (vel < 16){cal = 4 * 0.0175 * n4}
+                    else if (vel >= 16 & vel < 19){cal = 6 * 0.0175 * n4}
+                    else if (vel >= 19 & vel < 22.5){cal = 8 * 0.0175 * n4}
+                    else if (vel >= 22.5 & vel < 24){cal = 10 * 0.0175 * n4}
+                    else if (vel >= 24 & vel < 35){cal = 12 * 0.0175 * n4}
+                    else if (vel > 39 ){cal = 15 * 0.0175 * n4}
+                    else {cal = 8 * 0.0175 * n4}
+                  }
+              else if (n10 == 'N')
+                  {                
+                    n11<-readline(prompt="Nadas?(S/N) : " ) 
+                
+                      if  (n11 == 'S'){cal = 10 * 0.0175 * n4}  
+                      else{cal = 5.5 * 0.0175 * n4}
+                
+                  }
+              else{cal = 8 * 0.0175 * n4}
+           }
+      else {cal = 7 * 0.0175 * n4}
       calorias = TMB + cal 
   
       }
