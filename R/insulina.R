@@ -17,7 +17,7 @@ insulina <- function()
           insulina1 <- paste('%', ultra, '%',sep = '')
           
           ultrarrapida <- dbGetQuery(db, "select * from insulina_total where Tipo like ?", insulina1)
-          ultrarrapida <- dbGetQuery(db, "select * from insulina_total where Accion = 'ULTRARRAPIDA')
+          ultrarrapida <- dbGetQuery(db, select * from insulina_total where Accion = "ULTRARRAPIDA")
           
           library(DT)
 
