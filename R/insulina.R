@@ -14,10 +14,21 @@ insulina <- function()
 
           ultra<-readline(prompt="Seleccione insulina ultrarrapida LISPRO, ASPARTA O  GLULISINA en MAYUSCULAS, espacios todas: " )
 
-          insulina1 <- paste('%', ultra, '%',sep = '')
+          if  (ultra == ' ')
+            {
+           
+              insulina1 <- paste('ULTRA', '%',sep = '') 
+              ultrarrapida <- dbGetQuery(db, "select * from insulina_total where Accion like ?", insulina1) 
+           
+            }
+  
+          else 
+            {
+              insulina1 <- paste('%', ultra, '%',sep = '')
           
-          ultrarrapida <- dbGetQuery(db, "select * from insulina_total where Tipo like ?", insulina1) 
-          
+              ultrarrapida <- dbGetQuery(db, "select * from insulina_total where Tipo like ?", insulina1) 
+            }
+  
           library(DT)
 
           datatable(ultrarrapida)
