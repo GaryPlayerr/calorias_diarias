@@ -111,7 +111,8 @@ calorias.diarias <- function(){
   
       }
   
-  print(calorias)
+  message("Calorias metabolismo basal mas ejercicio:", calorias)
+  message("Calorias metabolismo basal:", TMB)
   
   modif<-readline(prompt="Quieres modificar tus calorias(S/N)?: " )
   
