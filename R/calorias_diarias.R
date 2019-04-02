@@ -114,25 +114,20 @@ calorias.diarias <- function(){
   message("Calorias metabolismo basal mas ejercicio:", calorias)
   message("Calorias metabolismo basal:", TMB)
   
-  tabla<-readline(prompt="Quieres ver las calorias quemadas en las diferentes actividades fisicas?(S/N) : " ) 
+  tabla<-readline(prompt="Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N) : " ) 
   
   if  (tabla == 'S')
     {
   
         install.packages("readxl")
-        install.packages("gsubfn")
-        install.packages("proto")
-        install.packages("RSQLite")
         library("readxl")
-        library("gsubfn")
-        library("proto")
-        library("RSQLite")
     
         url1<-'https://github.com/BorjaJorge/calorias_diarias/raw/master/R/MET.xlsx'
         p1f <- tempfile()
         download.file(url1, p1f, mode="wb")
         tabla<-read_excel(path = p1f)
-    
+        tabla$Calorias_que_quemarias <- tabla$Calorias * 0.0175 * n4 * n8
+        tabla$Calorias <- NULL
         library(DT)
         datatable(tabla)
     
