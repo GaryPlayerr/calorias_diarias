@@ -14,7 +14,7 @@ insulina <- function()
 
           ultra<-readline(prompt="Seleccione insulina ultrarrapida LISPRO, ASPARTA O  GLULISINA en MAYUSCULAS, espacios todas: " )
 
-          if  (ultra == ' ')
+          if  (ultra == '')
             {
            
               insulina1 <- paste('ULTRA', '%',sep = '') 
