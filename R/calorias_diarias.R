@@ -128,7 +128,7 @@ calorias.diarias <- function(){
         tabla$Calorias_que_quemarias <- tabla$Calorias * 0.0175 * n4 * n8
         tabla$Calorias <- NULL
 
-        datatable(tabla)
+        tabla
     
     }
   
