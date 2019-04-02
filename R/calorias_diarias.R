@@ -131,7 +131,10 @@ calorias.diarias <- function(){
         url1<-'https://github.com/BorjaJorge/calorias_diarias/raw/master/R/MET.xls'
         p1f <- tempfile()
         download.file(url1, p1f, mode="wb")
-        tabla<-read_excel(path = p1f) 
+        tabla<-read_excel(path = p1f)
+    
+        library(DT)
+        datatable(tabla)
     
     }
   
