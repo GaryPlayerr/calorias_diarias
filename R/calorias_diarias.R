@@ -114,24 +114,6 @@ calorias.diarias <- function(){
   message("Calorias metabolismo basal mas ejercicio:", calorias)
   message("Calorias metabolismo basal:", TMB)
   
-  tabla<-readline(prompt="Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N) : " ) 
-  
-  if  (tabla == 'S')
-    {
-        n8<-readline(prompt="Tiempo(minutos) : " )
-        n8<-as.integer(n8)
-    
-        url1<-'https://github.com/BorjaJorge/calorias_diarias/raw/master/R/MET.xlsx'
-        p1f <- tempfile()
-        download.file(url1, p1f, mode="wb")
-        tabla<-read_excel(path = p1f)
-        tabla$Calorias_que_quemarias <- tabla$Calorias * 0.0175 * n4 * n8
-        tabla$Calorias <- NULL
-
-        tabla
-    
-    }
-  
   modif<-readline(prompt="Quieres modificar tus calorias(S/N)?: " )
   
   if  (modif == 'S')
@@ -155,3 +137,21 @@ calorias.diarias <- function(){
   cat("Grasa vegetal: ", lip_veg, " ; Grasa animal: ", lip_an," ; Grasa saturada < ", lip_sat)
   
 }
+
+  tabla<-readline(prompt="Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N) : " ) 
+  
+  if  (tabla == 'S')
+    {
+        n8<-readline(prompt="Tiempo(minutos) : " )
+        n8<-as.integer(n8)
+    
+        url1<-'https://github.com/BorjaJorge/calorias_diarias/raw/master/R/MET.xlsx'
+        p1f <- tempfile()
+        download.file(url1, p1f, mode="wb")
+        tabla<-read_excel(path = p1f)
+        tabla$Calorias_que_quemarias <- tabla$Calorias * 0.0175 * n4 * n8
+        tabla$Calorias <- NULL
+
+        tabla
+    
+    }
