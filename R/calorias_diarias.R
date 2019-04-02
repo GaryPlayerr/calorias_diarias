@@ -125,7 +125,7 @@ calorias.diarias <- function(){
         if  (n8 == '')
             {
               n8<-readline(prompt="Tiempo(minutos) : " )
-              n8<-as.integer(n8
+              n8<-as.integer(n8)
             }
     
         url1<-'https://github.com/BorjaJorge/calorias_diarias/raw/master/R/MET.xlsx'
