@@ -70,7 +70,7 @@ calorias.diarias <- function(){
       {
         calorias = TMB * 1.375
       }
-  else if  (n5 == '1' | n5 == ' ')
+  else if  (n5 == '1' | n5 == '')
       {
         calorias = TMB * 1.2
       }
