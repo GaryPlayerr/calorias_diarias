@@ -88,25 +88,25 @@ calorias.diarias <- function(){
         
               if  (n10 == 'S')
                   {
-                    if  (vel < 16){cal = 4 * 0.0175 * n4}
-                    else if (vel >= 16 & vel < 19){cal = 6 * 0.0175 * n4}
-                    else if (vel >= 19 & vel < 22.5){cal = 8 * 0.0175 * n4}
-                    else if (vel >= 22.5 & vel < 24){cal = 10 * 0.0175 * n4}
-                    else if (vel >= 24 & vel < 35){cal = 12 * 0.0175 * n4}
-                    else if (vel > 39 ){cal = 15 * 0.0175 * n4}
-                    else {cal = 8 * 0.0175 * n4}
+                    if  (vel < 16){cal = 4 * 0.0175 * n4 * n8}
+                    else if (vel >= 16 & vel < 19){cal = 6 * 0.0175 * n4 * n8}
+                    else if (vel >= 19 & vel < 22.5){cal = 8 * 0.0175 * n4 * n8}
+                    else if (vel >= 22.5 & vel < 24){cal = 10 * 0.0175 * n4 * n8}
+                    else if (vel >= 24 & vel < 35){cal = 12 * 0.0175 * n4 * n8}
+                    else if (vel > 39 ){cal = 15 * 0.0175 * n4 * n8}
+                    else {cal = 8 * 0.0175 * n4 * n8}
                   }
               else if (n10 == 'N')
                   {                
                     n11<-readline(prompt="Nadas?(S/N) : " ) 
                 
-                      if  (n11 == 'S'){cal = 10 * 0.0175 * n4}  
-                      else{cal = 5.5 * 0.0175 * n4}
+                      if  (n11 == 'S'){cal = 10 * 0.0175 * n4 * n8}  
+                      else{cal = 5.5 * 0.0175 * n4 * n8}
                 
                   }
-              else{cal = 8 * 0.0175 * n4}
+              else{cal = 8 * 0.0175 * n4 * n8}
            }
-      else {cal = 7 * 0.0175 * n4}
+      else {cal = 7 * 0.0175 * n4 * n8}
       calorias = TMB + cal 
   
       }
