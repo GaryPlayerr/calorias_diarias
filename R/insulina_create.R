@@ -40,8 +40,6 @@ insulina.create <- function(){
   asparta3$Accion <- 'ULTRARRAPIDA'
   asparta3$Tipo   <- 'ASPARTA'
 
-  datatable(asparta3)
-
   insulina_glulisina<- read_html("https://www.vademecum.es/principios-activos-insulina+glulisina-a10ab06") 
 
   lista_insulina_glulisina <-
@@ -85,6 +83,27 @@ insulina.create <- function(){
   insulina_total <- rbind(lispro3, asparta3, glulisina3, regular3)
   insulina_total <- insulina_total[insulina_total$Insulina != '', ]
 
+  library(sqldf)
+
+  db <- dbConnect(SQLite(), dbname="insulina_total")
+
+  dbSendQuery(conn = db,
+
+       "CREATE TABLE insulina_total
+       (Insulina TEXT,
+        Accion TEXT,
+        Tipo TEXT)")
+
+  dbListTables(db)
+  dbListFields(db, "insulina_total")    
+
+  res <- dbReadTable(db, "insulina_total")
+  dbWriteTable(conn = db, name = "insulina_total", value = insulina_total, append = TRUE)
+
+  dbGetQuery(db, "select * from insulina_total")
+  dbRemoveTable(db, "insulina_total")
+  dbListTables(db)
+  out <- dbWriteTable(db, "insulina_total", insulina_total)
   datatable(insulina_total)
 
 }
