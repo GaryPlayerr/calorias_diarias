@@ -118,10 +118,6 @@ calorias.diarias <- function(){
   
   if  (tabla == 'S')
     {
-  
-        install.packages("readxl")
-        library("readxl")
-
         n8<-readline(prompt="Tiempo(minutos) : " )
         n8<-as.integer(n8)
     
@@ -131,7 +127,7 @@ calorias.diarias <- function(){
         tabla<-read_excel(path = p1f)
         tabla$Calorias_que_quemarias <- tabla$Calorias * 0.0175 * n4 * n8
         tabla$Calorias <- NULL
-        library(DT)
+
         datatable(tabla)
     
     }
