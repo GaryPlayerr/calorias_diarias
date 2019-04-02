@@ -128,7 +128,7 @@ calorias.diarias <- function(){
         library("proto")
         library("RSQLite")
     
-        url1<-'https://github.com/BorjaJorge/calorias_diarias/raw/master/R/MET.xls'
+        url1<-'https://github.com/BorjaJorge/calorias_diarias/raw/master/R/MET.xlsx'
         p1f <- tempfile()
         download.file(url1, p1f, mode="wb")
         tabla<-read_excel(path = p1f)
