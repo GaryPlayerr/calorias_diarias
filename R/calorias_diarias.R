@@ -135,13 +135,13 @@ calorias.diarias <- function(){
   message("Calorias Proteina: ", prot)
   message("Calorias Grasa total: ", lip)
   cat("Grasa vegetal: ", lip_veg, " ; Grasa animal: ", lip_an," ; Grasa saturada < ", lip_sat)
-  
-}
 
   tabla<-readline(prompt="Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N) : " ) 
   
   if  (tabla == 'S')
     {
+        library("readxl")
+    
         n8<-readline(prompt="Tiempo(minutos) : " )
         n8<-as.integer(n8)
     
@@ -156,3 +156,4 @@ calorias.diarias <- function(){
         datatable(tabla)
     
     }
+}
