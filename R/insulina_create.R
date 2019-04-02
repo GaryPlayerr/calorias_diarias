@@ -21,8 +21,6 @@ insulina.create <- function(){
   lispro3$Accion <- 'ULTRARRAPIDA'
   lispro3$Tipo   <- 'LISPRO'
 
-  datatable(lispro3)
-
   insulina_asparta<- read_html("https://www.vademecum.es/principios-activos-insulina+asparta-a10ab05") 
 
   lista_insulina_asparta <-
@@ -57,8 +55,6 @@ insulina.create <- function(){
   glulisina3$Accion <- 'ULTRARRAPIDA'
   glulisina3$Tipo   <- 'GLULISINA'
 
-  datatable(glulisina3)
-
   insulina_regular<- read_html("https://www.vademecum.es/principios-activos-insulina+humana+para+inyeccion-a10ab01") 
 
   lista_insulina_regular <-
@@ -75,8 +71,6 @@ insulina.create <- function(){
   colnames(regular3)[colnames(regular3) == 'regular3'] <- 'Insulina' 
   regular3$Accion <- 'RAPIDA'
   regular3$Tipo   <- 'REGULAR'
-
-  datatable(regular3)
 
   install.packages("gdata", dependencies=TRUE)
   library(gdata)
