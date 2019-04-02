@@ -23,7 +23,7 @@ calorias.diarias <- function(){
   
   n6<-readline(prompt="Conoces la distancia y el tiempo de entrenamiento? (S/N)  : " )
   
-  if  (n6 == 'N' | n6 == ' ')
+  if  (n6 == 'N' | n6 == '')
     {
       n5<-readline(prompt="Ejercicio(1-Poco, 2-Ligero, 3-Moderado, 4-Fuerte, 5-Muy fuerte) : " )
     }  
