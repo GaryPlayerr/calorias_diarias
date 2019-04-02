@@ -44,7 +44,7 @@ insulina <- function()
 
           db <- dbConnect(SQLite(), dbname="insulina_total")
 
-          todas <- dbGetQuery(db, "select * from insulina_total)
+          todas <- dbGetQuery(db, "select * from insulina_total")
           
           library(DT)
 
