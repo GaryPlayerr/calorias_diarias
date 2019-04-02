@@ -16,8 +16,8 @@ insulina <- function()
 
           insulina1 <- paste('%', ultra, '%',sep = '')
           
-          ultrarrapida <- dbGetQuery(db, "select * from insulina_total where Tipo like ?", insulina1)
-          ultrarrapida <- dbGetQuery(db, "select * from insulina_total where Accion = 'ULTRARRAPIDA'")
+          ultrarrapida <- dbGetQuery(db, "select * from insulina_total where Tipo like ?", insulina1 )
+                                          AND "Accion = 'ULTRARRAPIDA'")
           
           library(DT)
 
@@ -30,9 +30,9 @@ insulina <- function()
 
           db <- dbConnect(SQLite(), dbname="insulina_total")
   
-          insulina2 <- paste('RAPIDA', '%',sep = '') 
+          insulina2 <- paste('RAPID', '%',sep = '')
 
-          rapida <- dbGetQuery(db, "select * from insulina_total where Tipo like ?", insulina2)
+          rapida <- dbGetQuery(db, "select * from insulina_total where Accion like ?", insulina2)
           
           library(DT)
 
