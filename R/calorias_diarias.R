@@ -143,6 +143,18 @@ calorias.diarias <- function(){
   
       modifbbdd <- readline(prompt="Usuario ya regfistrado. Modificar BBDD?(S/N) : " ) 
     
+      if  (modifbbdd == 'S')
+          {
+      
+            db <- dbConnect(SQLite(), dbname="perfil_insulina")
+
+            dbWriteTable(conn = db, name = "perfil_insulina", value = perfil_insulina, append = TRUE)
+
+            dbSendQuery(conn = db, paste("UPDATE perfil_insulina SET hp = 'MAX' WHERE Comentarios = ("PERFIL")") 
+
+            dbDisconnect(perfil_insulina)
+        
+          }
     }
 
   else
