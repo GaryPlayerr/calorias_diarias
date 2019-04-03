@@ -175,6 +175,10 @@ calorias.diarias <- function(){
             U_Insulina_Correcion <- 0 
             U_Insulina_Comida <- 0 
             Comentarios <- 'PERFIL'   
+        
+            perfil_insulina <- data.frame(Fecha,Sexo,Edad, Altura, Peso, Distancia, Tiempo, Actividad, Calorias_Totales, Calorias_Carbohidratos, Calorias_Proteinas, Calorias_Grasa, Gramos_Carbohidratos, Dia, Horarios_Comida, Alimento, Glucemia_Real, Glucemia_Objetivo, Tipo_Insulina, FSI, Ratio, U_Insulina_Correcion, U_Insulina_Comida, Comentarios)
+    
+            library(sqldf)
       
             db <- dbConnect(SQLite(), dbname="perfil_insulina")
 
