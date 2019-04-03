@@ -165,7 +165,7 @@ calorias.diarias <- function(){
       Calorias_Carbohidratos <- hc
       Calorias_Proteinas <- prot
       Calorias_Grasa <- lip
-      Gramos_carbohidratos <- 0
+      Gramos_Carbohidratos <- 0
       Dia <- ' '
       Horarios_Comida <- ' '
       Alimento <- ' '
