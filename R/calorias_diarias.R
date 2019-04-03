@@ -135,7 +135,21 @@ calorias.diarias <- function(){
   message("Calorias Proteina: ", prot)
   message("Calorias Grasa total: ", lip)
   cat("Grasa vegetal: ", lip_veg, " ; Grasa animal: ", lip_an," ; Grasa saturada < ", lip_sat)
+  
+  crearbbdd <-readline(prompt="Usuario Nuevo. Crear BBDD?(S/N) : " ) 
+  
+  if  (crearbbdd == 'N')
+    {
+  
+      modifbbdd <- readline(prompt="Usuario ya regfistrado. Modificar BBDD?(S/N) : " ) 
+    
+    }
 
+  else
+    {
+  
+    }
+  
   tabla<-readline(prompt="Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N) : " ) 
   
   if  (tabla == 'S')
