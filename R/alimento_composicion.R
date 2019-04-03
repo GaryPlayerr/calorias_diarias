@@ -212,9 +212,7 @@ alimento.composicion <- function()
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
-          fiicar <- alimento$Carbohidratos * por
-          fiiprot <- 0.4 * alimento$Proteina * por
-          alimento$FII_food_insuline_index<- 10.4 + fiicar + fiiprot 
+          alimento$FII_food_insuline_index<- 10.4 + alimento$Carbohidratos * por + 0.4 * alimento$Proteina * por 
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
           alimento$Proteina <- NULL
@@ -234,6 +232,10 @@ alimento.composicion <- function()
   
           n2<-readline(prompt="Cantidad en gramos?")
           n2<-as.integer(n2)
+  
+          alimento$Proteina <- as.integar(alimento$Proteina)
+          alimento$Grasa <- as.integar(alimento$Grasa)
+          alimento$Carbohidratos <- as.integar(alimento$Carbohidratos)
   
           por = n2 / 100
   
