@@ -151,8 +151,11 @@ calorias.diarias <- function(){
             Edad <- n2
             Altura <- n3
             Peso <- n4
-            Distancia <- n7
-            Tiempo <- n8
+        
+            if  (n7 == ''){Distancia <- 0}
+            else {Distancia <- n7}
+            if  (n8 == ''){Tiempo <- 0}
+            else {Tiempo <- n8}
       
             if  (n9 == 'S'){Actividad <- 'Caminas o Corres'}
             else if (n10 == 'S'){Actividad <- 'Bicicleta'}
@@ -248,8 +251,10 @@ calorias.diarias <- function(){
       Edad <- n2
       Altura <- n3
       Peso <- n4
-      Distancia <- n7
-      Tiempo <- n8
+      if  (n7 == ''){Distancia <- 0}
+      else {Distancia <- n7}
+      if  (n8 == ''){Tiempo <- 0}
+      else {Tiempo <- n8}
       
       if  (n9 == 'S'){Actividad <- 'Caminas o Corres'}
       else if (n10 == 'S'){Actividad <- 'Bicicleta'}
