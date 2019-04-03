@@ -186,7 +186,7 @@ calorias.diarias <- function(){
             db <- dbConnect(SQLite(), dbname="perfil_insulina")
  
             query <- "INSERT INTO perfil_insulina VALUES   
-            (Sys.Date(), 
+            (Fecha, 
             n1, 
             n2, 
             n3, 
