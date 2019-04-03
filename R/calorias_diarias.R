@@ -180,35 +180,6 @@ calorias.diarias <- function(){
 
             dbWriteTable(conn = db, name = "perfil_insulina", value = perfil_insulina, append = TRUE)
 
-            dbSendQuery(conn = db, paste("INSERT INTO perfil_insulina
-            VALUES
-
-            (Fecha, 
-            Sexo, 
-            Edad, 
-            Altura, 
-            Peso, 
-            Distancia,
-            Tiempo,
- 	          Actividad ,    
-            Calorias_Totales,
-            Calorias_Carbohidratos ,
-            Calorias_Proteinas ,
-            Calorias_Grasa ,
-            Gramos_Carbohidratos ,
-            Dia ,
-            Horarios_Comida, 
-            Alimento, 
-            Glucemia_Real, 
-            Glucemia_Objetivo, 
-            Tipo_Insulina, 
-            FSI, 
-            Ratio, 
-            U_Insulina_Correcion, 
-            U_Insulina_Comida,
-            Comentarios)")
-
-                        
             dbRemoveTable(db, "perfil_insulina")
             dbListTables(db)
             out <- dbWriteTable(db, "perfil_insulina", perfil_insulina)
