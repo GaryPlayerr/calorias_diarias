@@ -152,7 +152,7 @@ calorias.diarias <- function(){
       Sexo <- n1
       Edad <- n2
       Altura <- n3
-      Pesa <- n4
+      Peso <- n4
       Distancia <- n7
       Tiempo <- n8
       
