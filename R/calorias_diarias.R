@@ -287,7 +287,7 @@ calorias.diarias <- function(){
       dbSendQuery(conn = db,
 
           "CREATE TABLE perfil_insulina
-          (Fecha TEXT,
+          (Fecha DATETIME,
             Sexo TEXT,
             Edad FLOAT,
             Altura FLOAT,
