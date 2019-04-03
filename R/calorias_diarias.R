@@ -208,7 +208,9 @@ calorias.diarias <- function(){
             U_Insulina_Comida,
             Comentarios)")
                         
-        dbDisconnect(conn = db)
+      dbRemoveTable(db, "perfil_insulina")
+      dbListTables(db)
+      out <- dbWriteTable(db, "perfil_insulina", perfil_insulina)
         
           }
     }
