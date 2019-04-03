@@ -151,7 +151,7 @@ calorias.diarias <- function(){
       if  (modifbbdd == 'S')
           {
         
-            Fecha1 <- Sys.Date()
+            Fecha1 <- '2019-04-03'
             Sexo <- n1
             Edad <- n2
             Altura <- n3
