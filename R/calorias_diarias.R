@@ -207,8 +207,6 @@ calorias.diarias <- function(){
             U_Insulina_Correcion, 
             U_Insulina_Comida,
             Comentarios)")
-                        
-            dbDisconnect(db)
         
           }
     }
