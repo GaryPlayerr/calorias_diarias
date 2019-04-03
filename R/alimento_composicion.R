@@ -206,6 +206,10 @@ alimento.composicion <- function()
           n2<-readline(prompt="Cantidad en gramos?")
           n2<-as.integer(n2)
   
+          alimento$Proteina <- as.integar(alimento$Proteina)
+          alimento$Grasa <- as.integar(alimento$Grasa)
+          alimento$Carbohidratos <- as.integar(alimento$Carbohidratos)
+  
           por = n2 / 100
   
           alimento$Calorias <- NULL
