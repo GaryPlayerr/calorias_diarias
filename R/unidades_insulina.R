@@ -2,9 +2,9 @@
 unidades.insulina <- function()
 {
 
-          db <- dbConnect(SQLite(), dbname="insulina_total")
+          db <- dbConnect(SQLite(), dbname="perfil_insulina")
 
-          unidades <- dbGetQuery(db, "select * from insulina_total") 
+          unidades <- dbGetQuery(db, "select * from perfil_insulina") 
 
           library(DT)
 
