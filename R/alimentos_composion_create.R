@@ -5,6 +5,7 @@ alimentos.composicion.create <- function(){
   library("gsubfn")
   library("proto")
   library("RSQLite")
+  library("readxl")
 
   url1<-'https://github.com/BorjaJorge/calorias_diarias/raw/master/R/ficha_alimentacion.xls'
   p1f <- tempfile()
