@@ -27,6 +27,7 @@ alimento.composicion <- function()
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
+          alimento$Carbohidratos_gramos<- alimento$Carbohidratos * por
           alimento$FII_food_insuline_index<- 10.4 + alimento$Carbohidratos * por + 0.4 * alimento$Proteina * por 
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
@@ -58,6 +59,7 @@ alimento.composicion <- function()
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
+          alimento$Carbohidratos_gramos<- alimento$Carbohidratos * por  
           alimento$FII_food_insuline_index<- 10.4 + alimento$Carbohidratos * por + 0.4 * alimento$Proteina * por 
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
@@ -89,6 +91,7 @@ alimento.composicion <- function()
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
+          alimento$Carbohidratos_gramos<- alimento$Carbohidratos * por  
           alimento$FII_food_insuline_index<- 10.4 + alimento$Carbohidratos * por + 0.4 * alimento$Proteina * por 
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
@@ -120,6 +123,7 @@ alimento.composicion <- function()
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
+          alimento$Carbohidratos_gramos<- alimento$Carbohidratos * por  
           alimento$FII_food_insuline_index<- 10.4 + alimento$Carbohidratos * por + 0.4 * alimento$Proteina * por 
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
@@ -151,6 +155,7 @@ alimento.composicion <- function()
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
+          alimento$Carbohidratos_gramos<- alimento$Carbohidratos * por  
           alimento$FII_food_insuline_index<- 10.4 + alimento$Carbohidratos * por + 0.4 * alimento$Proteina * por 
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
@@ -182,6 +187,7 @@ alimento.composicion <- function()
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
+          alimento$Carbohidratos_gramos<- alimento$Carbohidratos * por  
           alimento$FII_food_insuline_index<- 10.4 + alimento$Carbohidratos * por + 0.4 * alimento$Proteina * por 
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
@@ -213,6 +219,7 @@ alimento.composicion <- function()
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
+          alimento$Carbohidratos_gramos<- alimento$Carbohidratos * por  
           alimento$FII_food_insuline_index<- 10.4 + alimento$Carbohidratos * por + 0.4 * alimento$Proteina * por 
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
@@ -244,6 +251,7 @@ alimento.composicion <- function()
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
+          alimento$Carbohidratos_gramos<- alimento$Carbohidratos * por  
           alimento$FII_food_insuline_index<- 10.4 + alimento$Carbohidratos * por + 0.4 * alimento$Proteina * por 
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
@@ -275,6 +283,7 @@ alimento.composicion <- function()
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
+          alimento$Carbohidratos_gramos<- alimento$Carbohidratos * por  
           alimento$FII_food_insuline_index<- 10.4 + alimento$Carbohidratos * por + 0.4 * alimento$Proteina * por 
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
@@ -306,6 +315,7 @@ alimento.composicion <- function()
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
+          alimento$Carbohidratos_gramos<- alimento$Carbohidratos * por  
           alimento$FII_food_insuline_index<- 10.4 + alimento$Carbohidratos * por + 0.4 * alimento$Proteina * por 
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
@@ -337,6 +347,7 @@ alimento.composicion <- function()
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
+          alimento$Carbohidratos_gramos<- alimento$Carbohidratos * por  
           alimento$FII_food_insuline_index<- 10.4 + alimento$Carbohidratos * por + 0.4 * alimento$Proteina * por 
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
@@ -368,6 +379,7 @@ alimento.composicion <- function()
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
+          alimento$Carbohidratos_gramos<- alimento$Carbohidratos * por  
           alimento$FII_food_insuline_index<- 10.4 + alimento$Carbohidratos * por + 0.4 * alimento$Proteina * por 
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
@@ -399,6 +411,7 @@ alimento.composicion <- function()
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
+          alimento$Carbohidratos_gramos<- alimento$Carbohidratos * por  
           alimento$FII_food_insuline_index<- 10.4 + alimento$Carbohidratos * por + 0.4 * alimento$Proteina * por 
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
@@ -430,6 +443,7 @@ alimento.composicion <- function()
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
+          alimento$Carbohidratos_gramos<- alimento$Carbohidratos * por  
           alimento$FII_food_insuline_index<- 10.4 + alimento$Carbohidratos * por + 0.4 * alimento$Proteina * por 
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
@@ -461,6 +475,7 @@ alimento.composicion <- function()
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
+          alimento$Carbohidratos_gramos<- alimento$Carbohidratos * por  
           alimento$FII_food_insuline_index<- 10.4 + alimento$Carbohidratos * por + 0.4 * alimento$Proteina * por 
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
@@ -492,6 +507,7 @@ alimento.composicion <- function()
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
+          alimento$Carbohidratos_gramos<- alimento$Carbohidratos * por  
           alimento$FII_food_insuline_index<- 10.4 + alimento$Carbohidratos * por + 0.4 * alimento$Proteina * por 
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
@@ -523,6 +539,7 @@ alimento.composicion <- function()
           alimento$Proteina_calorias <- alimento$Proteina * por * 4
           alimento$Grasas_calorias <- alimento$Grasas * por * 9
           alimento$Carbohidratos_calorias<- alimento$Carbohidratos * por * 4
+          alimento$Carbohidratos_gramos<- alimento$Carbohidratos * por  
           alimento$FII_food_insuline_index<- 10.4 + alimento$Carbohidratos * por + 0.4 * alimento$Proteina * por 
           alimento$Agua <- NULL
           alimento$Cenizas <- NULL
