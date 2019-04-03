@@ -182,8 +182,57 @@ calorias.diarias <- function(){
       
             db <- dbConnect(SQLite(), dbname="perfil_insulina")
 
-            dbWriteTable(conn = db, name = "perfil_insulina", value = perfil_insulina, append = TRUE)
-
+            dbExecute(conn = db, "INSERT INTO perfil_insulina 
+            (Fecha, 
+            Sexo, 
+            Edad, 
+            Altura, 
+            Peso, 
+            Distancia,
+            Tiempo,
+ 	          Actividad ,    
+            Calorias_Totales,
+            Calorias_Carbohidratos ,
+            Calorias_Proteinas ,
+            Calorias_Grasa ,
+            Gramos_Carbohidratos ,
+            Dia ,
+            Horarios_Comida, 
+            Alimento, 
+            Glucemia_Real, 
+            Glucemia_Objetivo, 
+            Tipo_Insulina, 
+            FSI, 
+            Ratio, 
+            U_Insulina_Correcion, 
+            U_Insulina_Comida,
+            Comentarios)
+            VALUES   
+            (Fecha, 
+            Sexo, 
+            Edad, 
+            Altura, 
+            Peso, 
+            Distancia,
+            Tiempo,
+ 	          Actividad ,    
+            Calorias_Totales,
+            Calorias_Carbohidratos ,
+            Calorias_Proteinas ,
+            Calorias_Grasa ,
+            Gramos_Carbohidratos ,
+            Dia ,
+            Horarios_Comida, 
+            Alimento, 
+            Glucemia_Real, 
+            Glucemia_Objetivo, 
+            Tipo_Insulina, 
+            FSI, 
+            Ratio, 
+            U_Insulina_Correcion, 
+            U_Insulina_Comida,
+            Comentarios)")            
+        
             dbRemoveTable(db, "perfil_insulina")
             dbListTables(db)
             out <- dbWriteTable(db, "perfil_insulina", perfil_insulina)
@@ -233,7 +282,7 @@ calorias.diarias <- function(){
       dbSendQuery(conn = db,
 
           "CREATE TABLE perfil_insulina
-          (Fecha DATE,
+          (Fecha TEXT,
             Sexo TEXT,
             Edad FLOAT,
             Altura FLOAT,
