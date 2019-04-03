@@ -159,10 +159,10 @@ calorias.diarias <- function(){
             Distancia <- n7
             Tiempo <- n8
       
-            if  (n9 == 'S'){Actividad <- 'Caminas o Corres'}
-            else if (n10 == 'S'){Actividad <- 'Bicicleta'}
-            else if (n10 == 'N'){Actividad <- 'Natacion'}
-            else{Actividad <- 'Otros'}         
+            if  (n9 == 'S'){Actividad1 <- 'Caminas o Corres'}
+            else if (n10 == 'S'){Actividad1 <- 'Bicicleta'}
+            else if (n10 == 'N'){Actividad1 <- 'Natacion'}
+            else{Actividad1 <- 'Otros'}         
       
             Calorias_Totales <- calorias
             Calorias_Carbohidratos <- hc
@@ -213,30 +213,30 @@ calorias.diarias <- function(){
             U_Insulina_Comida,
             Comentarios)
             VALUES   
-            (Fecha, 
-            Sexo, 
-            Edad, 
-            Altura, 
-            Peso, 
-            Distancia,
-            Tiempo,
- 	          Actividad ,    
-            Calorias_Totales,
-            Calorias_Carbohidratos ,
-            Calorias_Proteinas ,
-            Calorias_Grasa ,
-            Gramos_Carbohidratos ,
-            Dia ,
-            Horarios_Comida, 
-            Alimento, 
-            Glucemia_Real, 
-            Glucemia_Objetivo, 
-            Tipo_Insulina, 
-            FSI, 
-            Ratio, 
-            U_Insulina_Correcion, 
-            U_Insulina_Comida,
-            Comentarios)")            
+            (Sys.Date(), 
+            n1, 
+            n2, 
+            n3, 
+            n4, 
+            n7,
+            n8,
+ 	          Actividad1 ,    
+            calorias,
+            hc ,
+            prot,
+            lip,
+            0 ,
+            ' ' ,
+            ' ', 
+            ' ', 
+            0, 
+            0, 
+            ' ', 
+            0, 
+            0, 
+            0, 
+            0,
+            'PERFIL')")            
         
             dbRemoveTable(db, "perfil_insulina")
             dbListTables(db)
