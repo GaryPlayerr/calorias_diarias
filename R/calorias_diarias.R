@@ -157,7 +157,7 @@ calorias.diarias <- function(){
       Tiempo <- n8
       
       if  (n9 == 'S'){Actividad <- 'Caminas o Corres'}
-      else if (n10 == 'S'{Actividad <- 'Bicicleta'}
+      else if (n10 == 'S'){Actividad <- 'Bicicleta'}
       else if (n10 == 'N'){Actividad <- 'Natacion'}
       else{Actividad <- 'Otros'}         
       
