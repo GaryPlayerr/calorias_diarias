@@ -207,7 +207,7 @@ alimento.composicion <- function()
           n2<-as.integer(n2)
   
           alimento$Proteina <- as.integer(alimento$Proteina)
-          alimento$Grasa <- as.integer(alimento$Grasa)
+          alimento$Grasas <- as.integer(alimento$Grasas)
           alimento$Carbohidratos <- as.integer(alimento$Carbohidratos)
   
           por = n2 / 100
@@ -238,7 +238,7 @@ alimento.composicion <- function()
           n2<-as.integer(n2)
   
           alimento$Proteina <- as.integer(alimento$Proteina)
-          alimento$Grasa <- as.integer(alimento$Grasa)
+          alimento$Grasas <- as.integer(alimento$Grasas)
           alimento$Carbohidratos <- as.integer(alimento$Carbohidratos)
   
           por = n2 / 100
