@@ -3,6 +3,9 @@ calorias.diarias <- function(){
   n1<-readline(prompt="Sexo(M/F): " )
   n7 <- 0
   n8 <- 0
+  n9 <- 'N'
+  n10 <- 'N'
+  n11 <- 'N'
   
   if (n1 != 'M' & n1 != 'F')
     {
@@ -153,11 +156,8 @@ calorias.diarias <- function(){
             Edad <- n2
             Altura <- n3
             Peso <- n4
-        
-            if  (n7 == 0){Distancia <- 0}
-            else {Distancia <- n7}
-            if  (n8 == 0){Tiempo <- 0}
-            else {Tiempo <- n8}
+            Distancia <- n7
+            Tiempo <- n8
       
             if  (n9 == 'S'){Actividad <- 'Caminas o Corres'}
             else if (n10 == 'S'){Actividad <- 'Bicicleta'}
@@ -253,10 +253,8 @@ calorias.diarias <- function(){
       Edad <- n2
       Altura <- n3
       Peso <- n4
-      if  (n7 == 0){Distancia <- 0}
-      else {Distancia <- n7}
-      if  (n8 == 0){Tiempo <- 0}
-      else {Tiempo <- n8}
+      Distancia <- n7
+      Tiempo <- n8
       
       if  (n9 == 'S'){Actividad <- 'Caminas o Corres'}
       else if (n10 == 'S'){Actividad <- 'Bicicleta'}
