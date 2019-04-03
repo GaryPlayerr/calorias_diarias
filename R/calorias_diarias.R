@@ -256,10 +256,10 @@ calorias.diarias <- function(){
       Distancia <- n7
       Tiempo <- n8
       
-      if  (n6 == 'N' | n6 == ''){Actividad1 <- 'Otros'}
-      else if  (n9 == 'S'){Actividad1 <- 'Caminas o Corres'}
-      else if (n10 == 'S'){Actividad1 <- 'Bicicleta'}
-      else if (n10 == 'N'){Actividad1 <- 'Natacion'}       
+      if  (n6 == 'N' | n6 == ''){Actividad <- 'Otros'}
+      else if  (n9 == 'S'){Actividad <- 'Caminas o Corres'}
+      else if (n10 == 'S'){Actividad <- 'Bicicleta'}
+      else if (n10 == 'N'){Actividad <- 'Natacion'}       
       
       Calorias_Totales <- calorias
       Calorias_Carbohidratos <- hc
