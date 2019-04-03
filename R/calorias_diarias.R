@@ -207,10 +207,11 @@ calorias.diarias <- function(){
             U_Insulina_Correcion, 
             U_Insulina_Comida,
             Comentarios)")
+
                         
-      dbRemoveTable(db, "perfil_insulina")
-      dbListTables(db)
-      out <- dbWriteTable(db, "perfil_insulina", perfil_insulina)
+            dbRemoveTable(db, "perfil_insulina")
+            dbListTables(db)
+            out <- dbWriteTable(db, "perfil_insulina", perfil_insulina)
         
           }
     }
