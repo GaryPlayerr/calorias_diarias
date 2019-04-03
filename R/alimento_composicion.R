@@ -17,6 +17,10 @@ alimento.composicion <- function()
           n2<-readline(prompt="Cantidad en gramos?")
           n2<-as.integer(n2)
   
+          alimento$Proteina <- as.integer(alimento$Proteina)
+          alimento$Grasas <- as.integer(alimento$Grasas)
+          alimento$Carbohidratos <- as.integer(alimento$Carbohidratos)
+  
           por = n2 / 100
   
           alimento$Calorias <- NULL
@@ -43,6 +47,10 @@ alimento.composicion <- function()
 
           n2<-readline(prompt="Cantidad en gramos?")
           n2<-as.integer(n2)
+  
+          alimento$Proteina <- as.integer(alimento$Proteina)
+          alimento$Grasas <- as.integer(alimento$Grasas)
+          alimento$Carbohidratos <- as.integer(alimento$Carbohidratos)
   
           por = n2 / 100
   
@@ -71,6 +79,10 @@ alimento.composicion <- function()
           n2<-readline(prompt="Cantidad en gramos?")
           n2<-as.integer(n2)
   
+          alimento$Proteina <- as.integer(alimento$Proteina)
+          alimento$Grasas <- as.integer(alimento$Grasas)
+          alimento$Carbohidratos <- as.integer(alimento$Carbohidratos)  
+  
           por = n2 / 100
   
           alimento$Calorias <- NULL
@@ -97,6 +109,10 @@ alimento.composicion <- function()
   
           n2<-readline(prompt="Cantidad en gramos?")
           n2<-as.integer(n2)
+  
+          alimento$Proteina <- as.integer(alimento$Proteina)
+          alimento$Grasas <- as.integer(alimento$Grasas)
+          alimento$Carbohidratos <- as.integer(alimento$Carbohidratos)  
   
           por = n2 / 100
   
@@ -125,6 +141,10 @@ alimento.composicion <- function()
           n2<-readline(prompt="Cantidad en gramos?")
           n2<-as.integer(n2)
   
+          alimento$Proteina <- as.integer(alimento$Proteina)
+          alimento$Grasas <- as.integer(alimento$Grasas)
+          alimento$Carbohidratos <- as.integer(alimento$Carbohidratos)  
+  
           por = n2 / 100
   
           alimento$Calorias <- NULL
@@ -152,6 +172,10 @@ alimento.composicion <- function()
           n2<-readline(prompt="Cantidad en gramos?")
           n2<-as.integer(n2)
   
+          alimento$Proteina <- as.integer(alimento$Proteina)
+          alimento$Grasas <- as.integer(alimento$Grasas)
+          alimento$Carbohidratos <- as.integer(alimento$Carbohidratos)  
+  
           por = n2 / 100
   
           alimento$Calorias <- NULL
@@ -178,6 +202,10 @@ alimento.composicion <- function()
   
           n2<-readline(prompt="Cantidad en gramos?")
           n2<-as.integer(n2)
+  
+          alimento$Proteina <- as.integer(alimento$Proteina)
+          alimento$Grasas <- as.integer(alimento$Grasas)
+          alimento$Carbohidratos <- as.integer(alimento$Carbohidratos)  
   
           por = n2 / 100
   
@@ -268,6 +296,10 @@ alimento.composicion <- function()
           n2<-readline(prompt="Cantidad en gramos?")
           n2<-as.integer(n2)
   
+          alimento$Proteina <- as.integer(alimento$Proteina)
+          alimento$Grasas <- as.integer(alimento$Grasas)
+          alimento$Carbohidratos <- as.integer(alimento$Carbohidratos)  
+  
           por = n2 / 100
   
           alimento$Calorias <- NULL
@@ -294,6 +326,10 @@ alimento.composicion <- function()
   
           n2<-readline(prompt="Cantidad en gramos?")
           n2<-as.integer(n2)
+  
+          alimento$Proteina <- as.integer(alimento$Proteina)
+          alimento$Grasas <- as.integer(alimento$Grasas)
+          alimento$Carbohidratos <- as.integer(alimento$Carbohidratos)  
   
           por = n2 / 100
   
@@ -322,6 +358,10 @@ alimento.composicion <- function()
           n2<-readline(prompt="Cantidad en gramos?")
           n2<-as.integer(n2)
   
+          alimento$Proteina <- as.integer(alimento$Proteina)
+          alimento$Grasas <- as.integer(alimento$Grasas)
+          alimento$Carbohidratos <- as.integer(alimento$Carbohidratos)  
+  
           por = n2 / 100
   
           alimento$Calorias <- NULL
@@ -348,6 +388,10 @@ alimento.composicion <- function()
   
           n2<-readline(prompt="Cantidad en gramos?")
           n2<-as.integer(n2)
+  
+          alimento$Proteina <- as.integer(alimento$Proteina)
+          alimento$Grasas <- as.integer(alimento$Grasas)
+          alimento$Carbohidratos <- as.integer(alimento$Carbohidratos)  
   
           por = n2 / 100
   
@@ -376,6 +420,10 @@ alimento.composicion <- function()
           n2<-readline(prompt="Cantidad en gramos?")
           n2<-as.integer(n2)
   
+          alimento$Proteina <- as.integer(alimento$Proteina)
+          alimento$Grasas <- as.integer(alimento$Grasas)
+          alimento$Carbohidratos <- as.integer(alimento$Carbohidratos)  
+  
           por = n2 / 100
   
           alimento$Calorias <- NULL
@@ -402,6 +450,10 @@ alimento.composicion <- function()
   
           n2<-readline(prompt="Cantidad en gramos?")
           n2<-as.integer(n2)
+  
+          alimento$Proteina <- as.integer(alimento$Proteina)
+          alimento$Grasas <- as.integer(alimento$Grasas)
+          alimento$Carbohidratos <- as.integer(alimento$Carbohidratos)  
   
           por = n2 / 100
   
@@ -430,6 +482,10 @@ alimento.composicion <- function()
           n2<-readline(prompt="Cantidad en gramos?")
           n2<-as.integer(n2)
   
+          alimento$Proteina <- as.integer(alimento$Proteina)
+          alimento$Grasas <- as.integer(alimento$Grasas)
+          alimento$Carbohidratos <- as.integer(alimento$Carbohidratos)  
+  
           por = n2 / 100
   
           alimento$Calorias <- NULL
@@ -456,6 +512,10 @@ alimento.composicion <- function()
   
           n2<-readline(prompt="Cantidad en gramos?")
           n2<-as.integer(n2)
+  
+          alimento$Proteina <- as.integer(alimento$Proteina)
+          alimento$Grasas <- as.integer(alimento$Grasas)
+          alimento$Carbohidratos <- as.integer(alimento$Carbohidratos)  
   
           por = n2 / 100
   
