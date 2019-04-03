@@ -220,7 +220,7 @@ calorias.diarias <- function(){
             n4, 
             n7,
             n8,
- 	          Actividad1 ,    
+ 	          'OTROS' ,    
             calorias,
             hc ,
             prot,
