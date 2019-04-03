@@ -76,14 +76,14 @@ Cereales patron de busqueda en MAYUSCULAS: por ejemplo ARROZ
 Introducimos la cantidad en gramas. Cantidad en gramos? por ejmplo 80
 Obtenemos los siguienbtes resultados, por ejemplo:
 
-	Cereales	         Estado	    Proteina_calorias	Grasas_calorias	Carbohidratos_calorias	Carbohidratos_gramos
-1	ARROZ	             DESCASAC.	  26.24	           4.32	              246.4	                     77
-2	ARROZ	             HERVIDO	     7.36	           1.44	               99.52	                   31.1
-3	ARROZ	             PAELLA	      22.08	           2.88	              238.4	                     74.5
-4	ALMIDON DE ARROZ	 GRANO	       2.56		       272.64	               85.2
-5	HARINA DE ARROZ	   GRANO	      23.68	           4.32	              252.8	                     79
+	Cereales	         Estado	    Proteina_calorias	Grasas_calorias	Carbohidratos_calorias	FII_food_insulin_index
+1	ARROZ	             DESCASAC.	     26.24	           4.32	              246.4	                     77
+2	ARROZ	             HERVIDO	      7.36	           1.44	               99.52	                   31.1
+3	ARROZ	             PAELLA	      22.08	           2.88	              238.4	                   74.5
+4	ALMIDON DE ARROZ     GRANO	      2.56		 272.64	               85.2
+5	HARINA DE ARROZ	     GRANO	      23.68	           4.32	              252.8	                     79
 
-  
+FII (food insuline index): tiene en cuenta las proteinas grasas y carbohidratos. Son deseables valores bajos para que no se produjan incrementos rapidos de azucar en sangre.
 
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 
