@@ -136,7 +136,7 @@ calorias.diarias <- function(){
   message("Calorias Grasa total: ", lip)
   cat("Grasa vegetal: ", lip_veg, " ; Grasa animal: ", lip_an," ; Grasa saturada < ", lip_sat)
   
-  crearbbdd <-readline(prompt="Usuario Nuevo. Crear BBDD?(S/N) : " ) 
+  crearbbdd <-readline(prompt="Usuario Nuevo?(S/N) : " ) 
   
   if  (crearbbdd == 'N')
     {
@@ -148,7 +148,7 @@ calorias.diarias <- function(){
   else
     {
   
-      Fecha_actual <- Sys.Date()
+      Fecha <- Sys.Date()
       Sexo <- n1
       Edad <- n2
       Altura <- n3
