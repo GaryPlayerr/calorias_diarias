@@ -222,7 +222,7 @@ calorias.diarias <- function(){
   else
     {
   
-      Fecha <- Sys.Date()
+      Fecha <- '2019-04-03'
       Sexo <- n1
       Edad <- n2
       Altura <- n3
@@ -261,7 +261,7 @@ calorias.diarias <- function(){
       dbSendQuery(conn = db,
 
           "CREATE TABLE perfil_insulina
-          (Fecha DATETIME,
+          (Fecha TEXT,
             Sexo TEXT,
             Edad FLOAT,
             Altura FLOAT,
