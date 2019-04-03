@@ -3,6 +3,7 @@ insulina.create <- function(){
   library(DT)
   install.packages("rvest")
   library(rvest)
+  library(stringr)
 
   insulina_lispro<- read_html("https://www.vademecum.es/principios-activos-insulina+lispro-a10ab04") 
 
