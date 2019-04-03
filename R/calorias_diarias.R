@@ -148,6 +148,81 @@ calorias.diarias <- function(){
   else
     {
   
+      Fecha_actual <- Sys.Date()
+      Sexo <- n1
+      Edad <- n2
+      Altura <- n3
+      Pesa <- n4
+      Distancia <- n7
+      Tiempo <- n8
+      
+      if  (n9 == 'S'){Actividad <- 'Caminas o Corres'}
+      else if (n10 == 'S'{Actividad <- 'Bicicleta'}
+      else if (n10 == 'N'){Actividad <- 'Natacion'}
+      else{Actividad <- 'Otros'}         
+      
+      Calorias_Totales <- calorias
+      Calorias_Carbohidratos <- hc
+      Calorias_Proteinas <- prot
+      Calorias_Grasa <- lip
+      Gramos_carbohidratos <- 0
+      Dia <- ' '
+      Horarios_Comida <- ' '
+      Alimento <- ' '
+      Glucemia_Real <- 0
+      Glucemia_Objetivo <- 0
+      Tipo_Insulina <- ' '
+      FSI <- 0
+      Ratio <- 0  
+      U_Insulina_Correcion <- 0 
+      U_Insulina_Comida <- 0 
+      Comentarios <- ' '         
+    
+      perfil_insulina <- data.frame(Fecha,Sexo,Edad, Altura, Peso, Distancia, Tiempo, Actividad, Calorias_Totales, Calorias_Carbohidratos, Calorias_Proteinas, Calorias_Grasa, Gramos_Carbohidratos, Dia, Horarios_Comida, Alimento, Glucemia_Real, Glucemia_Objetivo, Tipo_Insulina, FSI, Ratio, U_Insulina_Correcion, U_Insulina_Comida, Comentarios)
+    
+      library(sqldf)
+
+      db <- dbConnect(SQLite(), dbname="perfil_insulina")
+
+      dbSendQuery(conn = db,
+
+          "CREATE TABLE perfil_insulina
+          (Fecha DATE,
+            Sexo TEXT,
+            Edad FLOAT,
+            Altura FLOAT,
+            Peso FLOAT,
+            Distancia FLOAT,
+            Tiempo FLOAT,
+            Actividad TEXT,
+            Calorias_Totales FLOAT,
+            Calorias_Carbohidratos FLOAT,
+            Calorias_Proteinas FLOAT,
+            Calorias_Grasa FLOAT,
+            Gramos_Carbohidratos FLOAT,
+            Dia TEXT,
+            Horarios_Comida TEXT,
+            Alimento TEXT,
+            Glucemia_Real FLOAT,
+            Glucemia_Objetivo FLOAT,
+            Tipo_Insulina TEXT,
+            FSI FLOAT,
+            Ratio FLOAT,
+            U_Insulina_Correcion FLOAT,
+            U_Insulina_Comida FLOAT,
+            Comentarios TEXT)")
+
+      dbListTables(db)
+      dbListFields(db, "perfil_insulina")    
+
+      res <- dbReadTable(db, "perfil_insulina")
+
+      dbWriteTable(conn = db, name = "perfil_insulina", value = perfil_insulina, append = TRUE)
+      dbGetQuery(db, "select * from perfil_insulina")
+      dbRemoveTable(db, "perfil_insulina")
+      dbListTables(db)
+      out <- dbWriteTable(db, "perfil_insulina", perfil_insulina)
+    
     }
   
   tabla<-readline(prompt="Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N) : " ) 
