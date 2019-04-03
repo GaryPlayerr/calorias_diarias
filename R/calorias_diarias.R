@@ -151,7 +151,7 @@ calorias.diarias <- function(){
       if  (modifbbdd == 'S')
           {
         
-            Fecha <- Sys.Date()
+            Fecha1 <- Sys.Date()
             Sexo <- n1
             Edad <- n2
             Altura <- n3
@@ -159,10 +159,10 @@ calorias.diarias <- function(){
             Distancia <- n7
             Tiempo <- n8
       
-            if  (n6 == 'N' | n6 == ''){Actividad <- 'Otros'}
-            else if  (n9 == 'S'){Actividad <- 'Caminas o Corres'}
-            else if (n10 == 'S'){Actividad <- 'Bicicleta'}
-            else if (n10 == 'N'){Actividad <- 'Natacion'}     
+            if  (n6 == 'N' | n6 == ''){Actividad1 <- 'Otros'}
+            else if  (n9 == 'S'){Actividad1 <- 'Caminas o Corres'}
+            else if (n10 == 'S'){Actividad1 <- 'Bicicleta'}
+            else if (n10 == 'N'){Actividad1 <- 'Natacion'}     
       
             Calorias_Totales <- calorias
             Calorias_Carbohidratos <- hc
@@ -186,14 +186,14 @@ calorias.diarias <- function(){
             db <- dbConnect(SQLite(), dbname="perfil_insulina")
  
             query <- "INSERT INTO perfil_insulina VALUES   
-            (Fecha, 
+            (Fecha1, 
             n1, 
             n2, 
             n3, 
             n4, 
             n7,
             n8,
- 	          Actividad ,    
+ 	          Actividad1 ,    
             calorias,
             hc ,
             prot,
