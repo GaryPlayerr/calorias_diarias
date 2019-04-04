@@ -52,25 +52,33 @@ main <- function()
     {
       n2<-readline(prompt="Ayuda Calcular calorias diarias y registrar/modificar perfil(S/N): " )
         if  (n2 == 'S')
-          {?calorias.diarias 
-           break
+          {
+            ?calorias.diarias 
           }  
-      n3<-readline(prompt="Ayuda Consultar BBDD de alimentos(S/N): " ) 
-        if  (n3 == 'S')
-          {?alimento.composicion 
-           break
+        else if (n2 == 'N')
+          {
+          n3<-readline(prompt="Ayuda Consultar BBDD de alimentos(S/N): " ) 
+          if  (n3 == 'S')
+            {
+              ?alimento.composicion 
+            }
           }
-      n4<-readline(prompt="Ayuda Consultar BBDD de Insulinas(S/N): " ) 
-        if  (n4 == 'S')
-          {?insulina 
-           break
-          }
-      n5<-readline(prompt="Ayuda Consultar Unidades de Insulina y dietas de dias anteriore(S/N): " ) 
-        if  (n5 == 'S')
-          {?unidades.insulina 
-           break
-          }      
-    
+          else if  (n3 == 'N')
+            {
+            n4<-readline(prompt="Ayuda Consultar BBDD de Insulinas(S/N): " ) 
+            if  (n4 == 'S')
+              {
+                ?insulina 
+              }
+            }
+            else if (n4 == 'N')
+            {
+            n5<-readline(prompt="Ayuda Consultar Unidades de Insulina y dietas de dias anteriore(S/N): " )
+            if  (n5 == 'S')
+              {
+               ?unidades.insulina 
+              } 
+            }
     }  
     
 }
