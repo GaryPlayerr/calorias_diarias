@@ -1,7 +1,7 @@
 
 unidades.insulina <- function(){
 
-
+   n1<-readline(prompt="Sexo(M/F): " )	
        library(sqldf)
           
        db <- dbConnect(SQLite(), dbname="unidades_insulina")
