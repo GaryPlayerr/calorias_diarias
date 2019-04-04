@@ -25,8 +25,8 @@ unidades.insulina <- function(){
 	Calorias_Alimento_Carbohidratos <- readline(prompt="Calorias Carbohidratos?: " )	
 	Calorias_Alimento_Proteinas <- readline(prompt="Calorias Proteinas?: " )	
 	Calorias_Alimento_Grasas <- readline(prompt="Calorias Grasas?: " )	
-        w <- wday(Fecha)	
-        Dia <- wday(Fecha, label = TRUE) 
+	
+        Dia <- 'Thu'
         Glucemia_Real <- 0
         Glucemia_Objetivo <- 0
         Tipo_Insulina <- readline(prompt="Tipo de Insulina?(RAPIDA/ULTRARRAPIDA) : " )
