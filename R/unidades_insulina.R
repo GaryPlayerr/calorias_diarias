@@ -1,31 +1,37 @@
 
 unidades.insulina <- function(){
 
+
+       library(sqldf)
+          
+       db <- dbConnect(SQLite(), dbname="unidades_insulina")
+
+       unidades <- dbGetQuery(db, "select * from unidades_insulina") 
       
 
       Fecha <- 	
-      Sexo <- n1
-      Edad <- n2
-      Altura <- n3
-      Peso <- n4
-      Distancia <- n7
-      Tiempo <- n8
-      Actividad <-	   
-      Calorias_Totales <- calorias
-      Calorias_Carbohidratos <- hc
-      Calorias_Proteinas <- prot
-      Calorias_Grasa <- lip
-      Gramos_Carbohidratos
-      Dia
+      Sexo <- unidades$Sexo
+      Edad <- unidades$Edad
+      Altura <- unidades$Altura
+      Peso <- unidades$Peso
+      Distancia <- unidades$Distancia
+      Tiempo <- unidades$Tiempo
+      Actividad <- unidades$Actividad	   
+      Calorias_Totales <- unidades$calorias
+      Calorias_Carbohidratos <- unidades$hc
+      Calorias_Proteinas <- unidades$prot
+      Calorias_Grasa <- unidades$lip
+      Gramos_Carbohidratos <- 
+      Dia <-
       Horaio_Comida
       Alimento
-      Glucemia_Real
-      Glucemia_Objetivo
-      Tipo_Insulina
-      FSI
-      Ratio
-      U_Insulina_Correcion   	 	
-      U_Insulina_Comida
+      Glucemia_Real <- 0
+      Glucemia_Objetivo <- 0
+      Tipo_Insulina <-
+      FSI <- 0
+      Ratio <- 0
+      U_Insulina_Correcion <- 0  	 	
+      U_Insulina_Comida <- 0
       Comentarios <-         
 
       unidades_insulina <- data.frame(Fecha, Sexo, Edad, Altura, Peso, Distancia, Tiempo, Actividad, Calorias_Totales, Calorias_Carbohidratos, 
