@@ -187,8 +187,8 @@ calorias.diarias <- function(){
  
             query <- "INSERT INTO perfil_insulina VALUES   
             ('2019-04-04', 
-            n1, 
-            n2, 
+            :n1, 
+            :n2, 
             n3, 
             n4, 
             n7,
