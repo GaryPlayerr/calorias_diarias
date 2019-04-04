@@ -50,7 +50,7 @@ main <- function()
         if  (n2 == 'S')
           {
             ?calorias.diarias 
-            print('Ayuda')
+            print('Ayuda Calorias')
           }  
         else if (n2 == 'N')
           {
@@ -58,7 +58,7 @@ main <- function()
           if  (n3 == 'S')
             {
               ?alimento.composicion 
-              print('Ayuda')
+              print('Ayuda Alimentos')
             }
           }
           else if  (n3 == 'N')
@@ -67,7 +67,7 @@ main <- function()
             if  (n4 == 'S')
               {
                 ?insulina 
-                print('Ayuda')
+                print('Ayuda Insulinas')
               }
             }
             else if (n4 == 'N')
@@ -76,7 +76,7 @@ main <- function()
             if  (n5 == 'S')
               {
                ?unidades.insulina 
-               print('Ayuda')
+               print('Ayuda Unidades Insulina y Dieta')
               } 
             }
     }  
