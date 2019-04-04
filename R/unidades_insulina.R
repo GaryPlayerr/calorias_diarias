@@ -10,7 +10,7 @@ unidades.insulina <- function(){
 	
 	Fecha1 <- today() 
 	Fecha <- as.Date(Fecha1,format="%Y%m%d")
-	Fecha <- as.integer(Fecha)
+	Fecha <- as.character(Fecha)
         Sexo <- unidades$Sexo
         Edad <- unidades$Edad
         Altura <- unidades$Altura
@@ -75,7 +75,7 @@ unidades.insulina <- function(){
         	dbSendQuery(conn = db,
 
           	"CREATE TABLE unidades_insulina
-            	(Fecha INTEGER,
+            	(Fecha TEXT,
 		Sexo TEXT,
             	Edad FLOAT,
             	Altura FLOAT,
