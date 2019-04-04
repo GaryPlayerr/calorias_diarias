@@ -4,10 +4,6 @@ unidades.insulina <- function(){
       library(sqldf)
       library(lubridate)		
 	     
-      db <- dbConnect(SQLite(), dbname="unidades_insulina")
-
-      unidades <- dbGetQuery(db, "select * from unidades_insulina") 
-      
       Fecha <- today()	
       Sexo <- unidades$Sexo
       Edad <- unidades$Edad
@@ -42,8 +38,11 @@ unidades.insulina <- function(){
    if  (crearbbdd == 'S')
        {		
 
-      db <- dbConnect(SQLite(), dbname="unidades_insulina")
-      dbSendQuery(conn = db,
+        db <- dbConnect(SQLite(), dbname="unidades_insulina")
+
+        unidades <- dbGetQuery(db, "select * from unidades_insulina") 
+	   
+        dbSendQuery(conn = db,
 
           "CREATE TABLE unidades_insulina
           (Fecha TEXT,
@@ -71,17 +70,17 @@ unidades.insulina <- function(){
             U_Insulina_Comida FLOAT,
             Comentarios TEXT)")
 
-      dbListTables(db)
-      dbListFields(db, "unidades_insulina")    
+      	dbListTables(db)
+      	dbListFields(db, "unidades_insulina")    
 
-      res <- dbReadTable(db, "unidades_insulina")
+      	res <- dbReadTable(db, "unidades_insulina")
 
-      dbWriteTable(conn = db, name = "unidades_insulina", value = unidades_insulina, append = TRUE)
-      dbGetQuery(db, "select * from unidades_insulina")
-      dbRemoveTable(db, "unidades_insulina")
-      dbListTables(db)
-      out <- dbWriteTable(db, "unidades_insulina", unidades_insulina)
-      }
+      	dbWriteTable(conn = db, name = "unidades_insulina", value = unidades_insulina, append = TRUE)
+      	dbGetQuery(db, "select * from unidades_insulina")
+      	dbRemoveTable(db, "unidades_insulina")
+      	dbListTables(db)
+      	out <- dbWriteTable(db, "unidades_insulina", unidades_insulina)
+       }
 
       else if (crearbbdd == 'N' | crearbbdd == '')
 	      {
