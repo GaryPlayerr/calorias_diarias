@@ -50,6 +50,7 @@ main <- function()
         if  (n2 == 'S')
           {
             ?calorias.diarias 
+            print('Ayuda')
           }  
         else if (n2 == 'N')
           {
@@ -57,6 +58,7 @@ main <- function()
           if  (n3 == 'S')
             {
               ?alimento.composicion 
+              print('Ayuda')
             }
           }
           else if  (n3 == 'N')
@@ -65,6 +67,7 @@ main <- function()
             if  (n4 == 'S')
               {
                 ?insulina 
+                print('Ayuda')
               }
             }
             else if (n4 == 'N')
@@ -73,6 +76,7 @@ main <- function()
             if  (n5 == 'S')
               {
                ?unidades.insulina 
+               print('Ayuda')
               } 
             }
     }  
