@@ -15,10 +15,10 @@ unidades.insulina <- function(){
         Distancia <- unidades$Distancia
         Tiempo <- unidades$Tiempo
         Actividad <-unidades$Actividad	   
-        Calorias_Totales <- unidades$calorias
-        Calorias_Carbohidratos <- unidades$hc
-        Calorias_Proteinas <- unidades$prot
-        Calorias_Grasa <- unidades$lip
+        Calorias_Totales <- unidades$Calorias_Totales
+        Calorias_Carbohidratos <- unidades$Calorias_Carbohidrato
+        Calorias_Proteinas <- unidades$Calorias_Proteinas
+        Calorias_Grasa <- unidades$Calorias_Grasa
 	Horario_Comida <-readline(prompt="Horario de Comida?(DESAYUNO, ALMUERZO, COMIDA, MERIENDA, CENA, RECENA) : " )	
 	Alimento <- readline(prompt="Que alimentos vas ingerir? : " )
         Gramos_Carbohidratos <- readline(prompt="Gramos de Carbohidratos?: " )	
