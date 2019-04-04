@@ -192,6 +192,7 @@ calorias.diarias <- function(){
         
             dbRemoveTable(db, "perfil_insulina")
             dbListTables(db)
+            out <- dbWriteTable(db, "perfil_insulina", perfil_insulina)
         
           }
     }
