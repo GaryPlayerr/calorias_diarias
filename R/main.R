@@ -49,7 +49,8 @@ main <- function()
        if  (n2 == 'S')
           {
             print('Ayuda Calorias')
-            ?calorias.diarias 
+            ?calorias.diarias
+            stop
           }  
 
        n3<-readline(prompt="Ayuda Consultar BBDD de alimentos(S/N): " ) 
@@ -57,6 +58,7 @@ main <- function()
           {
             print('Ayuda Alimentos')
             ?alimento.composicion
+            stop
           }
        n4<-readline(prompt="Ayuda Consultar BBDD de Insulinas(S/N): " ) 
        if  (n4 == 'S')
