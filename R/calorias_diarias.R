@@ -143,7 +143,7 @@ calorias.diarias <- function(){
   
   crearbbdd <-readline(prompt="Usuario Nuevo?(S/N) : " ) 
   
-  if  (crearbbdd == 'N')
+  if  (crearbbdd == 'N' | crearbbdd = '')
     {
   
       modifbbdd <- readline(prompt="Usuario ya regfistrado. Modificar BBDD?(S/N) : " ) 
