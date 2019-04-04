@@ -51,13 +51,25 @@ main <- function()
   else if (n1 == 7)
     {
       n2<-readline(prompt="Ayuda Calcular calorias diarias y registrar/modificar perfil(S/N): " )
-        if  (n2 == 'S'){?calorias.diarias break}  
+        if  (n2 == 'S')
+          {?calorias.diarias 
+           break
+          }  
       n3<-readline(prompt="Ayuda Consultar BBDD de alimentos(S/N): " ) 
-        if  (n3 == 'S'){?alimento.composicion break}
+        if  (n3 == 'S')
+          {?alimento.composicion 
+           break
+          }
       n4<-readline(prompt="Ayuda Consultar BBDD de Insulinas(S/N): " ) 
-        if  (n4 == 'S'){?insulina break}
+        if  (n4 == 'S')
+          {?insulina 
+           break
+          }
       n5<-readline(prompt="Ayuda Consultar Unidades de Insulina y dietas de dias anteriore(S/N): " ) 
-        if  (n5 == 'S'){?unidades.insulina break}      
+        if  (n5 == 'S')
+          {?unidades.insulina 
+           break
+          }      
     
     }  
     
