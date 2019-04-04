@@ -171,11 +171,11 @@ calorias.diarias <- function(){
             Calorias_Grasa <- lip
             Grasa_Vegetal <- lip_veg
             Grasa_Animal <- lip_an
-            Calorias_Ejercicio <- cal
+            Calorias_Metabolismo <- TMB
             Comentarios <- 'PERFIL'         
     
             perfil_insulina <- data.frame(Sexo,Edad, Altura, Peso, Distancia, Tiempo, Actividad, Calorias_Totales, Calorias_Carbohidratos, 
-                               Calorias_Proteinas, Calorias_Grasa, Grasa_Vegetal, Grasa_Animal, Calorias_Ejercicio, Comentarios)      
+                               Calorias_Proteinas, Calorias_Grasa, Grasa_Vegetal, Grasa_Animal, Calorias_Metabolismo, Comentarios)      
             
             db <- dbConnect(SQLite(), dbname="perfil_insulina")
         
@@ -208,11 +208,11 @@ calorias.diarias <- function(){
       Calorias_Grasa <- lip
       Grasa_Vegetal <- lip_veg
       Grasa_Animal <- lip_an
-      Calorias_Ejercicio <- cal
+      Calorias_Metabolismo <- TMB
       Comentarios <- 'PERFIL'         
     
       perfil_insulina <- data.frame(Sexo,Edad, Altura, Peso, Distancia, Tiempo, Actividad, Calorias_Totales, Calorias_Carbohidratos, 
-                                    Calorias_Proteinas, Calorias_Grasa, Grasa_Vegetal, Grasa_Animal, Calorias_Ejercicio, Comentarios)
+                                    Calorias_Proteinas, Calorias_Grasa, Grasa_Vegetal, Grasa_Animal, Calorias_Metabolismo, Comentarios)
     
       library(sqldf)
 
@@ -234,7 +234,7 @@ calorias.diarias <- function(){
             Calorias_Grasa FLOAT,
             Grasa_Vegetal FLOAT,
             Grasa_Animal FLOAT,
-            Calorias_Ejercicio FLOAT,
+            Calorias_Metabolismo FLOAT,
             Comentarios TEXT)")
 
       dbListTables(db)
