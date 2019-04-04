@@ -70,6 +70,10 @@ Quieres modificar tus calorias(S/N)?
     -Hidratos de carbono: 60 por ciento de las calorias totales diarias.
     -Grasa: 25 por ciento de las calorias totales diarias. 70 por ciento de grasas vegetales y 30 por ciento animales. Las grasas saturadas deben ser < 7 por ciento de las calorias totales.
  
+Puedes registrar tu perfil diariamente en la BBDD:
+    -Si el usuario es nuevo y no esta registrado. Usuario Nuevo?(S/N)
+    -Usuario ya regfistrado. Modificar BBDD?(S/N)
+  
 Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N)  
     Se utilizan METs (metabolic equivalent of task) multiplicadas por el peso y tiempo de entrenamiento.
   
