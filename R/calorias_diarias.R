@@ -190,7 +190,12 @@ calorias.diarias <- function(){
             dbGetQuery(db, "select * from perfil_insulina")
 
             dbListTables(db)
-            out <- dbWriteTable(db, "perfil_insulina", perfil_insulina, WHERE perfil_insulina$Edad = 99, overwrite=TRUE)
+            out <- dbWriteTable(db, "perfil_insulina", perfil_insulina, row.names=T)
+        
+            dbSendQuery(db, paste("UPDATE perfil_insulina SET Comentarios = 'PERFIL UPDATED' WHERE row_names IN (", 
+                        paste0(shQuote(rownames(perfil_insulina)), collapse=","), ")" ))
+
+            dbDisconnect(db)
          
           }
     }
