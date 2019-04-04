@@ -7,8 +7,9 @@ unidades.insulina <- function(){
 	db <- dbConnect(SQLite(), dbname="perfil_insulina")
 
         unidades <- dbGetQuery(db, "select * from perfil_insulina") 
-	Fecha <- today()  
-	Fecha1 <- today()   	
+	
+	Fecha1 <- today() 
+	Fecha <- as.Date(Fecha1,format="%Y%m%d")
         Sexo <- unidades$Sexo
         Edad <- unidades$Edad
         Altura <- unidades$Altura
@@ -26,14 +27,7 @@ unidades.insulina <- function(){
 	Calorias_Alimento_Carbohidratos <- readline(prompt="Calorias Carbohidratos?: " )	
 	Calorias_Alimento_Proteinas <- readline(prompt="Calorias Proteinas?: " )	
 	Calorias_Alimento_Grasas <- readline(prompt="Calorias Grasas?: " )
-	w(1:2) <- wday(Fecha1, label = TRUE)
-	if  (w == 'lu'){Dia <- 'Lunes'}
-	if  (w == 'ma'){Dia <- 'Martes'}
-	if  (w == 'mi'){Dia <- 'Miercoles'}
-	if  (w == 'ju'){Dia <- 'Jueves'}
-	if  (w == 'vi'){Dia <- 'Viernes'}
-	if  (w == 'sa'){Dia <- 'Sabado'}
-	if  (w == 'do'){Dia <- 'Domingo'}
+	Dia <- format(as.Date(Fecha1),"%A")
         Glucemia_Real <- 0
         Glucemia_Objetivo <- 0
         Tipo_Insulina <- readline(prompt="Tipo de Insulina?(RAPIDA/ULTRARRAPIDA) : " )
@@ -80,7 +74,7 @@ unidades.insulina <- function(){
         	dbSendQuery(conn = db,
 
           	"CREATE TABLE unidades_insulina
-            	(Fecha TIMESTAMP,
+            	(Fecha INTEGER,
 		Sexo TEXT,
             	Edad FLOAT,
             	Altura FLOAT,
