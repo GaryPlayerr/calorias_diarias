@@ -15,7 +15,7 @@ unidades.insulina <- function(){
         Peso <- unidades_insulina$Peso
         Distancia <- unidades_insulina$Distancia
         Tiempo <- unidades_insulina$Tiempo
-        Actividad <-'OOO'	   
+        Actividad <-unidades_insulina$Actividad	   
         Calorias_Totales <- unidades_insulina$calorias
         Calorias_Carbohidratos <- unidades_insulina$hc
         Calorias_Proteinas <- unidades_insulina$prot
@@ -36,13 +36,34 @@ unidades.insulina <- function(){
         U_Insulina_Correcion <- 0  	 	
         U_Insulina_Comida <- 0
         Comentarios <- readline(prompt="Introduce tus comentarios? : " )   
-	   
-	unidades_insulina <- data.frame(Fecha, Sexo, Edad, Altura, Peso, Distancia, Tiempo, Actividad, Calorias_Totales, Calorias_Carbohidratos, 
-                            Calorias_Proteinas, Calorias_Grasa, Gramos_Carbohidratos, Calorias_Alimento_Carbohidratos, Calorias_Alimento_Proteinas, 
-			    Calorias_Alimento_Grasas, Dia, Horario_Comida, Alimento, Glucemia_Real, 
-			    Glucemia_Objetivo, Tipo_Insulina, FSI, Ratio, U_Insulina_Correcion, U_Insulina_Comida, Comentarios)
-
-	   
+	
+	unidades_insulina <- data.frame(Fecha,
+		 Sexo,
+		 Edad,
+		 Altura,
+		 Peso,
+		 Distancia,
+		 Tiempo,
+		 Actividad,
+		 Calorias_Totales,
+		 Calorias_Carbohidratos, 
+		 Calorias_Proteinas,
+		 Calorias_Grasa, 
+		 Gramos_Carbohidratos,
+		 Calorias_Alimento_Carbohidratos,
+		 Calorias_Alimento_Proteinas, 
+		 Calorias_Alimento_Grasas,
+		 Dia, 
+		 Horario_Comida, 
+		 Alimento, 
+		 Glucemia_Real, 
+		 Glucemia_Objetivo, 
+		 Tipo_Insulina,
+		 FSI,
+		 Ratio,
+		 U_Insulina_Correcion,
+		 U_Insulina_Comida,
+		 Comentarios)
 	
    	crearbbdd <-readline(prompt="Usuario Nuevo?(S/N) : " ) 
    	if  (crearbbdd == 'S')
