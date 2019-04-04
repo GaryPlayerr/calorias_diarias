@@ -88,7 +88,7 @@ unidades.insulina <- function(){
 		Calorias_Alimento_Proteinas,
 		Calorias_Alimento_Grasas,
             	Dia TEXT,
-            	Horarios_Comida TEXT,
+            	Horario_Comida TEXT,
             	Alimento TEXT,	
             	Glucemia_Real FLOAT,
             	Glucemia_Objetivo FLOAT,
