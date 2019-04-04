@@ -6,20 +6,20 @@ unidades.insulina <- function(){
 	
 	db <- dbConnect(SQLite(), dbname="perfil_insulina")
 
-        unidades_insulina <- dbGetQuery(db, "select * from perfil_insulina") 
+        unidades <- dbGetQuery(db, "select * from perfil_insulina") 
 	   
         Fecha <- today()	
-        Sexo <- unidades_insulina$Sexo
-        Edad <- unidades_insulina$Edad
-        Altura <- unidades_insulina$Altura
-        Peso <- unidades_insulina$Peso
-        Distancia <- unidades_insulina$Distancia
-        Tiempo <- unidades_insulina$Tiempo
-        Actividad <-unidades_insulina$Actividad	   
-        Calorias_Totales <- unidades_insulina$calorias
-        Calorias_Carbohidratos <- unidades_insulina$hc
-        Calorias_Proteinas <- unidades_insulina$prot
-        Calorias_Grasa <- unidades_insulina$lip
+        Sexo <- unidades$Sexo
+        Edad <- unidades$Edad
+        Altura <- unidades$Altura
+        Peso <- unidades$Peso
+        Distancia <- unidades$Distancia
+        Tiempo <- unidades$Tiempo
+        Actividad <-unidades$Actividad	   
+        Calorias_Totales <- unidades$calorias
+        Calorias_Carbohidratos <- unidades$hc
+        Calorias_Proteinas <- unidades$prot
+        Calorias_Grasa <- unidades$lip
 	Horario_Comida <-readline(prompt="Horario de Comida?(DESAYUNO, ALMUERZO, COMIDA, MERIENDA, CENA, RECENA) : " )	
 	Alimento <- readline(prompt="Que alimentos vas ingerir? : " )
         Gramos_Carbohidratos <- readline(prompt="Gramos de Carbohidratos?: " )	
