@@ -99,6 +99,5 @@ insulina.create <- function(){
   dbRemoveTable(db, "insulina_total")
   dbListTables(db)
   out <- dbWriteTable(db, "insulina_total", insulina_total)
-  datatable(insulina_total)
 
 }
