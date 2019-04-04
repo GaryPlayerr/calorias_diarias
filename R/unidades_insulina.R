@@ -7,7 +7,7 @@ unidades.insulina <- function(){
 	db <- dbConnect(SQLite(), dbname="perfil_insulina")
 
         unidades <- dbGetQuery(db, "select * from perfil_insulina") 
-	   	
+	Fecha <- today()   	
         Sexo <- unidades$Sexo
         Edad <- unidades$Edad
         Altura <- unidades$Altura
@@ -25,8 +25,7 @@ unidades.insulina <- function(){
 	Calorias_Alimento_Carbohidratos <- readline(prompt="Calorias Carbohidratos?: " )	
 	Calorias_Alimento_Proteinas <- readline(prompt="Calorias Proteinas?: " )	
 	Calorias_Alimento_Grasas <- readline(prompt="Calorias Grasas?: " )	
-	
-        Dia <- 'Thu'
+        Dia <- wday(Fecha, label = TRUE)
         Glucemia_Real <- 0
         Glucemia_Objetivo <- 0
         Tipo_Insulina <- readline(prompt="Tipo de Insulina?(RAPIDA/ULTRARRAPIDA) : " )
@@ -37,6 +36,7 @@ unidades.insulina <- function(){
         Comentarios <- readline(prompt="Introduce tus comentarios? : " )   
 	
 	unidades_insulina <- data.frame(
+		 Fecha,
 		 Sexo,
 		 Edad,
 		 Altura,
@@ -72,7 +72,8 @@ unidades.insulina <- function(){
         	dbSendQuery(conn = db,
 
           	"CREATE TABLE unidades_insulina
-            	(Sexo TEXT,
+            	(Fecha DATE,
+		Sexo TEXT,
             	Edad FLOAT,
             	Altura FLOAT,
             	Peso FLOAT,
@@ -114,7 +115,7 @@ unidades.insulina <- function(){
    		else if (crearbbdd == 'N' | crearbbdd == '')
 	      	{
 	      
-	      	modifbbdd <- readline(prompt="Usuario ya regfistrado. Modificar BBDD?(S/N) : " ) 
+	      	modifbbdd <- readline(prompt="Usuario ya regfistrado. Añadir rewgistro a BBDD?(S/N) : " ) 
 	      
 	      	if  (modifbbdd == 'S')
 		  {
