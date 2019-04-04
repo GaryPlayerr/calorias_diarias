@@ -216,7 +216,6 @@ calorias.diarias <- function(){
         
             dbGetQuery(db, "select * from perfil_insulina")
 
-            dbRemoveTable(db, "perfil_insulina")
             dbListTables(db)
             out <- dbWriteTable(db, "perfil_insulina", perfil_insulina)
          
