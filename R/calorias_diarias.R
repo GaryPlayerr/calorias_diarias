@@ -243,10 +243,7 @@ calorias.diarias <- function(){
 
       res <- dbReadTable(db, "perfil_insulina")
       dbWriteTable(conn = db, name = "perfil_insulina", value = perfil_insulina, append = TRUE)
-      dbGetQuery(db, "select * from perfil_insulina")
-      dbRemoveTable(db, "perfil_insulina")
-      dbListTables(db)
-      out <-dbWriteTable(conn = db, name = "perfil_insulina", value = perfil_insulina)
+      dbDisconnect(db)
     
     }
   
