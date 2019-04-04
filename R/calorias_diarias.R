@@ -190,7 +190,7 @@ calorias.diarias <- function(){
             dbGetQuery(db, "select * from perfil_insulina WHERE Comentarios = 'PERFIL1'")
 
             dbListTables(db)
-            out <- dbWriteTable(db, "perfil_insulina", perfil_insulina)
+            out <- dbWriteTable(db, "perfil_insulina", perfil_insulina, overwrite=TRUE)
          
           }
     }
