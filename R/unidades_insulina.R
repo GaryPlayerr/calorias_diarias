@@ -7,8 +7,7 @@ unidades.insulina <- function(){
 	db <- dbConnect(SQLite(), dbname="perfil_insulina")
 
         unidades <- dbGetQuery(db, "select * from perfil_insulina") 
-	   
-        Fecha <- today()	
+	   	
         Sexo <- unidades$Sexo
         Edad <- unidades$Edad
         Altura <- unidades$Altura
@@ -37,7 +36,7 @@ unidades.insulina <- function(){
         U_Insulina_Comida <- 0
         Comentarios <- readline(prompt="Introduce tus comentarios? : " )   
 	
-	unidades_insulina <- data.frame(Fecha,
+	unidades_insulina <- data.frame(
 		 Sexo,
 		 Edad,
 		 Altura,
@@ -73,8 +72,7 @@ unidades.insulina <- function(){
         	dbSendQuery(conn = db,
 
           	"CREATE TABLE unidades_insulina
-          	(Fecha DATE,
-            	Sexo TEXT,
+            	(Sexo TEXT,
             	Edad FLOAT,
             	Altura FLOAT,
             	Peso FLOAT,
