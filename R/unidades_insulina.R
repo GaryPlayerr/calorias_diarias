@@ -1,15 +1,14 @@
 
 unidades.insulina <- function(){
 
-   n1<-readline(prompt="Sexo(M/F): " )	
-       library(sqldf)
-          
-       db <- dbConnect(SQLite(), dbname="unidades_insulina")
+      library(sqldf)
+      library(lubridate)		
+	     
+      db <- dbConnect(SQLite(), dbname="unidades_insulina")
 
-       unidades <- dbGetQuery(db, "select * from unidades_insulina") 
+      unidades <- dbGetQuery(db, "select * from unidades_insulina") 
       
-
-      Fecha <- 	
+      Fecha <- today()	
       Sexo <- unidades$Sexo
       Edad <- unidades$Edad
       Altura <- unidades$Altura
@@ -22,23 +21,26 @@ unidades.insulina <- function(){
       Calorias_Proteinas <- unidades$prot
       Calorias_Grasa <- unidades$lip
       Gramos_Carbohidratos <- 
-      Dia <-
-      Horaio_Comida
-      Alimento
+      w <- wday(Fecha)	
+      Dia <- wday(Fecha, label = TRUE) 
+      Horario_Comida <-readline(prompt="Horario de Comida?(DESAYUNO, ALMUERZO, COMIDA, MERIENDA, CENA, RECENA) : " )	
+      Alimento <- readline(prompt="Que alimentos vas ingerir? : " )
       Glucemia_Real <- 0
       Glucemia_Objetivo <- 0
-      Tipo_Insulina <-
+      Tipo_Insulina <- readline(prompt="Tipo de Insulina?(RAPIDA/ULTRARRAPIDA) : " )
       FSI <- 0
       Ratio <- 0
       U_Insulina_Correcion <- 0  	 	
       U_Insulina_Comida <- 0
-      Comentarios <-         
+      Comentarios <- readline(prompt="Introduce tus comentarios? : " )        
 
       unidades_insulina <- data.frame(Fecha, Sexo, Edad, Altura, Peso, Distancia, Tiempo, Actividad, Calorias_Totales, Calorias_Carbohidratos, 
                                     Calorias_Proteinas, Calorias_Grasa, Gramos_Carbohidratos, Dia, Horario_Comida, Alimento, Glucemia_Real, 
 				    Glucemia_Objetivo, Tipo_Insulina, FSI, Ratio, U_Insulina_Correcion, U_Insulina_Comida, Comentarios)
-
-      library(sqldf)
+	
+   crearbbdd <-readline(prompt="Usuario Nuevo?(S/N) : " ) 
+   if  (crearbbdd == 'S')
+       {		
 
       db <- dbConnect(SQLite(), dbname="unidades_insulina")
       dbSendQuery(conn = db,
@@ -79,5 +81,27 @@ unidades.insulina <- function(){
       dbRemoveTable(db, "unidades_insulina")
       dbListTables(db)
       out <- dbWriteTable(db, "unidades_insulina", unidades_insulina)
+      }
 
+      else if (crearbbdd == 'N' | crearbbdd == '')
+	      {
+	      
+	      	modifbbdd <- readline(prompt="Usuario ya regfistrado. Modificar BBDD?(S/N) : " ) 
+	      
+	      	if  (modifbbdd == 'S')
+		{
+	      
+      			db <- dbConnect(SQLite(), dbname="unidades_insulina")	      
+      			dbListTables(db)
+      			dbListFields(db, "unidades_insulina")    
+
+      			res <- dbReadTable(db, "unidades_insulina")
+
+      			dbWriteTable(conn = db, name = "unidades_insulina", value = unidades_insulina, append = TRUE)
+      			dbGetQuery(db, "select * from unidades_insulina")
+      			dbRemoveTable(db, "unidades_insulina")
+      			dbListTables(db)
+      			out <- dbWriteTable(db, "unidades_insulina", unidades_insulina)	      
+	        }
+	      }
 }
