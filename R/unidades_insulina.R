@@ -111,6 +111,7 @@ unidades.insulina <- function(){
       		dbRemoveTable(db, "unidades_insulina")
       		dbListTables(db)
       		out <- dbWriteTable(db, "unidades_insulina", unidades_insulina, append = TRUE)
+		dbDisconnect(db)
 	       }
 
    		else if (crearbbdd == 'N' | crearbbdd == '')
