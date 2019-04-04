@@ -128,7 +128,6 @@ unidades.insulina <- function(){
 
       			dbWriteTable(conn = db, name = "unidades_insulina", value = unidades_insulina, append = TRUE)
       			dbGetQuery(db, "select * from unidades_insulina")
-      			dbRemoveTable(db, "unidades_insulina")
       			dbListTables(db)
       			out <- dbWriteTable(db, "unidades_insulina", unidades_insulina)	      
 	          }
