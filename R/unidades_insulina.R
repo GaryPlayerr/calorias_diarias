@@ -15,16 +15,19 @@ unidades.insulina <- function(){
         Peso <- unidades_insulina$Peso
         Distancia <- unidades_insulina$Distancia
         Tiempo <- unidades_insulina$Tiempo
-        Actividad <- unidades_insulina$Actividad	   
+        Actividad <-'OOO'	   
         Calorias_Totales <- unidades_insulina$calorias
         Calorias_Carbohidratos <- unidades_insulina$hc
         Calorias_Proteinas <- unidades_insulina$prot
         Calorias_Grasa <- unidades_insulina$lip
+	Horario_Comida <-readline(prompt="Horario de Comida?(DESAYUNO, ALMUERZO, COMIDA, MERIENDA, CENA, RECENA) : " )	
+	Alimento <- readline(prompt="Que alimentos vas ingerir? : " )
         Gramos_Carbohidratos <- readline(prompt="Gramos de Carbohidratos?: " )	
+	Calorias_Alimento_Carbohidratos <- readline(prompt="Calorias Carbohidratos?: " )	
+	Calorias_Alimento_Proteinas <- readline(prompt="Calorias Proteinas?: " )	
+	Calorias_Alimento-Grasas <- readline(prompt="Calorias Grasas?: " )	
         w <- wday(Fecha)	
         Dia <- wday(Fecha, label = TRUE) 
-        Horario_Comida <-readline(prompt="Horario de Comida?(DESAYUNO, ALMUERZO, COMIDA, MERIENDA, CENA, RECENA) : " )	
-        Alimento <- readline(prompt="Que alimentos vas ingerir? : " )
         Glucemia_Real <- 0
         Glucemia_Objetivo <- 0
         Tipo_Insulina <- readline(prompt="Tipo de Insulina?(RAPIDA/ULTRARRAPIDA) : " )
@@ -35,7 +38,8 @@ unidades.insulina <- function(){
         Comentarios <- readline(prompt="Introduce tus comentarios? : " )   
 	   
 	unidades_insulina <- data.frame(Fecha, Sexo, Edad, Altura, Peso, Distancia, Tiempo, Actividad, Calorias_Totales, Calorias_Carbohidratos, 
-                            Calorias_Proteinas, Calorias_Grasa, Gramos_Carbohidratos, Dia, Horario_Comida, Alimento, Glucemia_Real, 
+                            Calorias_Proteinas, Calorias_Grasa, Gramos_Carbohidratos, Calorias_Alimento_Carbohidratos, Calorias_Alimento_Proteinas, 
+			    Calorias_Alimento_Grasas, Dia, Horario_Comida, Alimento, Glucemia_Real, 
 			    Glucemia_Objetivo, Tipo_Insulina, FSI, Ratio, U_Insulina_Correcion, U_Insulina_Comida, Comentarios)
 
 	   
@@ -61,6 +65,9 @@ unidades.insulina <- function(){
             	Calorias_Proteinas FLOAT,
             	Calorias_Grasa FLOAT,
             	Gramos_Carbohidratos FLOAT,
+		Calorias_Alimento_Carbohidratos,
+		Calorias_Alimento_Proteinas,
+		Calorias_Alimento_Grasas,
             	Dia TEXT,
             	Horarios_Comida TEXT,
             	Alimento TEXT,	
