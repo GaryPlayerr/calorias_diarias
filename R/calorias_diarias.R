@@ -187,10 +187,10 @@ calorias.diarias <- function(){
    
             db <- dbConnect(SQLite(), dbname="perfil_insulina")
         
-            dbGetQuery(db, "select * from perfil_insulina")
+            dbGetQuery(db, "select * from perfil_insulina WHERE Comentarios = 'PERFIL1")
 
             dbListTables(db)
-            out <- db_insert_into( conn = db, table = "perfil_insulina", values = perfil_insulina)
+            out <- dbWriteTable(db, "perfil_insulina", perfil_insulina, append = FALSE)
          
           }
     }
