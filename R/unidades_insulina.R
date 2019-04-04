@@ -48,7 +48,7 @@ unidades.insulina <- function(){
         	dbSendQuery(conn = db,
 
           	"CREATE TABLE unidades_insulina
-          	(Fecha TEXT,
+          	(Fecha DATE,
             	Sexo TEXT,
             	Edad FLOAT,
             	Altura FLOAT,
@@ -63,7 +63,7 @@ unidades.insulina <- function(){
             	Gramos_Carbohidratos FLOAT,
             	Dia TEXT,
             	Horarios_Comida TEXT,
-            	Alimento TEXT,
+            	Alimento TEXT,	
             	Glucemia_Real FLOAT,
             	Glucemia_Objetivo FLOAT,
             	Tipo_Insulina TEXT,
