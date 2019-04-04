@@ -10,5 +10,5 @@ perfil.insulina <- function()
           library(DT)
 
           datatable(unidades)
-          dbDisconnect(db)
+
    }
