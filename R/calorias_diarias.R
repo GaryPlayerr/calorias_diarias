@@ -153,57 +153,43 @@ calorias.diarias <- function(){
 
             library(sqldf)
       
-            Fecha <- '2019-04-03'
             Sexo <- n1
             Edad <- n2
             Altura <- n3
             Peso <- n4
             Distancia <- n7
             Tiempo <- n8
-      
+
             if  (n6 == 'N' | n6 == ''){Actividad <- 'Otros'}
             else if  (n9 == 'S'){Actividad <- 'Caminas o Corres'}
             else if (n10 == 'S'){Actividad <- 'Bicicleta'}
             else if (n10 == 'N'){Actividad <- 'Natacion'}       
-      
+
             Calorias_Totales <- calorias
             Calorias_Carbohidratos <- hc
             Calorias_Proteinas <- prot
             Calorias_Grasa <- lip
-            Gramos_Carbohidratos <- 0
-            Dia <- ' '
-            Horarios_Comida <- ' '
-            Alimento <- ' '
-            Glucemia_Real <- 0
-            Glucemia_Objetivo <- 0
-            Tipo_Insulina <- ' '
-            FSI <- 0
-            Ratio <- 0  
-            U_Insulina_Correcion <- 0 
-            U_Insulina_Comida <- 0 
+            Grasa_Vegetal <- lip_veg
+            Grasa_Animal <- lip_an
+            Calorias_Ejercicio <- cal
             Comentarios <- 'PERFIL'         
     
-            perfil_insulina <- data.frame(Fecha,Sexo,Edad, Altura, Peso, Distancia, Tiempo, Actividad, Calorias_Totales, Calorias_Carbohidratos, Calorias_Proteinas, Calorias_Grasa, Gramos_Carbohidratos, Dia, Horarios_Comida, Alimento, Glucemia_Real, Glucemia_Objetivo, Tipo_Insulina, FSI, Ratio, U_Insulina_Correcion, U_Insulina_Comida, Comentarios)
-   
+            perfil_insulina <- data.frame(Sexo,Edad, Altura, Peso, Distancia, Tiempo, Actividad, Calorias_Totales, Calorias_Carbohidratos, 
+                               Calorias_Proteinas, Calorias_Grasa, Grasa_Vegetal, Grasa_Animal, Calorias_Ejercicio, Comentarios)      
+            
             db <- dbConnect(SQLite(), dbname="perfil_insulina")
         
             dbGetQuery(db, "select * from perfil_insulina")
 
             dbListTables(db)
-            out <- dbWriteTable(db, "perfil_insulina", perfil_insulina, row.names=T)
-        
-            dbSendQuery(db, paste("UPDATE perfil_insulina SET Comentarios = 'PERFIL UPDATED' WHERE row_names IN (", 
-                        paste0(shQuote(rownames(perfil_insulina)), collapse=","), ")" ))
-
-            dbDisconnect(db)
-         
+            out <- dbWriteTable(db, "perfil_insulina", perfil_insulina, overwrite=TRUE)
+               
           }
     }
 
   else
     {
   
-      Fecha <- '2019-04-03'
       Sexo <- n1
       Edad <- n2
       Altura <- n3
@@ -220,20 +206,13 @@ calorias.diarias <- function(){
       Calorias_Carbohidratos <- hc
       Calorias_Proteinas <- prot
       Calorias_Grasa <- lip
-      Gramos_Carbohidratos <- 0
-      Dia <- ' '
-      Horarios_Comida <- ' '
-      Alimento <- ' '
-      Glucemia_Real <- 0
-      Glucemia_Objetivo <- 0
-      Tipo_Insulina <- ' '
-      FSI <- 0
-      Ratio <- 0  
-      U_Insulina_Correcion <- 0 
-      U_Insulina_Comida <- 0 
+      Grasa_Vegetal <- lip_veg
+      Grasa_Animal <- lip_an
+      Calorias_Ejercicio <- cal
       Comentarios <- 'PERFIL'         
     
-      perfil_insulina <- data.frame(Fecha,Sexo,Edad, Altura, Peso, Distancia, Tiempo, Actividad, Calorias_Totales, Calorias_Carbohidratos, Calorias_Proteinas, Calorias_Grasa, Gramos_Carbohidratos, Dia, Horarios_Comida, Alimento, Glucemia_Real, Glucemia_Objetivo, Tipo_Insulina, FSI, Ratio, U_Insulina_Correcion, U_Insulina_Comida, Comentarios)
+      perfil_insulina <- data.frame(Sexo,Edad, Altura, Peso, Distancia, Tiempo, Actividad, Calorias_Totales, Calorias_Carbohidratos, 
+                                    Calorias_Proteinas, Calorias_Grasa, Grasa_Vegetal, Grasa_Animal, Calorias_Ejercicio, Comentarios)
     
       library(sqldf)
 
@@ -242,8 +221,7 @@ calorias.diarias <- function(){
       dbSendQuery(conn = db,
 
           "CREATE TABLE perfil_insulina
-          (Fecha TEXT,
-            Sexo TEXT,
+          ( Sexo TEXT,
             Edad FLOAT,
             Altura FLOAT,
             Peso FLOAT,
@@ -254,17 +232,9 @@ calorias.diarias <- function(){
             Calorias_Carbohidratos FLOAT,
             Calorias_Proteinas FLOAT,
             Calorias_Grasa FLOAT,
-            Gramos_Carbohidratos FLOAT,
-            Dia TEXT,
-            Horarios_Comida TEXT,
-            Alimento TEXT,
-            Glucemia_Real FLOAT,
-            Glucemia_Objetivo FLOAT,
-            Tipo_Insulina TEXT,
-            FSI FLOAT,
-            Ratio FLOAT,
-            U_Insulina_Correcion FLOAT,
-            U_Insulina_Comida FLOAT,
+            Grasa_Vegetal FLOAT,
+            Grasa_Animal FLOAT,
+            Calorias_Ejercicio FLOAT,
             Comentarios TEXT)")
 
       dbListTables(db)
