@@ -48,27 +48,27 @@ main <- function()
       n2<-readline(prompt="Ayuda Calcular calorias diarias y registrar/modificar perfil(S/N): " )
        if  (n2 == 'S')
           {
-            ?calorias.diarias 
             print('Ayuda Calorias')
+            ?calorias.diarias 
           }  
 
        n3<-readline(prompt="Ayuda Consultar BBDD de alimentos(S/N): " ) 
        if  (n3 == 'S')
           {
-            ?alimento.composicion 
             print('Ayuda Alimentos')
+            ?alimento.composicion
           }
        n4<-readline(prompt="Ayuda Consultar BBDD de Insulinas(S/N): " ) 
        if  (n4 == 'S')
-          {
-            ?insulina 
+          {  
             print('Ayuda Insulinas')
+            ?insulina
           }
        n5<-readline(prompt="Ayuda Consultar Unidades de Insulina y dietas de dias anteriore(S/N): " )
        if  (n5 == 'S')
           {
-            ?unidades.insulina 
             print('Ayuda Unidades Insulina y Dieta')
+            ?unidades.insulina 
           } 
     }  
     
