@@ -150,16 +150,42 @@ calorias.diarias <- function(){
     
       if  (modifbbdd == 'S')
           {
-        
-            Fecha <- '2019-04-03'
-      
-            if  (n6 == 'N' | n6 == ''){Actividad <- 'Otros'}
-            else if  (n9 == 'S'){Actividad <- 'Caminas o Corres'}
-            else if (n10 == 'S'){Actividad <- 'Bicicleta'}
-            else if (n10 == 'N'){Actividad <- 'Natacion'}     
-        
+
             library(sqldf)
       
+              Fecha <- '2019-04-03'
+              Sexo <- n1
+              Edad <- n2
+              Altura <- n3
+              Peso <- n4
+              Distancia <- n7
+              Tiempo <- n8
+      
+              if  (n6 == 'N' | n6 == ''){Actividad <- 'Otros'}
+              else if  (n9 == 'S'){Actividad <- 'Caminas o Corres'}
+              else if (n10 == 'S'){Actividad <- 'Bicicleta'}
+              else if (n10 == 'N'){Actividad <- 'Natacion'}       
+      
+              Calorias_Totales <- calorias
+              Calorias_Carbohidratos <- hc
+              Calorias_Proteinas <- prot
+              Calorias_Grasa <- lip
+              Gramos_Carbohidratos <- 0
+              Dia <- ' '
+              Horarios_Comida <- ' '
+              Alimento <- ' '
+              Glucemia_Real <- 0
+              Glucemia_Objetivo <- 0
+              Tipo_Insulina <- ' '
+              FSI <- 0
+              Ratio <- 0  
+              U_Insulina_Correcion <- 0 
+              U_Insulina_Comida <- 0 
+              Comentarios <- 'PERFIL'         
+    
+              perfil_insulina <- data.frame(Fecha,Sexo,Edad, Altura, Peso, Distancia, Tiempo, Actividad, Calorias_Totales, Calorias_Carbohidratos, Calorias_Proteinas, Calorias_Grasa, Gramos_Carbohidratos, Dia, Horarios_Comida, Alimento, Glucemia_Real, Glucemia_Objetivo, Tipo_Insulina, FSI, Ratio, U_Insulina_Correcion, U_Insulina_Comida, Comentarios)
+    
+        
             db <- dbConnect(SQLite(), dbname="perfil_insulina")
  
             query <- "INSERT INTO perfil_insulina VALUES   
@@ -187,6 +213,12 @@ calorias.diarias <- function(){
             0, 
             0,
             'PERFIL')"
+        
+            dbGetQuery(db "select * from perfil_insulina")
+
+            dbRemoveTable(db, "perfil_insulina")
+            dbListTables(db)
+            out <- dbWriteTable(db, "perfil_insulina", perfil_insulina)
          
           }
     }
