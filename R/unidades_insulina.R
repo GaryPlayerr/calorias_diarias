@@ -128,6 +128,7 @@ unidades.insulina <- function(){
       			res <- dbReadTable(db, "unidades_insulina")
 
       			dbWriteTable(conn = db, name = "unidades_insulina", value = unidades_insulina, append = TRUE)
+			dbDisconnect(db)
     
 	          }
 	        }
