@@ -10,7 +10,7 @@ unidades.insulina <- function(){
 
         db <- dbConnect(SQLite(), dbname="unidades_insulina")
 
-        unidades <- dbGetQuery(db, "select * from unidades_insulina") 
+        unidades_insulina <- dbGetQuery(db, "select * from unidades_insulina") 
 	   
         Fecha <- today()	
         Sexo <- unidades_insulina$Sexo
