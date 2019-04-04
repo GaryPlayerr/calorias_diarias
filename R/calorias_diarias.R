@@ -172,7 +172,7 @@ calorias.diarias <- function(){
             Grasa_Vegetal <- lip_veg
             Grasa_Animal <- lip_an
             Calorias_Metabolismo <- TMB
-            Comentarios <- 'PERFIL'         
+            Comentarios <- 'PERFIL UPDATED'         
     
             perfil_insulina <- data.frame(Sexo,Edad, Altura, Peso, Distancia, Tiempo, Actividad, Calorias_Totales, Calorias_Carbohidratos, 
                                Calorias_Proteinas, Calorias_Grasa, Grasa_Vegetal, Grasa_Animal, Calorias_Metabolismo, Comentarios)      
