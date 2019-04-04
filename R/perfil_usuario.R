@@ -11,5 +11,5 @@ perfil.usuario <- function()
           library(DT)
 
           datatable(unidades)
-
+          dbDisconnect(db)
    }
