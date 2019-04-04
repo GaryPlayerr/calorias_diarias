@@ -26,14 +26,14 @@ unidades.insulina <- function(){
 	Calorias_Alimento_Carbohidratos <- readline(prompt="Calorias Carbohidratos?: " )	
 	Calorias_Alimento_Proteinas <- readline(prompt="Calorias Proteinas?: " )	
 	Calorias_Alimento_Grasas <- readline(prompt="Calorias Grasas?: " )
-	w <- wday(Fecha1, label = TRUE)
-	if  (w == 'lu\.'){Dia <- 'Lunes'}
-	if  (w == 'ma\.'){Dia <- 'Martes'}
-	if  (w == 'mi\.'){Dia <- 'Miercoles'}
-	if  (w == 'ju\.'){Dia <- 'Jueves'}
-	if  (w == 'vi\.'){Dia <- 'Viernes'}
-	if  (w == 'sa\.'){Dia <- 'Sabado'}
-	if  (w == 'do\.'){Dia <- 'Domingo'}
+	w(1:2) <- wday(Fecha1, label = TRUE)
+	if  (w == 'lu'){Dia <- 'Lunes'}
+	if  (w == 'ma'){Dia <- 'Martes'}
+	if  (w == 'mi'){Dia <- 'Miercoles'}
+	if  (w == 'ju'){Dia <- 'Jueves'}
+	if  (w == 'vi'){Dia <- 'Viernes'}
+	if  (w == 'sa'){Dia <- 'Sabado'}
+	if  (w == 'do'){Dia <- 'Domingo'}
         Glucemia_Real <- 0
         Glucemia_Objetivo <- 0
         Tipo_Insulina <- readline(prompt="Tipo de Insulina?(RAPIDA/ULTRARRAPIDA) : " )
