@@ -50,7 +50,7 @@ main <- function()
           {
             print('Ayuda Calorias')
             ?calorias.diarias
-            stop
+            stop("Fin de ayuda")
           }  
 
        n3<-readline(prompt="Ayuda Consultar BBDD de alimentos(S/N): " ) 
