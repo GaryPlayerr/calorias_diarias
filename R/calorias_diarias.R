@@ -182,7 +182,7 @@ calorias.diarias <- function(){
             dbGetQuery(db, "select * from perfil_insulina")
 
             dbListTables(db)
-            out <- dbWriteTable(db, "perfil_insulina", perfil_insulina, overwrite=TRUE)
+            dbWriteTable(db, "perfil_insulina", perfil_insulina, overwrite=TRUE)
             dbDisconnect(db)
                
           }
@@ -242,7 +242,9 @@ calorias.diarias <- function(){
       dbListFields(db, "perfil_insulina")    
 
       res <- dbReadTable(db, "perfil_insulina")
-
+      dbGetQuery(db, "select * from perfil_insulina")
+      dbRemoveTable(db, "perfil_insulina")
+      dbListTables(db)
       dbWriteTable(conn = db, name = "perfil_insulina", value = perfil_insulina, append = TRUE)
     
     }
