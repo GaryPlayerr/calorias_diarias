@@ -10,7 +10,7 @@
 
 \usage{
 
-calorias.diarias(Rapida, Ultrarrapida)
+insulina(Rapida, Ultrarrapida)
 
 }
 
