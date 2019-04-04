@@ -115,11 +115,12 @@ unidades.insulina <- function(){
    		else if (crearbbdd == 'N' | crearbbdd == '')
 	      	{
 	      
-	      	modifbbdd <- readline(prompt="Usuario ya regfistrado. Añadir rewgistro a BBDD?(S/N) : " ) 
+	      	modifbbdd <- readline(prompt="Usuario ya registrado. Incorporar registro a BBDD?(S/N) : " ) 
 	      
 	      	if  (modifbbdd == 'S')
 		  {
 	      	
+			db <- dbConnect(SQLite(), dbname="unidades_insulina")   
       			dbListTables(db)
       			dbListFields(db, "unidades_insulina")    
 
