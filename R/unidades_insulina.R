@@ -1,5 +1,5 @@
 
-perfil.insulina <- function(){
+unidades.insulina <- function(){
 
    	library(sqldf)
    	library(lubridate)	
