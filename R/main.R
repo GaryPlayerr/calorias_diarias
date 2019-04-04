@@ -50,6 +50,8 @@ main <- function()
         if  (n2 == 'S')
           {
             ?calorias.diarias 
+            ?calorias.diarias 
+            ?calorias.diarias 
             print('Ayuda Calorias')
           }  
         else if (n2 == 'N')
