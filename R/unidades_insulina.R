@@ -7,7 +7,7 @@ unidades.insulina <- function(){
 	db <- dbConnect(SQLite(), dbname="perfil_insulina")
 
         unidades <- dbGetQuery(db, "select * from perfil_insulina") 
-	Fecha <- datetime()
+	Fecha <- today()  
 	Fecha1 <- today()   	
         Sexo <- unidades$Sexo
         Edad <- unidades$Edad
