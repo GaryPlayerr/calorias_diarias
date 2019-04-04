@@ -153,66 +153,41 @@ calorias.diarias <- function(){
 
             library(sqldf)
       
-              Fecha <- '2019-04-03'
-              Sexo <- n1
-              Edad <- n2
-              Altura <- n3
-              Peso <- n4
-              Distancia <- n7
-              Tiempo <- n8
+            Fecha <- '2019-04-03'
+            Sexo <- n1
+            Edad <- n2
+            Altura <- n3
+            Peso <- n4
+            Distancia <- n7
+            Tiempo <- n8
       
-              if  (n6 == 'N' | n6 == ''){Actividad <- 'Otros'}
-              else if  (n9 == 'S'){Actividad <- 'Caminas o Corres'}
-              else if (n10 == 'S'){Actividad <- 'Bicicleta'}
-              else if (n10 == 'N'){Actividad <- 'Natacion'}       
+            if  (n6 == 'N' | n6 == ''){Actividad <- 'Otros'}
+            else if  (n9 == 'S'){Actividad <- 'Caminas o Corres'}
+            else if (n10 == 'S'){Actividad <- 'Bicicleta'}
+            else if (n10 == 'N'){Actividad <- 'Natacion'}       
       
-              Calorias_Totales <- calorias
-              Calorias_Carbohidratos <- hc
-              Calorias_Proteinas <- prot
-              Calorias_Grasa <- lip
-              Gramos_Carbohidratos <- 0
-              Dia <- ' '
-              Horarios_Comida <- ' '
-              Alimento <- ' '
-              Glucemia_Real <- 0
-              Glucemia_Objetivo <- 0
-              Tipo_Insulina <- ' '
-              FSI <- 0
-              Ratio <- 0  
-              U_Insulina_Correcion <- 0 
-              U_Insulina_Comida <- 0 
-              Comentarios <- 'PERFIL'         
+            Calorias_Totales <- calorias
+            Calorias_Carbohidratos <- hc
+            Calorias_Proteinas <- prot
+            Calorias_Grasa <- lip
+            Gramos_Carbohidratos <- 0
+            Dia <- ' '
+            Horarios_Comida <- ' '
+            Alimento <- ' '
+            Glucemia_Real <- 0
+            Glucemia_Objetivo <- 0
+            Tipo_Insulina <- ' '
+            FSI <- 0
+            Ratio <- 0  
+            U_Insulina_Correcion <- 0 
+            U_Insulina_Comida <- 0 
+            Comentarios <- 'PERFIL1'         
     
-              perfil_insulina <- data.frame(Fecha,Sexo,Edad, Altura, Peso, Distancia, Tiempo, Actividad, Calorias_Totales, Calorias_Carbohidratos, Calorias_Proteinas, Calorias_Grasa, Gramos_Carbohidratos, Dia, Horarios_Comida, Alimento, Glucemia_Real, Glucemia_Objetivo, Tipo_Insulina, FSI, Ratio, U_Insulina_Correcion, U_Insulina_Comida, Comentarios)
-    
-        
+            perfil_insulina <- data.frame(Fecha,Sexo,Edad, Altura, Peso, Distancia, Tiempo, Actividad, Calorias_Totales, Calorias_Carbohidratos, Calorias_Proteinas, Calorias_Grasa, Gramos_Carbohidratos, Dia, Horarios_Comida, Alimento, Glucemia_Real, Glucemia_Objetivo, Tipo_Insulina, FSI, Ratio, U_Insulina_Correcion, U_Insulina_Comida, Comentarios)
+   
             db <- dbConnect(SQLite(), dbname="perfil_insulina")
  
-            query <- "INSERT INTO perfil_insulina VALUES   
-            (:Fecha, 
-            :n1, 
-            :n2, 
-            :n3, 
-            :n4, 
-            :n7,
-            :n8,
- 	          :Actividad ,    
-            :calorias,
-            :hc ,
-            :prot,
-            :lip,
-            0 ,
-            ' ' ,
-            ' ', 
-            ' ', 
-            0, 
-            0, 
-            ' ', 
-            0, 
-            0, 
-            0, 
-            0,
-            'PERFIL')"
+
         
             dbGetQuery(db, "select * from perfil_insulina")
 
