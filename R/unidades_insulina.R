@@ -10,6 +10,7 @@ unidades.insulina <- function(){
 	
 	Fecha1 <- today() 
 	Fecha <- as.Date(Fecha1,format="%Y%m%d")
+	Fecha <- as.integer(Fecha)
         Sexo <- unidades$Sexo
         Edad <- unidades$Edad
         Altura <- unidades$Altura
