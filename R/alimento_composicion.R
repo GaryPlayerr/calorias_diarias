@@ -19,6 +19,7 @@ alimento.composicion <- function()
  print('16 - AVES')  
  print('17 - CAZA')  
  
+ n1<-readline(prompt="Introduce una opcion: ")
 # n1<-readline(prompt="Tipo de alimemento(CEREALES, LEGUMINOSAS, TUBERCULOS_HORTALIZAS, FRUTOS_FRESCOS,FRUTOS_SECOS, 
 # LACTEOS, HUEVOS, DULCES, ACEITES_GRASAS, PESCADOS, CERDO, CORDERO, TERNERA, VACA, EMBUTIDOS, AVES, CAZA): ")
   
