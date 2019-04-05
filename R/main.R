@@ -45,28 +45,27 @@ main <- function()
     }
   else if (n1 == 7)
     {
-      n2<-readline(prompt="Ayuda Calcular calorias diarias y registrar/modificar perfil(S/N): " )
-       if  (n2 == 'S' | n2 == 's')
+    
+      print('1 - Ayuda Calcular calorias diarias y registrar/modificar perfil :')
+      print('2 - Ayuda Consultar BBDD de alimentos :')    
+      print('3 - Ayuda Consultar BBDD de Insulinas :')    
+      print('4 - Ayuda Consultar Unidades de Insulina y dietas de dias anteriores :')
+    
+      n2<-readline(prompt="Introduce una opcion : " )
+       if  (n2 == 1)
           {
-            print('Ayuda Calorias')
             ?calorias.diarias
           }  
-       n3<-readline(prompt="Ayuda Consultar BBDD de alimentos(S/N): " ) 
-       if  (n3 == 'S' | n3 == 's')
+       else if  (n2 == 2)
           {
-            print('Ayuda Alimentos')
             ?alimento.composicion
           }
-       n4<-readline(prompt="Ayuda Consultar BBDD de Insulinas(S/N): " ) 
-       if  (n4 == 'S' | n4 == 's')
+       else if  (n2 == 3)
           {  
-            print('Ayuda Insulinas')
             ?insulina
           }
-       n5<-readline(prompt="Ayuda Consultar Unidades de Insulina y dietas de dias anteriore(S/N): " )
-       if  (n5 == 'S' | n5 == 's')
+       else if  (n2 == 4)
           {
-            print('Ayuda Unidades Insulina y Dieta')
             ?unidades.insulina 
           } 
     }  
