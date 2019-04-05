@@ -20,6 +20,13 @@ alimento.composicion <- function()
  print('17 - CAZA')  
  
  n1<-readline(prompt="Introduce una opcion: ")
+ 
+ while (n1 != 1 & n1 != 2 & n1 != 3 & n1 != 4 & n1 != 5 & n1 != 6 & n1 != 7 & n1 != 8 & n1 != 9 & n1 != 10 &
+        n1 != 11 & n1 != 12 & n1 != 13 & n1 != 14 & n1 != 15 & n1 != 16 & n1 != 17)
+   {
+    n1<-readline(prompt="Introduce una opcion valida: ")
+  }
+ 
 # n1<-readline(prompt="Tipo de alimemento(CEREALES, LEGUMINOSAS, TUBERCULOS_HORTALIZAS, FRUTOS_FRESCOS,FRUTOS_SECOS, 
 # LACTEOS, HUEVOS, DULCES, ACEITES_GRASAS, PESCADOS, CERDO, CORDERO, TERNERA, VACA, EMBUTIDOS, AVES, CAZA): ")
   
