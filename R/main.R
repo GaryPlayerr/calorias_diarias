@@ -13,7 +13,7 @@ print('X - SALIR')
   
 n1<-readline(prompt="Introduzca una opcion: " )  
   
-while(n1 != 'X' | n1 != 'x')
+while(n1 != 'X' )
   {
 
   if  (n1 == 0)
