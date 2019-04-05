@@ -36,6 +36,11 @@ unidades.insulina <- function(){
 	Glucemia_Objetivo <- as.integer(Glucemia_Objetivo)
         Tipo_Insulina <- readline(prompt="Tipo de Insulina?(RAPIDA/ULTRARRAPIDA) : " )
 	
+	while (Tipo_Insulina != 'RAPIDA' & Tipo_Insulina != 'ULTRARRAPIDA' & Tipo_Insulina != 'rapida' & Tipo_Insulina != 'ultrarrapida')
+		{
+			Tipo_Insulina <- readline(prompt="Tipo de Insulina?(RAPIDA/ULTRARRAPIDA) : " )
+		}
+		
 	intot <- readline(prompt="Introduce las unidades totales de insulina(lenta+rapida+ultrarrapida) diarias : " )
 	intot <- as.integer(intot)
 	
@@ -49,12 +54,7 @@ unidades.insulina <- function(){
 		FSI <- 1800 / intot
 		message('Una Unidad de insulina ultrarrapida hace disminuir :', FSI , 'mg/dl de glucosa')
 		}
-	else
-		{
-		FSI <- 0
-		message('¡¡¡¡¡¡ E R R O R !!!!!!')   
-		}
-
+	
         Ratio <- readline(prompt="Introduce tu Ratio : " )
 	Ratio <- as.numeric(Ratio)
         U_Insulina_Correcion <- (Glucemia_Real - Glucemia_Objetivo) / FSI
@@ -94,6 +94,12 @@ unidades.insulina <- function(){
 		 Comentarios)
 	
    	crearbbdd <-readline(prompt="Usuario Nuevo?(S/N) : " ) 
+	
+	while (crearbbdd != 'S' & crearbbdd != 's' & crearbbdd != 'N' & crearbbdd != 'n' & crearbbdd != '')
+		{
+		crearbbdd <-readline(prompt="Usuario Nuevo?(S/N) : " )
+		}
+	
    	if  (crearbbdd == 'S' | crearbbdd == 's')
        		{		
 
@@ -145,6 +151,11 @@ unidades.insulina <- function(){
 	      	{
 	      
 	      	modifbbdd <- readline(prompt="Usuario ya registrado. Incorporar registro a BBDD?(S/N) : " ) 
+			
+		while (modifbbdd != 'S' & modifbbdd != 's' & modifbbdd != 'N' & modifbbdd != 'n')
+			{
+			modifbbdd <- readline(prompt="Usuario ya registrado. Incorporar registro a BBDD?(S/N) : " ) 
+			}
 	      
 	      	if  (modifbbdd == 'S' | modifbbdd == 's')
 		  {
