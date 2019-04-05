@@ -8,6 +8,12 @@ perfil.insulina <- function()
           
           opcion<-readline(prompt="Introduce una opcion: " )
           
+          while (opcion != 0 & opcion != 1 & opcion != 2 & opcion != 3 & opcion != '')
+                {
+                  opcion<-readline(prompt="Introduce una opcion valida: " )  
+                }    
+          
+          
           if  (opcion == 0 | opcion == '')
               {
                     
