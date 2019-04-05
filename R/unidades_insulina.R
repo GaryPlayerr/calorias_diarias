@@ -68,7 +68,7 @@ unidades.insulina <- function(){
 		 Comentarios)
 	
    	crearbbdd <-readline(prompt="Usuario Nuevo?(S/N) : " ) 
-   	if  (crearbbdd == 'S')
+   	if  (crearbbdd == 'S' | crearbbdd == 's')
        		{		
 
 		db <- dbConnect(SQLite(), dbname="unidades_insulina")   
@@ -115,12 +115,12 @@ unidades.insulina <- function(){
 		dbDisconnect(db)
 	       }
 
-   		else if (crearbbdd == 'N' | crearbbdd == '')
+   		else if (crearbbdd == 'N' | crearbbdd == '' | crearbbdd == 'n')
 	      	{
 	      
 	      	modifbbdd <- readline(prompt="Usuario ya registrado. Incorporar registro a BBDD?(S/N) : " ) 
 	      
-	      	if  (modifbbdd == 'S')
+	      	if  (modifbbdd == 'S' | modifbbdd == 's')
 		  {
 	      	
 			db <- dbConnect(SQLite(), dbname="unidades_insulina")   
