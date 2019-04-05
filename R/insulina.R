@@ -6,7 +6,7 @@ insulina <- function()
 
  library(sqldf)
 
- if  (n1 == 'ULTRARRAPIDA' | n1 == 'ultrarrapida)
+ if  (n1 == 'ULTRARRAPIDA' | n1 == 'ultrarrapida')
 
        {
 
