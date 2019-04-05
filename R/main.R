@@ -1,6 +1,6 @@
 main <- function()
 {
-
+repeat
   print('Pulse 0, 1, 2, 3, 4, 5, 6, 7 segun la opcion que desee') 
   print('0 - Crear BBDD de alimentos e insulinas. NECESARIO LA PRIMERA VEZ QUE SE EJECUTA LA APLICACION')
   print('1 - Calcular calorias diarias y registrar/modificar perfil:')
@@ -68,6 +68,5 @@ main <- function()
           {
             ?unidades.insulina 
           } 
-    }  
-repeat    
+    }    
 }
