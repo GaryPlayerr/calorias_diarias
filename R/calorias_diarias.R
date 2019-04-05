@@ -23,14 +23,19 @@ calorias.diarias <- function(){
     }
     
   n2<-readline(prompt="Edad: " )
-  n3<-readline(prompt="Altura: " )
-  n4<-readline(prompt="Peso: " )
+  n3<-readline(prompt="Altura (cm): " )
+  n4<-readline(prompt="Peso (kg): " )
   
   n6<-readline(prompt="Conoces la distancia y el tiempo de entrenamiento? (S/N)  : " )
   
   if  (n6 == 'N' | n6 == '' | n6 == 'n')
     {
       n5<-readline(prompt="Ejercicio(1-Poco, 2-Ligero, 3-Moderado, 4-Fuerte, 5-Muy fuerte) : " )
+    
+      while (n5 != 1 & n5 != 2 & n5 != 3 & n5 != 4 & n5 != 5)
+        {
+          n5<-readline(prompt="Ejercicio(1-Poco, 2-Ligero, 3-Moderado, 4-Fuerte, 5-Muy fuerte) : " )
+        }
     }  
   
   else if  (n6 == 'S' | n6 == 's')
@@ -121,6 +126,11 @@ calorias.diarias <- function(){
   
   modif<-readline(prompt="Quieres modificar tus calorias(S/N)?: " )
   
+  while (modif != 'S' & modif != 's' & modif != 'N' & modif != 'n' & modif != '')
+    {
+      modif<-readline(prompt="Quieres modificar tus calorias(S/N)?: " )
+    }
+  
   if  (modif == 'S' | modif == 's')
       {
     
@@ -143,10 +153,20 @@ calorias.diarias <- function(){
   
   crearbbdd <-readline(prompt="Usuario Nuevo?(S/N) : " ) 
   
+  while (crearbbdd != 'S' & crearbbdd != 's' & crearbbdd != 'N' & crearbbdd != 'n' & crearbbdd != '')
+    {
+      crearbbdd <-readline(prompt="Usuario Nuevo?(S/N) : " ) 
+    }
+  
   if  (crearbbdd == 'N' | crearbbdd == '' | crearbbdd == 'n')
     {
   
       modifbbdd <- readline(prompt="Usuario ya regfistrado. Modificar BBDD?(S/N) : " ) 
+    
+      while (modifbbdd != 'S' & modifbbdd != 's' & modifbbdd != 'N' & modifbbdd != 'n' & modifbbdd != '')
+        {
+          modifbbdd <- readline(prompt="Usuario ya regfistrado. Modificar BBDD?(S/N) : " ) 
+        }
     
       if  (modifbbdd == 'S' | modifbbdd == 's')
           {
@@ -248,6 +268,11 @@ calorias.diarias <- function(){
     }
   
   tabla<-readline(prompt="Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N) : " ) 
+  
+  while (tabla != 'S' & tabla != 's' & tabla != 'N' & tabla != 'n' & tabla != '')
+    {
+      tabla<-readline(prompt="Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N) : " ) 
+    }
   
   if  (tabla == 'S' | tabla == 's')
     {
