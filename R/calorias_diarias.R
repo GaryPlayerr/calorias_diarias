@@ -28,12 +28,12 @@ calorias.diarias <- function(){
   
   n6<-readline(prompt="Conoces la distancia y el tiempo de entrenamiento? (S/N)  : " )
   
-  if  (n6 == 'N' | n6 == '')
+  if  (n6 == 'N' | n6 == '' | n6 == 'n')
     {
       n5<-readline(prompt="Ejercicio(1-Poco, 2-Ligero, 3-Moderado, 4-Fuerte, 5-Muy fuerte) : " )
     }  
   
-  else if  (n6 == 'S')
+  else if  (n6 == 'S' | n6 == 's')
     {
       n7<-readline(prompt="Distancia(km) : " ) 
       n8<-readline(prompt="Tiempo(minutos) : " ) 
@@ -80,18 +80,18 @@ calorias.diarias <- function(){
         calorias = TMB * 1.2
       }
   
-  if  (n6 == 'S') 
+  if  (n6 == 'S' | n6 == 's') 
       {
       n9<-readline(prompt="Caminas o corres?(S/N) : " ) 
-      if  (n9 == 'S')
+      if  (n9 == 'S' | n9 == 's')
            {
             cal = 14.26 * n8 + 46.66 * vel + 8.55 * n4 - 1164.85
            }
-      else if (n9 == 'N')
+      else if (n9 == 'N' | n9 == 'n')
            {
             n10<-readline(prompt="Montas en bici?(S/N) : " ) 
         
-              if  (n10 == 'S')
+              if  (n10 == 'S' | n10 == 's')
                   {
                     if  (vel < 16){cal = 4 * 0.0175 * n4 * n8}
                     else if (vel >= 16 & vel < 19){cal = 6 * 0.0175 * n4 * n8}
@@ -101,11 +101,11 @@ calorias.diarias <- function(){
                     else if (vel > 39 ){cal = 15 * 0.0175 * n4 * n8}
                     else {cal = 8 * 0.0175 * n4 * n8}
                   }
-              else if (n10 == 'N')
+              else if (n10 == 'N' | n10 == 'n')
                   {                
                     n11<-readline(prompt="Nadas?(S/N) : " ) 
                 
-                      if  (n11 == 'S'){cal = 10 * 0.0175 * n4 * n8}  
+                      if  (n11 == 'S' | n11 == 's'){cal = 10 * 0.0175 * n4 * n8}  
                       else{cal = 5.5 * 0.0175 * n4 * n8}
                 
                   }
@@ -121,7 +121,7 @@ calorias.diarias <- function(){
   
   modif<-readline(prompt="Quieres modificar tus calorias(S/N)?: " )
   
-  if  (modif == 'S')
+  if  (modif == 'S' | modif == 's')
       {
     
         calorias<-readline(prompt="Introduce nuevo valor de calorias: " )
@@ -143,12 +143,12 @@ calorias.diarias <- function(){
   
   crearbbdd <-readline(prompt="Usuario Nuevo?(S/N) : " ) 
   
-  if  (crearbbdd == 'N' | crearbbdd == '')
+  if  (crearbbdd == 'N' | crearbbdd == '' | crearbbdd == 'n')
     {
   
       modifbbdd <- readline(prompt="Usuario ya regfistrado. Modificar BBDD?(S/N) : " ) 
     
-      if  (modifbbdd == 'S')
+      if  (modifbbdd == 'S' | modifbbdd == 's')
           {
 
             library(sqldf)
@@ -160,10 +160,10 @@ calorias.diarias <- function(){
             Distancia <- n7
             Tiempo <- n8
 
-            if  (n6 == 'N' | n6 == ''){Actividad <- 'Otros'}
-            else if  (n9 == 'S'){Actividad <- 'Caminas o Corres'}
-            else if (n10 == 'S'){Actividad <- 'Bicicleta'}
-            else if (n10 == 'N'){Actividad <- 'Natacion'}       
+            if  (n6 == 'N' | n6 == '' | n6 == 'n'){Actividad <- 'Otros'}
+            else if  (n9 == 'S' | n9 == 's'){Actividad <- 'Caminas o Corres'}
+            else if (n10 == 'S' | n10 == 's'){Actividad <- 'Bicicleta'}
+            else if (n10 == 'N' | n10 =='n'){Actividad <- 'Natacion'}       
 
             Calorias_Totales <- calorias
             Calorias_Carbohidratos <- hc
@@ -198,10 +198,10 @@ calorias.diarias <- function(){
       Distancia <- n7
       Tiempo <- n8
       
-      if  (n6 == 'N' | n6 == ''){Actividad <- 'Otros'}
-      else if  (n9 == 'S'){Actividad <- 'Caminas o Corres'}
-      else if (n10 == 'S'){Actividad <- 'Bicicleta'}
-      else if (n10 == 'N'){Actividad <- 'Natacion'}       
+      if  (n6 == 'N' | n6 == '' | n6 =='n'){Actividad <- 'Otros'}
+      else if  (n9 == 'S' | n9 == 's'){Actividad <- 'Caminas o Corres'}
+      else if (n10 == 'S' | n10 == 's'){Actividad <- 'Bicicleta'}
+      else if (n10 == 'N' | n10 == 'n'){Actividad <- 'Natacion'}       
       
       Calorias_Totales <- calorias
       Calorias_Carbohidratos <- hc
@@ -249,7 +249,7 @@ calorias.diarias <- function(){
   
   tabla<-readline(prompt="Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N) : " ) 
   
-  if  (tabla == 'S')
+  if  (tabla == 'S' | tabla == 's')
     {
         library("readxl")
     
