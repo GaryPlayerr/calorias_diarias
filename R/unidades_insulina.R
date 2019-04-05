@@ -41,12 +41,12 @@ unidades.insulina <- function(){
 	
 	if  (Tipo_Insulina == 'RAPIDA' | Tipo_Insulina == 'rapida')
 		{
-		FSI <- 1800 / intot
+		FSI <- 1500 / intot
 		message('Una Unidad de insulina ultrarrapida hace disminuir :', FSI , 'mg/dl de glucosa')
 		}
 	else if (Tipo_Insulina == 'ULTRARRAPIDA' | Tipo_Insulina == 'ultrarrapida')
 		{
-		FSI <- 1500 / intot
+		FSI <- 1800 / intot
 		message('Una Unidad de insulina ultrarrapida hace disminuir :', FSI , 'mg/dl de glucosa')
 		}
 	else
