@@ -18,8 +18,10 @@ perfil.insulina <- function()
                     datatable(unidades)  
               }                    
           
-          if  (opcion == 1)
+          else if  (opcion == 1)
               {
+                    library(sqldf)
+                    db <- dbConnect(SQLite(), dbname="unidades_insulina")                    
                     fec<-readline(prompt="Introduce fecha o patron(AAAA-MM-DD): " )
                     filtro <- paste('%', fec, '%',sep = '') 
                     unidades <- dbGetQuery(db, "select * from unidades_insulina where Fecha like ?", filtro) 
@@ -28,8 +30,10 @@ perfil.insulina <- function()
           
               }      
 
-          if  (opcion == 2)
+          else if  (opcion == 2)
               {
+                    library(sqldf)
+                    db <- dbConnect(SQLite(), dbname="unidades_insulina")                    
                     dia<-readline(prompt="Introduce dia de la semana : " )
                     if  (dia == 'LUNES'){dia <- 'lunes'}
                     if  (dia == 'MARTES'){dia <- 'martes'}
@@ -46,8 +50,10 @@ perfil.insulina <- function()
           
               }            
     
-          if  (opcion == 3)
+          else if  (opcion == 3)
               {
+                    library(sqldf)
+                    db <- dbConnect(SQLite(), dbname="unidades_insulina")                    
                     hor<-readline(prompt="Introduce horario de comida (DESAYUNO, ALMUERZO, COMIDA, MERIENDA, CENA, RECENA): " )
                     if  (hor == 'desayuno'){hor <- 'DESAYUNO'}
                     if  (hor == 'almuerzo'){hor <- 'ALMUERZO'}
