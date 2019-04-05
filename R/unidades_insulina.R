@@ -25,7 +25,7 @@ unidades.insulina <- function(){
 	Horario_Comida <-readline(prompt="Horario de Comida?(DESAYUNO, ALMUERZO, COMIDA, MERIENDA, CENA, RECENA) : " )	
 	Alimento <- readline(prompt="Que alimentos vas ingerir? : " )
         Gramos_Carbohidratos <- readline(prompt="Gramos de Carbohidratos?: " )	
-	Gramos_Carbohidratos <- as.integer(Gramos_Carbohidratos)
+	Gramos_Carbohidratos <- as.float(Gramos_Carbohidratos)
 	Calorias_Alimento_Carbohidratos <- readline(prompt="Calorias Carbohidratos?: " )	
 	Calorias_Alimento_Proteinas <- readline(prompt="Calorias Proteinas?: " )	
 	Calorias_Alimento_Grasas <- readline(prompt="Calorias Grasas?: " )
@@ -56,11 +56,11 @@ unidades.insulina <- function(){
 		}
 
         Ratio <- readline(prompt="Introduce tu Ratio : " )
-	Ratio <- as.integer(Ratio)
+	Ratio <- as.float(Ratio)
         U_Insulina_Correcion <- (Glucemia_Real - Glucemia_Objetivo) / FSI
-	message(U_Insulina_Correcion, 'unidades de insulina de correcion mas que la pauta establecida')
+	message(U_Insulina_Correcion, ' unidades de insulina de correcion mas que la pauta establecida')
         U_Insulina_Comida <- Ratio * (Gramos_Carbohidratos / 10)
-	message(U_Insulina_Comida, 'unidades de insulina para la comida')
+	message(U_Insulina_Comida, ' unidades de insulina para la comida')
         Comentarios <- readline(prompt="Introduce tus comentarios? : " )   
 	
 	unidades_insulina <- data.frame(
