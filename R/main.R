@@ -10,10 +10,10 @@ print('5 - Consultar BBDD de alimentos:')
 print('6 - Consultar BBDD de Insulinas')  
 print('7 - Ayuda')
   
-n1<-readline(prompt="Introduzca una opcion: " )  
+n1<-readline(prompt="Introduce una opcion: " )  
 while (n1 != 0 & n1 != 1 & n1 != 2 & n1 != 3 & n1 != 4 & n1 != 5 & n1 != 6 & n1 != 7)
 {
-  n1<-readline(prompt="Introduzca una opcion: " ) 
+  n1<-readline(prompt="Introduce una opcion valida: " ) 
 }  
   if  (n1 == 0)
     {  
