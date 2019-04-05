@@ -9,7 +9,6 @@ print('4 - Consultar Unidades de Insulina y dietas de dias anteriores:')
 print('5 - Consultar BBDD de alimentos:')
 print('6 - Consultar BBDD de Insulinas')  
 print('7 - Ayuda')
-print('X - SALIR') 
   
 n1<-readline(prompt="Introduzca una opcion: " )  
 
