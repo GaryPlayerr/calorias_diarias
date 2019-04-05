@@ -6,14 +6,13 @@ perfil.insulina <- function()
           print ('2 - Consultar por dia de la semana.(LUNES, MARTES,....,DOMINGO)')
           print ('3 - Consultar por horario de comida (DESAYUNO, ALMUERZO, COMIDA, MERIENDA, CENA, RECENA)')
           
-          library(sqldf)
-
-          db <- dbConnect(SQLite(), dbname="unidades_insulina")
-          
           opcion<-readline(prompt="Introduce una opcion: " )
           
           if  (opcion == 0 | opcion == '')
               {
+                    
+                    library(sqldf)
+                    db <- dbConnect(SQLite(), dbname="unidades_insulina")
                     unidades <- dbGetQuery(db, "select * from unidades_insulina") 
                     library(DT)
                     datatable(unidades)  
