@@ -1,21 +1,21 @@
 main <- function()
 {
+print('Pulse 0, 1, 2, 3, 4, 5, 6, 7 segun la opcion que desee') 
+print('0 - Crear BBDD de alimentos e insulinas. NECESARIO LA PRIMERA VEZ QUE SE EJECUTA LA APLICACION')
+print('1 - Calcular calorias diarias y registrar/modificar perfil:')
+print('2 - Calcular las unidades de insulina de correcion o comidas. Registrar las dietas en BBDD:')
+print('3 - Consultar perfil de Usuario:')
+print('4 - Consultar Unidades de Insulina y dietas de dias anteriores:')
+print('5 - Consultar BBDD de alimentos:')
+print('6 - Consultar BBDD de Insulinas')  
+print('7 - Ayuda')
+print('X - SALIR') 
+  
+n1<-readline(prompt="Introduzca una opcion: " )  
+  
 while(n1 != 'X' | n1 != 'x')
   {
-  
-  print('Pulse 0, 1, 2, 3, 4, 5, 6, 7 segun la opcion que desee') 
-  print('0 - Crear BBDD de alimentos e insulinas. NECESARIO LA PRIMERA VEZ QUE SE EJECUTA LA APLICACION')
-  print('1 - Calcular calorias diarias y registrar/modificar perfil:')
-  print('2 - Calcular las unidades de insulina de correcion o comidas. Registrar las dietas en BBDD:')
-  print('3 - Consultar perfil de Usuario:')
-  print('4 - Consultar Unidades de Insulina y dietas de dias anteriores:')
-  print('5 - Consultar BBDD de alimentos:')
-  print('6 - Consultar BBDD de Insulinas')  
-  print('7 - Ayuda')
-  print('X - SALIR') 
-  
-  n1<-readline(prompt="Introduzca una opcion: " )
-  
+
   if  (n1 == 0)
     {  
       alimentos.composicion.create()
@@ -71,6 +71,20 @@ while(n1 != 'X' | n1 != 'x')
           {
             ?unidades.insulina 
           } 
-    }    
+    } 
+  
+  print('Pulse 0, 1, 2, 3, 4, 5, 6, 7 segun la opcion que desee') 
+  print('0 - Crear BBDD de alimentos e insulinas. NECESARIO LA PRIMERA VEZ QUE SE EJECUTA LA APLICACION')
+  print('1 - Calcular calorias diarias y registrar/modificar perfil:')
+  print('2 - Calcular las unidades de insulina de correcion o comidas. Registrar las dietas en BBDD:')
+  print('3 - Consultar perfil de Usuario:')
+  print('4 - Consultar Unidades de Insulina y dietas de dias anteriores:')
+  print('5 - Consultar BBDD de alimentos:')
+  print('6 - Consultar BBDD de Insulinas')  
+  print('7 - Ayuda')
+  print('X - SALIR') 
+  
+  n1<-readline(prompt="Introduzca una opcion: " )    
+  
   }
 }
