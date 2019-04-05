@@ -1,12 +1,30 @@
 alimento.composicion <- function()
 {
 
- n1<-readline(prompt="Tipo de alimemento(CEREALES, LEGUMINOSAS, TUBERCULOS_HORTALIZAS, FRUTOS_FRESCOS,FRUTOS_SECOS, 
- LACTEOS, HUEVOS, DULCES, ACEITES_GRASAS, PESCADOS, CERDO, CORDERO, TERNERA, VACA, EMBUTIDOS, AVES, CAZA): ")
+ print('1 - CEREALES')
+ print('2 - LEGUMINOSAS') 
+ print('3 - TUBERCULOS_HORTALIZAS') 
+ print('4 - FRUTOS_FRESCOS') 
+ print('5 - FRUTOS_SECOS') 
+ print('6 - LACTEOS') 
+ print('7 - HUEVOS') 
+ print('8 - DULCES') 
+ print('9 - ACEITES_GRASAS') 
+ print('10 - PESCADOS') 
+ print('11 - CERDO')
+ print('12 - CORDERO') 
+ print('13 - TERNERA') 
+ print('14 - VACA')
+ print('15 - EMBUTIDOS') 
+ print('16 - AVES')  
+ print('17 - CAZA')  
+ 
+# n1<-readline(prompt="Tipo de alimemento(CEREALES, LEGUMINOSAS, TUBERCULOS_HORTALIZAS, FRUTOS_FRESCOS,FRUTOS_SECOS, 
+# LACTEOS, HUEVOS, DULCES, ACEITES_GRASAS, PESCADOS, CERDO, CORDERO, TERNERA, VACA, EMBUTIDOS, AVES, CAZA): ")
   
  library(sqldf)
 
- if  (n1 == 'CEREALES')
+ if  (n1 == 1)
        {
           db <- dbConnect(SQLite(), dbname="Cereales")
   
@@ -38,7 +56,7 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        }
- else if (n1 == 'LEGUMINOSAS')
+ else if (n1 == 2)
        {
           db <- dbConnect(SQLite(), dbname="Leguminosas")
   
@@ -70,7 +88,7 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        } 
- else if (n1 == 'TUBERCULOS_HORTALIZAS')
+ else if (n1 == 3)
        {
           db <- dbConnect(SQLite(), dbname="Tuberculos_hortalizas")
   
@@ -102,7 +120,7 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        } 
- else if (n1 == 'FRUTOS_FRESCOS')
+ else if (n1 == 4)
        {
           db <- dbConnect(SQLite(), dbname="Frutos_frescos")
   
@@ -134,7 +152,7 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        } 
- else if (n1 == 'FRUTOS_SECOS')
+ else if (n1 == 5)
        {
           db <- dbConnect(SQLite(), dbname="Frutos_secos")
   
@@ -166,7 +184,7 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        } 
- else if (n1 == 'LACTEOS')
+ else if (n1 == 6)
        {
           db <- dbConnect(SQLite(), dbname="Lacteos")
   
@@ -198,7 +216,7 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        } 
- else if (n1 == 'HUEVOS')
+ else if (n1 == 7)
        {
           db <- dbConnect(SQLite(), dbname="Huevos")
   
@@ -230,7 +248,7 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        } 
- else if (n1 == 'DULCES')
+ else if (n1 == 8)
        {
           db <- dbConnect(SQLite(), dbname="Dulces")
   
@@ -262,7 +280,7 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        } 
- else if (n1 == 'ACEITES_GRASAS')
+ else if (n1 == 9)
        {
           db <- dbConnect(SQLite(), dbname="aceites_grasas")
   
@@ -294,7 +312,7 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        }  
- else if (n1 == 'PESCADOS')
+ else if (n1 == 10)
        {
           db <- dbConnect(SQLite(), dbname="Pescados")
   
@@ -326,7 +344,7 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        }  
- else if (n1 == 'CERDO')
+ else if (n1 == 11)
        {
           db <- dbConnect(SQLite(), dbname="Cerdo")
   
@@ -358,7 +376,7 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        } 
- else if (n1 == 'CORDERO')
+ else if (n1 == 12)
        {
           db <- dbConnect(SQLite(), dbname="Cordero")
   
@@ -390,7 +408,7 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        } 
- else if (n1 == 'TERNERA')
+ else if (n1 == 13)
        {
           db <- dbConnect(SQLite(), dbname="Ternera")
   
@@ -422,7 +440,7 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        }  
- else if (n1 == 'VACA')
+ else if (n1 == 14)
        {
           db <- dbConnect(SQLite(), dbname="Vaca")
   
@@ -454,7 +472,7 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        }  
- else if (n1 == 'EMBUTIDOS')
+ else if (n1 == 15)
        {
           db <- dbConnect(SQLite(), dbname="Embutidos")
   
@@ -486,7 +504,7 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        }
- else if (n1 == 'AVES')
+ else if (n1 == 16)
        {
           db <- dbConnect(SQLite(), dbname="Aves")
   
@@ -518,7 +536,7 @@ alimento.composicion <- function()
           library(DT)
           datatable(alimento)
        }  
- else if (n1 == 'CAZA')
+ else if (n1 == 17)
        {
           db <- dbConnect(SQLite(), dbname="Caza")
   
