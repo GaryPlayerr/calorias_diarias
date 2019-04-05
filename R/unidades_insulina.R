@@ -25,6 +25,7 @@ unidades.insulina <- function(){
 	Horario_Comida <-readline(prompt="Horario de Comida?(DESAYUNO, ALMUERZO, COMIDA, MERIENDA, CENA, RECENA) : " )	
 	Alimento <- readline(prompt="Que alimentos vas ingerir? : " )
         Gramos_Carbohidratos <- readline(prompt="Gramos de Carbohidratos?: " )	
+	Gramos_Carbohidratos <- as.integer(Gramos_Carbohidratos)
 	Calorias_Alimento_Carbohidratos <- readline(prompt="Calorias Carbohidratos?: " )	
 	Calorias_Alimento_Proteinas <- readline(prompt="Calorias Proteinas?: " )	
 	Calorias_Alimento_Grasas <- readline(prompt="Calorias Grasas?: " )
