@@ -55,7 +55,7 @@ while (n1 != 0 & n1 != 1 & n1 != 2 & n1 != 3 & n1 != 4 & n1 != 5 & n1 != 6 & n1 
     
       n2<-readline(prompt="Introduce una opcion : " )
     
-      while (n1 != 1 & n1 != 2 & n1 != 3 & n1 != 4)
+      while (n2 != 1 & n1 != 2 & n1 != 3 & n1 != 4)
           {
             n2<-readline(prompt="Introduce una opcion valida: " ) 
           } 
