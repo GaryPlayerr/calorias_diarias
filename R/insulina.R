@@ -14,9 +14,17 @@ insulina <- function()
        {
 
           db <- dbConnect(SQLite(), dbname="insulina_total")
-
-          ultra<-readline(prompt="Seleccione insulina ultrarrapida LISPRO, ASPARTA O  GLULISINA en MAYUSCULAS, espacios todas: " )
-
+  
+          print('1 - LISPRO')
+          print('2 - ASPARTA')  
+          print('3 - GLULISINA')
+          print('Cualquier otra opcion se listan todos los tipos de ultrarrapidas')
+          ultraop <-readline(prompt="Introduce una opcion:")
+          if  (ultraop != 1 & ultraop != 2 & ultraop != 3){ultra <- ''} 
+          if  (ultraop == 1){ultra <- 'LISPRO'}
+          if  (ultraop == 2){ultra <- 'ASPARTA'}
+          if  (ultraop == 3){ultra <- 'GLULISINA'}
+  
           if  (ultra == '')
             {
            
