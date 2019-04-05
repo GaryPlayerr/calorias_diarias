@@ -2,11 +2,14 @@ insulina <- function()
 
 {
 
- n1<-readline(prompt="Accion de la Insulina (RAPIDA o ULTRARRAPIDA): ")
+ print('1 - Insulina RAPIDA: ')
+ print('2 - Insulina ULTRARRAPIDA: ') 
+ print('Cualquier otra opcion lista todos los tipos de insulina') 
+ n1<-readline(prompt="Introduce una opcion: ")
 
  library(sqldf)
 
- if  (n1 == 'ULTRARRAPIDA' | n1 == 'ultrarrapida')
+ if  (n1 == 2)
 
        {
 
@@ -34,7 +37,7 @@ insulina <- function()
           datatable(ultrarrapida)
        }
        
- else if (n1 == 'RAPIDA' | n1 == 'rapida')    
+ else if (n1 == 1)    
  
         {
 
