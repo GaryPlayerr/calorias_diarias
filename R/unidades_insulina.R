@@ -25,17 +25,42 @@ unidades.insulina <- function(){
 	Horario_Comida <-readline(prompt="Horario de Comida?(DESAYUNO, ALMUERZO, COMIDA, MERIENDA, CENA, RECENA) : " )	
 	Alimento <- readline(prompt="Que alimentos vas ingerir? : " )
         Gramos_Carbohidratos <- readline(prompt="Gramos de Carbohidratos?: " )	
+	Gramos_Carbohidratos <- as.integer(Gramos_Carbohidratos)
 	Calorias_Alimento_Carbohidratos <- readline(prompt="Calorias Carbohidratos?: " )	
 	Calorias_Alimento_Proteinas <- readline(prompt="Calorias Proteinas?: " )	
 	Calorias_Alimento_Grasas <- readline(prompt="Calorias Grasas?: " )
 	Dia <- format(as.Date(Fecha1),"%A")
         Glucemia_Real <- readline(prompt="Glucemia Real?: " )
+	Glucemia_Real <- as.integer(Glucemia_Real)
         Glucemia_Objetivo <- readline(prompt="Glucemia Objetivo?: " )
+	Glucemia_Objetivo <- as.integer(Glucemia_Objetivo)
         Tipo_Insulina <- readline(prompt="Tipo de Insulina?(RAPIDA/ULTRARRAPIDA) : " )
-        FSI <- 0
-        Ratio <- 0
-        U_Insulina_Correcion <- 0  	 	
-        U_Insulina_Comida <- 0
+	
+	intot <- readline(prompt="Introduce las unidades totales de insulina(lenta+rapida+ultrarrapida) diarias : " )
+	intot <- as.integer(intot)
+	
+	if  (Tipo_Insulina == 'RAPIDA' | Tipo_Insulina == 'rapida')
+		{
+		FSI <- 1800 / intot
+		message('Una Unidad de insulina ultrarrapida hace disminuir :', FSI , 'mg/dl de glucosa')
+		}
+	else if (Tipo_Insulina == 'ULTRARRAPIDA' | Tipo_Insulina == 'ultrarrapida')
+		{
+		FSI <- 1500 / intot
+		message('Una Unidad de insulina ultrarrapida hace disminuir :', FSI , 'mg/dl de glucosa')
+		}
+	else
+		{
+		FSI <- 0
+		message('¡¡¡¡¡¡ E R R O R !!!!!!')   
+		}
+
+        Ratio <- readline(prompt="Introduce tu Ratio : " )
+	Ratio <- as.integer(Ratio)
+        U_Insulina_Correcion <- (Glucemia_Real - Glucemia_Objetivo) / FSI
+	message(U_Insulina_Correcion, 'unidades de insulina de correcion mas que la pauta establecida')
+        U_Insulina_Comida <- Ratio * (Gramos_Carbohidratos / 10)
+	message(U_Insulina_Comida, 'unidades de insulina para la comida')
         Comentarios <- readline(prompt="Introduce tus comentarios? : " )   
 	
 	unidades_insulina <- data.frame(
