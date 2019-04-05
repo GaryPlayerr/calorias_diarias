@@ -6,7 +6,7 @@ insulina <- function()
 
  library(sqldf)
 
- if  (n1 == 'ULTRARRAPIDA')
+ if  (n1 == 'ULTRARRAPIDA' | n1 == 'ultrarrapida)
 
        {
 
@@ -34,7 +34,7 @@ insulina <- function()
           datatable(ultrarrapida)
        }
        
- else if (n1 == 'RAPIDA')    
+ else if (n1 == 'RAPIDA' | n1 == 'rapida')    
  
         {
 
