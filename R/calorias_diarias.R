@@ -225,12 +225,12 @@ calorias.diarias <- function(){
     print('N - No haces ningun tipo de ejercicio')
     tabla<-readline(prompt="Introduce una opcion (S/N)?:")
   
-    while (tabla != 'S' tabla != 'N' & tabla != 'n' & tabla != '')
+    while (tabla != 'S' & tabla != 'N' & tabla != 'n' & tabla != '')
       {
         tabla<-readline(prompt="Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N) : " ) 
       }
   
-    if  (tabla == 'S' | tabla == 's')
+    if  (tabla == 'S')
       {
         library("readxl")
     
