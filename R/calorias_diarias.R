@@ -17,39 +17,12 @@ calorias.diarias <- function(){
       
          message('ERROR, teclea M o F')
          n1<-readline(prompt="Sexo(M/F): " )
-      
-        }
-    
+        } 
     }
     
   n2<-readline(prompt="Edad: " )
   n3<-readline(prompt="Altura (cm): " )
   n4<-readline(prompt="Peso (kg): " )
-  
-  n6<-readline(prompt="Conoces la distancia y el tiempo de entrenamiento? (S/N)  : " )
-  
-  if  (n6 == 'N' | n6 == '' | n6 == 'n')
-    {
-      n5<-readline(prompt="Ejercicio(1-Poco, 2-Ligero, 3-Moderado, 4-Fuerte, 5-Muy fuerte) : " )
-    
-      while (n5 != 1 & n5 != 2 & n5 != 3 & n5 != 4 & n5 != 5)
-        {
-          n5<-readline(prompt="Ejercicio(1-Poco, 2-Ligero, 3-Moderado, 4-Fuerte, 5-Muy fuerte) : " )
-        }
-    }  
-  
-  else if  (n6 == 'S' | n6 == 's')
-    {
-      n7<-readline(prompt="Distancia(km) : " ) 
-      n8<-readline(prompt="Tiempo(minutos) : " ) 
-      n5<- 0
-      n7<-as.integer(n7)
-      n8<-as.integer(n8)
-    
-      horas = n8 / 60
-      vel = n7 / horas
-    
-    }  
   
   n2<-as.integer(n2)
   n3<-as.integer(n3)
@@ -64,63 +37,223 @@ calorias.diarias <- function(){
       TMB = (10 * n4) + (6.25 * n3) - (5 * n2) - 161     
     }
   
-  if  (n5 == '5')
+  print('1 - Caminas o corres?')
+  print('2 - Montas en bici?')
+  print('3 - Nadas'?)
+  print('4 - otras actividades')
+  
+  depor <- readline(prompt="Introduce una opcion: " )
+  
+  while (depor != 1 & depor != 2 & depor != 3 & depor != 4)
     {
-      calorias = TMB * 1.9
+      depor <- readline(prompt="Introduce una opcion valida: " )
     }
-  else if  (n5 == '4')
+  
+  if  (depor == 1)
+    {
+    n6<-readline(prompt="Conoces la distancia y el tiempo de entrenamiento? (S/N)  : " )
+    
+    while (n6 != 'S' & n6 != 's' & n6 != 'N' & n6 != 'n' & n6 != '')
       {
-        calorias = TMB * 1.725
+         n6<-readline(prompt="Conoces la distancia y el tiempo de entrenamiento? (S/N)  : " )
       }
-  else if  (n5 == '3')
+  
+    if  (n6 == 'N' | n6 == '' | n6 == 'n')
       {
-        calorias = TMB * 1.55
+        n5<-readline(prompt="Ejercicio(1-Poco, 2-Ligero, 3-Moderado, 4-Fuerte, 5-Muy fuerte) : " )
+    
+        while (n5 != 1 & n5 != 2 & n5 != 3 & n5 != 4 & n5 != 5)
+          {
+            n5<-readline(prompt="Ejercicio(1-Poco, 2-Ligero, 3-Moderado, 4-Fuerte, 5-Muy fuerte) : " )
+          }
+          if  (n5 == '5')
+              {
+                calorias = TMB * 1.9
+              }
+          else if  (n5 == '4')
+              {
+                calorias = TMB * 1.725
+              }
+          else if  (n5 == '3')
+              {
+                calorias = TMB * 1.55
+              }  
+          else if  (n5 == '2')
+              {
+                calorias = TMB * 1.375
+              }
+          else if  (n5 == '1' | n5 == '')
+              {
+                calorias = TMB * 1.2
+              }
+      }
+    else if  (n6 == 'S' | n6 == 's')
+      {
+        n7<-readline(prompt="Distancia(km) : " ) 
+        n8<-readline(prompt="Tiempo(minutos) : " ) 
+        n5<- 0
+        n7<-as.integer(n7)
+        n8<-as.integer(n8)
+    
+        horas = n8 / 60
+        vel = n7 / horas
+      
+        cal = 14.26 * n8 + 46.66 * vel + 8.55 * n4 - 1164.85  
+        calorias = TMB + cal 
       }  
-  else if  (n5 == '2')
+    }
+  else if (depor == 2)
+    {
+    n6<-readline(prompt="Conoces la distancia y el tiempo de entrenamiento? (S/N)  : " )
+    
+    while (n6 != 'S' & n6 != 's' & n6 != 'N' & n6 != 'n' & n6 != '')
       {
-        calorias = TMB * 1.375
+         n6<-readline(prompt="Conoces la distancia y el tiempo de entrenamiento? (S/N)  : " )
       }
-  else if  (n5 == '1' | n5 == '')
+    
+    if  (n6 == 'N' | n6 == '' | n6 == 'n')
       {
-        calorias = TMB * 1.2
+        n5<-readline(prompt="Ejercicio(1-Poco, 2-Ligero, 3-Moderado, 4-Fuerte, 5-Muy fuerte) : " )
+    
+        while (n5 != 1 & n5 != 2 & n5 != 3 & n5 != 4 & n5 != 5)
+          {
+            n5<-readline(prompt="Ejercicio(1-Poco, 2-Ligero, 3-Moderado, 4-Fuerte, 5-Muy fuerte) : " )
+          }
+          if  (n5 == '5')
+              {
+                calorias = TMB * 1.9
+              }
+          else if  (n5 == '4')
+              {
+                calorias = TMB * 1.725
+              }
+          else if  (n5 == '3')
+              {
+                calorias = TMB * 1.55
+              }  
+          else if  (n5 == '2')
+              {
+                calorias = TMB * 1.375
+              }
+          else if  (n5 == '1' | n5 == '')
+              {
+                calorias = TMB * 1.2
+              } 
+      }
+    else if  (n6 == 'S' | n6 == 's')
+      {
+        n7<-readline(prompt="Distancia(km) : " ) 
+        n8<-readline(prompt="Tiempo(minutos) : " ) 
+        n5<- 0
+        n7<-as.integer(n7)
+        n8<-as.integer(n8)
+    
+        horas = n8 / 60
+        vel = n7 / horas
+      
+       if  (vel < 16){cal = 4 * 0.0175 * n4 * n8}
+       else if (vel >= 16 & vel < 19){cal = 6 * 0.0175 * n4 * n8}
+       else if (vel >= 19 & vel < 22.5){cal = 8 * 0.0175 * n4 * n8}
+       else if (vel >= 22.5 & vel < 24){cal = 10 * 0.0175 * n4 * n8}
+       else if (vel >= 24 & vel < 35){cal = 12 * 0.0175 * n4 * n8}
+       else if (vel > 39 ){cal = 15 * 0.0175 * n4 * n8}
+       else {cal = 8 * 0.0175 * n4 * n8}      
+      
+       calorias = TMB + cal 
+      }  
+    }      
+ 
+   else if (depor == 3)
+    {
+    n6<-readline(prompt="Conoces la distancia y el tiempo de entrenamiento? (S/N)  : " )
+    
+    while (n6 != 'S' & n6 != 's' & n6 != 'N' & n6 != 'n' & n6 != '')
+      {
+         n6<-readline(prompt="Conoces la distancia y el tiempo de entrenamiento? (S/N)  : " )
+      }
+    
+    if  (n6 == 'N' | n6 == '' | n6 == 'n')
+      {
+        n5<-readline(prompt="Ejercicio(1-Poco, 2-Ligero, 3-Moderado, 4-Fuerte, 5-Muy fuerte) : " )
+    
+        while (n5 != 1 & n5 != 2 & n5 != 3 & n5 != 4 & n5 != 5)
+          {
+            n5<-readline(prompt="Ejercicio(1-Poco, 2-Ligero, 3-Moderado, 4-Fuerte, 5-Muy fuerte) : " )
+          }
+          if  (n5 == '5')
+              {
+                calorias = TMB * 1.9
+              }
+          else if  (n5 == '4')
+              {
+                calorias = TMB * 1.725
+              }
+          else if  (n5 == '3')
+              {
+                calorias = TMB * 1.55
+              }  
+          else if  (n5 == '2')
+              {
+                calorias = TMB * 1.375
+              }
+          else if  (n5 == '1' | n5 == '')
+              {
+                calorias = TMB * 1.2
+              } 
+      }
+    else if  (n6 == 'S' | n6 == 's')
+      {
+        n7<-readline(prompt="Distancia(km) : " ) 
+        n8<-readline(prompt="Tiempo(minutos) : " ) 
+        n5<- 0
+        n7<-as.integer(n7)
+        n8<-as.integer(n8)
+    
+        horas = n8 / 60
+        vel = n7 / horas
+      
+        cal = 10 * 0.0175 * n4 * n8
+        calorias = TMB + cal
+       
+      }  
+    }  
+    
+  else if  (depor == 4)
+    {
+  
+    tabla<-readline(prompt="Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N) : " ) 
+  
+    while (tabla != 'S' & tabla != 's' & tabla != 'N' & tabla != 'n' & tabla != '')
+      {
+        tabla<-readline(prompt="Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N) : " ) 
       }
   
-  if  (n6 == 'S' | n6 == 's') 
+    if  (tabla == 'S' | tabla == 's')
       {
-      n9<-readline(prompt="Caminas o corres?(S/N) : " ) 
-      if  (n9 == 'S' | n9 == 's')
-           {
-            cal = 14.26 * n8 + 46.66 * vel + 8.55 * n4 - 1164.85
-           }
-      else if (n9 == 'N' | n9 == 'n')
-           {
-            n10<-readline(prompt="Montas en bici?(S/N) : " ) 
-        
-              if  (n10 == 'S' | n10 == 's')
-                  {
-                    if  (vel < 16){cal = 4 * 0.0175 * n4 * n8}
-                    else if (vel >= 16 & vel < 19){cal = 6 * 0.0175 * n4 * n8}
-                    else if (vel >= 19 & vel < 22.5){cal = 8 * 0.0175 * n4 * n8}
-                    else if (vel >= 22.5 & vel < 24){cal = 10 * 0.0175 * n4 * n8}
-                    else if (vel >= 24 & vel < 35){cal = 12 * 0.0175 * n4 * n8}
-                    else if (vel > 39 ){cal = 15 * 0.0175 * n4 * n8}
-                    else {cal = 8 * 0.0175 * n4 * n8}
-                  }
-              else if (n10 == 'N' | n10 == 'n')
-                  {                
-                    n11<-readline(prompt="Nadas?(S/N) : " ) 
-                
-                      if  (n11 == 'S' | n11 == 's'){cal = 10 * 0.0175 * n4 * n8}  
-                      else{cal = 5.5 * 0.0175 * n4 * n8}
-                
-                  }
-              else{cal = 8 * 0.0175 * n4 * n8}
-           }
-      else {cal = 7 * 0.0175 * n4 * n8}
-      calorias = TMB + cal 
+        library("readxl")
+    
+        n8<-readline(prompt="Tiempo(minutos) : " )
+        n8<-as.integer(n8)
+    
+        url1<-'https://github.com/BorjaJorge/calorias_diarias/raw/master/R/MET.xlsx'
+        p1f <- tempfile()
+        download.file(url1, p1f, mode="wb")
+        tabla<-read_excel(path = p1f)
+        tabla$Calorias_que_quemarias <- tabla$Calorias * 0.0175 * n4 * n8
+        tabla$Calorias <- NULL
+
+        library(DT)
+        datatable(tabla)
+      
+        caldep<-readline(prompt="Introduce las calorias del deporte que has elegido : " ) 
+        caldep <- as.numeric(caldep)
+      
+        calorias = TMB + caldep
+    
+      }    
   
-      }
-  
+    }
+   
   message("Calorias metabolismo basal mas ejercicio:", calorias)
   message("Calorias metabolismo basal:", TMB)
   
@@ -267,29 +400,5 @@ calorias.diarias <- function(){
     
     }
   
-  tabla<-readline(prompt="Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N) : " ) 
-  
-  while (tabla != 'S' & tabla != 's' & tabla != 'N' & tabla != 'n' & tabla != '')
-    {
-      tabla<-readline(prompt="Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N) : " ) 
-    }
-  
-  if  (tabla == 'S' | tabla == 's')
-    {
-        library("readxl")
-    
-        n8<-readline(prompt="Tiempo(minutos) : " )
-        n8<-as.integer(n8)
-    
-        url1<-'https://github.com/BorjaJorge/calorias_diarias/raw/master/R/MET.xlsx'
-        p1f <- tempfile()
-        download.file(url1, p1f, mode="wb")
-        tabla<-read_excel(path = p1f)
-        tabla$Calorias_que_quemarias <- tabla$Calorias * 0.0175 * n4 * n8
-        tabla$Calorias <- NULL
 
-        library(DT)
-        datatable(tabla)
-    
-    }
 }
