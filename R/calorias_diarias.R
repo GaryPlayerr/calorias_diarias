@@ -221,11 +221,11 @@ calorias.diarias <- function(){
   else if  (depor == 4)
     {
   
-    print('S - Conocer las calorias que quemarias en otros tipos de entrenamiento')
+    print('S - Quieres ver las calorias que quemarias en otros tipos de entrenamiento?:')
     print('N - No haces ningun tipo de ejercicio')
     tabla<-readline(prompt="Introduce una opcion (S/N)?:")
   
-    while (tabla != 'S' & tabla != 's' & tabla != 'N' & tabla != 'n' & tabla != '')
+    while (tabla != 'S' tabla != 'N' & tabla != 'n' & tabla != '')
       {
         tabla<-readline(prompt="Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N) : " ) 
       }
@@ -243,7 +243,6 @@ calorias.diarias <- function(){
         tabla<-read_excel(path = p1f)
         tabla$Calorias_que_quemarias <- tabla$Calorias * 0.0175 * n4 * n8
         tabla$Calorias <- NULL
-        tabla <- 'S'
         library(DT)
         datatable(tabla)
     
