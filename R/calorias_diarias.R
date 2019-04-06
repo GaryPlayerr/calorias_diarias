@@ -39,7 +39,7 @@ calorias.diarias <- function(){
   
   print('1 - Caminas o corres?')
   print('2 - Montas en bici?')
-  print('3 - Nadas'?)
+  print('3 - Nadas?')
   print('4 - otras actividades o NO haces ningun deporte')
   
   depor <- readline(prompt="Introduce una opcion: " )
