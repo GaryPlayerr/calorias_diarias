@@ -255,16 +255,16 @@ calorias.diarias <- function(){
   
     }
    
+  message("Calorias metabolismo basal:", TMB)
+  
   if  (depor == 4 & tabla1 == 'S')
     {
-        datatable(tabla)
         caldep<-readline(prompt="Introduce las calorias del deporte que has elegido : " ) 
         caldep <- as.numeric(caldep) 
         calorias = TMB + caldep
     }
   
   message("Calorias metabolismo basal mas ejercicio:", calorias)
-  message("Calorias metabolismo basal:", TMB)
   
   modif<-readline(prompt="Quieres modificar tus calorias(S/N)?: " )
   
