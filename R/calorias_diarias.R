@@ -319,10 +319,10 @@ calorias.diarias <- function(){
             Distancia <- n7
             Tiempo <- n8
 
-            if  (n6 == 'N' | n6 == '' | n6 == 'n'){Actividad <- 'Otros'}
-            else if  (n9 == 'S' | n9 == 's'){Actividad <- 'Caminas o Corres'}
-            else if (n10 == 'S' | n10 == 's'){Actividad <- 'Bicicleta'}
-            else if (n10 == 'N' | n10 =='n'){Actividad <- 'Natacion'}       
+            if  (depor == 4){Actividad <- 'Otros'}
+            else if  (depor == 1){Actividad <- 'Caminas o Corres'}
+            else if (depor == 2){Actividad <- 'Bicicleta'}
+            else if (depor == 3){Actividad <- 'Natacion'}       
 
             Calorias_Totales <- calorias
             Calorias_Carbohidratos <- hc
@@ -357,10 +357,10 @@ calorias.diarias <- function(){
       Distancia <- n7
       Tiempo <- n8
       
-      if  (n6 == 'N' | n6 == '' | n6 =='n'){Actividad <- 'Otros'}
-      else if  (n9 == 'S' | n9 == 's'){Actividad <- 'Caminas o Corres'}
-      else if (n10 == 'S' | n10 == 's'){Actividad <- 'Bicicleta'}
-      else if (n10 == 'N' | n10 == 'n'){Actividad <- 'Natacion'}       
+      if  (depor == 4){Actividad <- 'Otros'}
+      else if  (depor == 1){Actividad <- 'Caminas o Corres'}
+      else if (depor == 2){Actividad <- 'Bicicleta'}
+      else if (depor == 3){Actividad <- 'Natacion'}       
       
       Calorias_Totales <- calorias
       Calorias_Carbohidratos <- hc
