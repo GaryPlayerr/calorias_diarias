@@ -233,7 +233,8 @@ calorias.diarias <- function(){
   
     if  (tabla1 == 'S' | tabla1 == 's')
       {
-        otros.deportes()  
+        otros.deportes() 
+        tabla1 <- 'S'
       }
     else if (tabla1 == 'N' | tabla1 == 'n' | tabla1 =='')
       {
