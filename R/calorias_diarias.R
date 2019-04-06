@@ -225,18 +225,18 @@ calorias.diarias <- function(){
     print('N - No haces ningun tipo de ejercicio')
     tabla<-readline(prompt="Introduce una opcion (S/N)?:")
   
-    while (tabla != 'S' & tabla != 'N' & tabla != 'n' & tabla != '')
+    while (tabla != 'S' & tabla != 's' & tabla != 'N' & tabla != 'n' & tabla != '')
       {
-        tabla<-readline(prompt="Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N) : " ) 
+        tabla1<-readline(prompt="Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N) : " ) 
       }
   
-    if  (tabla == 'S')
+    if  (tabla1 == 'S' | tabla1 == 's')
       {
         library("readxl")
     
         n8<-readline(prompt="Tiempo(minutos) : " )
         n8<-as.integer(n8)
-    
+        tabla1 <- 'S'
         url1<-'https://github.com/BorjaJorge/calorias_diarias/raw/master/R/MET.xlsx'
         p1f <- tempfile()
         download.file(url1, p1f, mode="wb")
@@ -247,14 +247,14 @@ calorias.diarias <- function(){
         datatable(tabla)
     
       }
-    else if (tabla == 'N' | tabla == 'n' | tabla =='')
+    else if (tabla1 == 'N' | tabla1 == 'n' | tabla1 =='')
       {
         calorias = TMB
       }
   
     }
    
-  if  (depor == 4 & tabla == 'S')
+  if  (depor == 4 & tabla1 == 'S')
     {
         caldep<-readline(prompt="Introduce las calorias del deporte que has elegido : " ) 
         caldep <- as.numeric(caldep) 
