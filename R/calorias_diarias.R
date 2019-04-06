@@ -261,6 +261,7 @@ calorias.diarias <- function(){
   if  (depor == 4 & tabla1 == 'S')
     {
 #        caldep<-readline(prompt="Introduce las calorias del deporte que has elegido : " ) 
+        caldep <- 100
         caldep <- as.numeric(caldep) 
         calorias = TMB + caldep
     }
