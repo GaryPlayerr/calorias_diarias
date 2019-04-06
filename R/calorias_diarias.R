@@ -252,7 +252,7 @@ calorias.diarias <- function(){
         fillContainer = getOption("DT.fillContainer", NULL),
         autoHideNavigation = getOption("DT.autoHideNavigation", NULL),
         selection = c("multiple", "single", "none"), extensions = list(),
-        plugins = NULL, editable = FALSE))
+        plugins = NULL, editable = FALSE)
     
       }
     else if (tabla1 == 'N' | tabla1 == 'n' | tabla1 =='')
