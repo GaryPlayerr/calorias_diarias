@@ -245,9 +245,7 @@ calorias.diarias <- function(){
         tabla$Calorias_que_quemarias <- tabla$Calorias * 0.0175 * n4 * n8
         tabla$Calorias <- NULL
         library(DT)
-        datatable(tabla, options = list(), class = "display",
-        callback = JS("return table;"))
-        tabla
+        datatable(tabla)
     
       }
     else if (tabla1 == 'N' | tabla1 == 'n' | tabla1 =='')
