@@ -6,6 +6,7 @@ calorias.diarias <- function(){
   n9 <- 'N'
   n10 <- 'N'
   n11 <- 'N'
+  tabla1 <- 'S'
   
   if (n1 != 'M' & n1 != 'F')
     {
