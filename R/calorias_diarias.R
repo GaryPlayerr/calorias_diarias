@@ -245,7 +245,14 @@ calorias.diarias <- function(){
         tabla$Calorias_que_quemarias <- tabla$Calorias * 0.0175 * n4 * n8
         tabla$Calorias <- NULL
         library(DT)
-        datatable(tabla)
+        datatable(tabla, options = list(), class = "display",
+        callback = JS("return table;"), rownames, colnames, container,
+        caption = NULL, filter = c("none", "bottom", "top"), escape = TRUE,
+        style = "default", width = NULL, height = NULL, elementId = NULL,
+        fillContainer = getOption("DT.fillContainer", NULL),
+        autoHideNavigation = getOption("DT.autoHideNavigation", NULL),
+        selection = c("multiple", "single", "none"), extensions = list(),
+        plugins = NULL, editable = FALSE))
     
       }
     else if (tabla1 == 'N' | tabla1 == 'n' | tabla1 =='')
