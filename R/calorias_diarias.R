@@ -243,7 +243,7 @@ calorias.diarias <- function(){
         tabla<-read_excel(path = p1f)
         tabla$Calorias_que_quemarias <- tabla$Calorias * 0.0175 * n4 * n8
         tabla$Calorias <- NULL
-
+        tabla <- 'S'
         library(DT)
         datatable(tabla)
     
@@ -255,7 +255,7 @@ calorias.diarias <- function(){
   
     }
    
-  if  (depor == 4)
+  if  (depor == 4 & tabla == 'S')
     {
         caldep<-readline(prompt="Introduce las calorias del deporte que has elegido : " ) 
         caldep <- as.numeric(caldep) 
