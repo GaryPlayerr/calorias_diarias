@@ -40,7 +40,7 @@ calorias.diarias <- function(){
   print('1 - Caminas o corres?')
   print('2 - Montas en bici?')
   print('3 - Nadas'?)
-  print('4 - otras actividades')
+  print('4 - otras actividades o NO haces ningun deporte')
   
   depor <- readline(prompt="Introduce una opcion: " )
   
@@ -221,7 +221,9 @@ calorias.diarias <- function(){
   else if  (depor == 4)
     {
   
-    tabla<-readline(prompt="Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N) : " ) 
+    print('S - Conocer las calorias que quemarias en otros tipos de entrenamiento')
+    print('N - No haces ningun tipo de ejercicio')
+    tabla<-readline(prompt="Introduce una opcion (S/N)?:"
   
     while (tabla != 'S' & tabla != 's' & tabla != 'N' & tabla != 'n' & tabla != '')
       {
@@ -250,7 +252,11 @@ calorias.diarias <- function(){
       
         calorias = TMB + caldep
     
-      }    
+      }
+    else if (tabla == 'N' | tabla == 'n' | tabla =='')
+      {
+        calorias = TMB
+      }
   
     }
    
