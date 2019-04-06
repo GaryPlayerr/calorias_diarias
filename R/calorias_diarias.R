@@ -223,9 +223,9 @@ calorias.diarias <- function(){
   
     print('S - Quieres ver las calorias que quemarias en otros tipos de entrenamiento?:')
     print('N - No haces ningun tipo de ejercicio')
-    tabla<-readline(prompt="Introduce una opcion (S/N)?:")
+    tabla1<-readline(prompt="Introduce una opcion (S/N)?:")
   
-    while (tabla != 'S' & tabla != 's' & tabla != 'N' & tabla != 'n' & tabla != '')
+    while (tabla1 != 'S' & tabla1 != 's' & tabla1 != 'N' & tabla1 != 'n' & tabla1 != '')
       {
         tabla1<-readline(prompt="Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N) : " ) 
       }
