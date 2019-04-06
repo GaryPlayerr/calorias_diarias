@@ -247,6 +247,7 @@ calorias.diarias <- function(){
         library(DT)
         datatable(tabla, options = list(), class = "display",
         callback = JS("return table;"))
+        tabla
     
       }
     else if (tabla1 == 'N' | tabla1 == 'n' | tabla1 =='')
@@ -260,8 +261,7 @@ calorias.diarias <- function(){
   
   if  (depor == 4 & tabla1 == 'S')
     {
-#        caldep<-readline(prompt="Introduce las calorias del deporte que has elegido : " ) 
-        caldep <- 100
+        caldep<-readline(prompt="Introduce las calorias del deporte que has elegido : " ) 
         caldep <- as.numeric(caldep) 
         calorias = TMB + caldep
     }
