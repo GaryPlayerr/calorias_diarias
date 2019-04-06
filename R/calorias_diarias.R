@@ -224,11 +224,11 @@ calorias.diarias <- function(){
   
     print('S - Quieres ver las calorias que quemarias en otros tipos de entrenamiento?:')
     print('N - No haces ningun tipo de ejercicio')
-    tabla1<-readline(prompt="Introduce una opcion (S/N)?:")
+    tabla1<-readline(prompt="Introduce una opcion (S/N):")
   
     while (tabla1 != 'S' & tabla1 != 's' & tabla1 != 'N' & tabla1 != 'n' & tabla1 != '')
       {
-        tabla1<-readline(prompt="Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N) : " ) 
+        tabla1<-readline(prompt="Introduce una opcion(S/N) : " ) 
       }
   
     if  (tabla1 == 'S' | tabla1 == 's')
@@ -302,7 +302,7 @@ calorias.diarias <- function(){
   if  (crearbbdd == 'N' | crearbbdd == '' | crearbbdd == 'n')
     {
   
-      modifbbdd <- readline(prompt="Usuario ya regfistrado. Modificar BBDD?(S/N) : " ) 
+      modifbbdd <- readline(prompt="Usuario ya registrado. Modificar BBDD?(S/N) : " ) 
     
       while (modifbbdd != 'S' & modifbbdd != 's' & modifbbdd != 'N' & modifbbdd != 'n' & modifbbdd != '')
         {
@@ -321,10 +321,11 @@ calorias.diarias <- function(){
             Distancia <- n7
             Tiempo <- n8
 
-            if  (depor == 4){Actividad <- 'Otros'}
+            if  (depor == 4 & tabla1 == 'S'){Actividad <- 'Otros'}
             else if  (depor == 1){Actividad <- 'Caminas o Corres'}
             else if (depor == 2){Actividad <- 'Bicicleta'}
-            else if (depor == 3){Actividad <- 'Natacion'}       
+            else if (depor == 3){Actividad <- 'Natacion'}  
+            else if (depor == 4 & tabla1 == 'N'){Actividad <- 'No Ejercicio'} 
 
             Calorias_Totales <- calorias
             Calorias_Carbohidratos <- hc
@@ -359,10 +360,11 @@ calorias.diarias <- function(){
       Distancia <- n7
       Tiempo <- n8
       
-      if  (depor == 4){Actividad <- 'Otros'}
+      if  (depor == 4 & tabla1 == 'S'){Actividad <- 'Otros'}
       else if  (depor == 1){Actividad <- 'Caminas o Corres'}
       else if (depor == 2){Actividad <- 'Bicicleta'}
-      else if (depor == 3){Actividad <- 'Natacion'}       
+      else if (depor == 3){Actividad <- 'Natacion'}  
+      else if (depor == 4 & tabla1 == 'N'){Actividad <- 'No Ejercicio'}      
       
       Calorias_Totales <- calorias
       Calorias_Carbohidratos <- hc
