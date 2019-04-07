@@ -21,7 +21,8 @@ perfil.insulina <- function()
                     db <- dbConnect(SQLite(), dbname="unidades_insulina")
                     unidades <- dbGetQuery(db, "select * from unidades_insulina") 
                     library(DT)
-                    datatable(unidades)  
+                    datatable(unidades, class = 'cell-border stripe', rownames = FALSE, 
+                              caption = 'Historico de dietas y unidades de insulina.', filter = 'top')  
               }                    
           
           else if  (opcion == 1)
@@ -32,7 +33,8 @@ perfil.insulina <- function()
                     filtro <- paste('%', fec, '%',sep = '') 
                     unidades <- dbGetQuery(db, "select * from unidades_insulina where Fecha like ?", filtro) 
                     library(DT)
-                    datatable(unidades)           
+                    datatable(unidades, class = 'cell-border stripe', rownames = FALSE, 
+                              caption = 'Dietas y unidades de insulina por fecha.', filter = 'top')  )           
           
               }      
 
@@ -52,7 +54,8 @@ perfil.insulina <- function()
                     filtro <- paste('%', dia, '%',sep = '') 
                     unidades <- dbGetQuery(db, "select * from unidades_insulina where Dia like ?", filtro)
                     library(DT)
-                    datatable(unidades)           
+                    datatable(unidades, class = 'cell-border stripe', rownames = FALSE, 
+                              caption = 'Dietas y unidades de insulina por dia de la semana.', filter = 'top')  )           
           
               }            
     
@@ -71,7 +74,8 @@ perfil.insulina <- function()
                     filtro <- paste('%', hor, '%',sep = '') 
                     unidades <- dbGetQuery(db, "select * from unidades_insulina where Horario_Comida like ?", filtro) 
                     library(DT)
-                    datatable(unidades)           
+                    datatable(unidades, class = 'cell-border stripe', rownames = FALSE, 
+                              caption = 'Dietas y unidades de insulina por horario de comida.', filter = 'top')  )           
           
               }           
           
