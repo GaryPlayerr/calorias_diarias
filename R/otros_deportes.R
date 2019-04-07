@@ -14,5 +14,5 @@ otros.deportes <- function(){
         tabla$Calorias <- NULL
         library(DT)
         datatable(tabla, class = 'cell-border stripe', rownames = FALSE, 
-                  caption = 'Calorias de diferentes actividades fisicas en funcion del peso y tiempo.', filter = 'top')  )
+                  caption = 'Calorias de diferentes actividades fisicas en funcion del peso y tiempo.', filter = 'top')
 }
