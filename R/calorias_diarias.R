@@ -224,7 +224,7 @@ calorias.diarias <- function(){
   
     print('1 - Conoces las calorias que quemarias en otros tipos de entrenamiento?. :')
     print('2 - NO conoces las calorias que quemarias en otros tipos de entrenamiento?. :')
-    message('Recuerda que puedes consultar la opcion 7 del menu principal para conocerlas calorias de las diferentes actividades')
+    message('Recuerda que puedes consultar la opcion 7 del menu principal para conocer las calorias de las diferentes actividades')
     print('N - No haces ningun tipo de ejercicio')
     tabla1<-readline(prompt="Introduce una opcion (1/2/N):")
   
