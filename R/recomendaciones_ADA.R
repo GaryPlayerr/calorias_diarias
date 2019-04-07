@@ -5,11 +5,14 @@ recomendaciones.ADA <- function(){
   library(rvest)
   library(stringr)
 
-  recomendaciones_ADA<- read_html("http://www.diabetes.org/es/vivir-con-diabetes/tratamiento-y-cuidado/el-control-de-la-glucosa-en-la-sangre/cmo-medir-la-glucosa-en-la.html") 
+recomendaciones_ADA<- read_html("http://www.diabetes.org/es/vivir-con-diabetes/tratamiento-y-cuidado/el-control-de-la-glucosa-en-la-sangre/cmo-medir-la-glucosa-en-la.html") 
 
-  rec_ADA <-
-    recomendaciones_ADA %>%
-    html_nodes(css = "main.colone") %>%
-    html_text()
-
-
+rec_ADA <-
+  recomendaciones_ADA %>%
+  html_nodes(css = "section.content-view-full") %>%
+  html_text()
+  
+ADA <- str_split(rec_ADA, '\n')
+ADA <- as.data.frame(ADA)
+ADA
+}  
