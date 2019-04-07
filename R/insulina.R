@@ -72,7 +72,7 @@ insulina <- function()
           library(DT)
 
           datatable(todas, class = 'cell-border stripe', rownames = FALSE, 
-                    caption = 'insulinas.', filter = 'top')
+                    caption = 'Insulinas.', filter = 'top')
        }
  
  }
