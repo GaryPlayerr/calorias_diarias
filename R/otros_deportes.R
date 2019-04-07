@@ -6,7 +6,6 @@ otros.deportes <- function(){
         n4<-readline(prompt="Peso(Kg) : " )
         n8<-as.integer(n8)
         n4<-as.integer(n4)
-        tabla1 <- 'S'
         url1<-'https://github.com/BorjaJorge/calorias_diarias/raw/master/R/MET.xlsx'
         p1f <- tempfile()
         download.file(url1, p1f, mode="wb")
