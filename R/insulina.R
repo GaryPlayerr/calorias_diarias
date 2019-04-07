@@ -43,7 +43,7 @@ insulina <- function()
           library(DT)
 
           datatable(ultrarrapida, class = 'cell-border stripe', rownames = FALSE, 
-                    caption = 'Insulina ultrarrapida.', filter = 'top'))
+                    caption = 'Insulina ultrarrapida.', filter = 'top')
        }
        
  else if (n1 == 1)    
@@ -59,7 +59,7 @@ insulina <- function()
           library(DT)
 
           datatable(rapida, class = 'cell-border stripe', rownames = FALSE, 
-                    caption = 'Insulina rapida.', filter = 'top'))
+                    caption = 'Insulina rapida.', filter = 'top')
        }
  else 
  
@@ -72,7 +72,7 @@ insulina <- function()
           library(DT)
 
           datatable(todas, class = 'cell-border stripe', rownames = FALSE, 
-                    caption = 'insulinas.', filter = 'top'))
+                    caption = 'insulinas.', filter = 'top')
        }
  
  }
