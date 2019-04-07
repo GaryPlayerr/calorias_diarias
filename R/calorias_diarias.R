@@ -222,21 +222,19 @@ calorias.diarias <- function(){
   else if  (depor == 4)
     {
   
-    print('S - Quieres ver las calorias que quemarias en otros tipos de entrenamiento?:')
+    print('1 - Conoces las calorias que quemarias en otros tipos de entrenamiento?. :')
+    print('2 - NO conoces las calorias que quemarias en otros tipos de entrenamiento?. :')
+    print('Recuerda que puedes consultar la opcion 7 del menu principal para conocerlas calorias de las diferentes actividades')
     print('N - No haces ningun tipo de ejercicio')
-    tabla1<-readline(prompt="Introduce una opcion (S/N):")
+    tabla1<-readline(prompt="Introduce una opcion (1/2/N):")
   
-    while (tabla1 != 'S' & tabla1 != 's' & tabla1 != 'N' & tabla1 != 'n' & tabla1 != '')
+    while (tabla1 != '1' & tabla1 != '2' & tabla1 != 'N' & tabla1 != 'n' & tabla1 != '')
       {
         tabla1<-readline(prompt="Introduce una opcion(S/N) : " ) 
       }
   
-    if  (tabla1 == 'S' | tabla1 == 's')
-      {
-        otros.deportes() 
-        tabla1 <- 'S'
-      }
-    else if (tabla1 == 'N' | tabla1 == 'n' | tabla1 =='')
+
+    if (tabla1 == 'N' | tabla1 == 'n' | tabla1 =='')
       {
         calorias = TMB
       }
@@ -245,11 +243,37 @@ calorias.diarias <- function(){
    
   message("Calorias metabolismo basal:", TMB)
   
-  if  (depor == 4 & tabla1 == 'S')
+  if  (depor == 4 & tabla1 == 1)
     {
         caldep<-readline(prompt="Introduce las calorias del deporte que has elegido : " ) 
         caldep <- as.numeric(caldep) 
         calorias = TMB + caldep
+    }
+  
+    if  (depor == 4 & tabla1 == 2)
+    {
+
+          if  (n5 == '5')
+              {
+                calorias = TMB * 1.9
+              }
+          else if  (n5 == '4')
+              {
+                calorias = TMB * 1.725
+              }
+          else if  (n5 == '3')
+              {
+                calorias = TMB * 1.55
+              }  
+          else if  (n5 == '2')
+              {
+                calorias = TMB * 1.375
+              }
+          else if  (n5 == '1' | n5 == '')
+              {
+                calorias = TMB * 1.2
+              }       
+      
     }
   
   message("Calorias metabolismo basal mas ejercicio:", calorias)
