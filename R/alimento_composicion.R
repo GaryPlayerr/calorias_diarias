@@ -96,7 +96,7 @@ alimento.composicion <- function()
   
           library(DT)
           datatable(alimento, class = 'cell-border stripe', rownames = FALSE, 
-                    caption = 'Composicion leguminosas.', filter = 'top'))
+                    caption = 'Composicion leguminosas.', filter = 'top')
        } 
  else if (n1 == 3)
        {
@@ -129,7 +129,7 @@ alimento.composicion <- function()
   
           library(DT)
           datatable(alimento, class = 'cell-border stripe', rownames = FALSE, 
-                    caption = 'Tuberculos y hortalizas.', filter = 'top'))
+                    caption = 'Tuberculos y hortalizas.', filter = 'top')
        } 
  else if (n1 == 4)
        {
@@ -162,7 +162,7 @@ alimento.composicion <- function()
   
           library(DT)
           datatable(alimento, class = 'cell-border stripe', rownames = FALSE, 
-                    caption = 'Composicion frutos frescos.', filter = 'top'))
+                    caption = 'Composicion frutos frescos.', filter = 'top')
        } 
  else if (n1 == 5)
        {
@@ -195,7 +195,7 @@ alimento.composicion <- function()
   
           library(DT)
           datatable(alimento, class = 'cell-border stripe', rownames = FALSE, 
-                    caption = 'Composicion frutos secos.', filter = 'top'))
+                    caption = 'Composicion frutos secos.', filter = 'top')
        } 
  else if (n1 == 6)
        {
@@ -228,7 +228,7 @@ alimento.composicion <- function()
   
           library(DT)
           datatable(alimento, class = 'cell-border stripe', rownames = FALSE, 
-                    caption = 'Composicion lacteos.', filter = 'top'))
+                    caption = 'Composicion lacteos.', filter = 'top')
        } 
  else if (n1 == 7)
        {
@@ -261,7 +261,7 @@ alimento.composicion <- function()
   
           library(DT)
           datatable(alimento, class = 'cell-border stripe', rownames = FALSE, 
-                    caption = 'Composicion huevos.', filter = 'top'))
+                    caption = 'Composicion huevos.', filter = 'top')
        } 
  else if (n1 == 8)
        {
@@ -294,7 +294,7 @@ alimento.composicion <- function()
   
           library(DT)
           datatable(alimento, class = 'cell-border stripe', rownames = FALSE, 
-                    caption = 'Composicion dulces.', filter = 'top'))
+                    caption = 'Composicion dulces.', filter = 'top')
        } 
  else if (n1 == 9)
        {
@@ -327,7 +327,7 @@ alimento.composicion <- function()
   
           library(DT)
           datatable(alimento, class = 'cell-border stripe', rownames = FALSE, 
-                    caption = 'Composicion aceites y grasas.', filter = 'top'))
+                    caption = 'Composicion aceites y grasas.', filter = 'top')
        }  
  else if (n1 == 10)
        {
@@ -360,7 +360,7 @@ alimento.composicion <- function()
   
           library(DT)
           datatable(alimento, class = 'cell-border stripe', rownames = FALSE, 
-                    caption = 'Composicion pescados.', filter = 'top'))
+                    caption = 'Composicion pescados.', filter = 'top')
        }  
  else if (n1 == 11)
        {
@@ -393,7 +393,7 @@ alimento.composicion <- function()
   
           library(DT)
           datatable(alimento, class = 'cell-border stripe', rownames = FALSE, 
-                    caption = 'Composicion cerdo.', filter = 'top'))
+                    caption = 'Composicion cerdo.', filter = 'top')
        } 
  else if (n1 == 12)
        {
@@ -426,7 +426,7 @@ alimento.composicion <- function()
   
           library(DT)
           datatable(alimento, class = 'cell-border stripe', rownames = FALSE, 
-                    caption = 'Composicion cordero.', filter = 'top'))
+                    caption = 'Composicion cordero.', filter = 'top')
        } 
  else if (n1 == 13)
        {
@@ -459,7 +459,7 @@ alimento.composicion <- function()
   
           library(DT)
           datatable(alimento, class = 'cell-border stripe', rownames = FALSE, 
-                    caption = 'Composicion ternera.', filter = 'top'))
+                    caption = 'Composicion ternera.', filter = 'top')
        }  
  else if (n1 == 14)
        {
@@ -492,7 +492,7 @@ alimento.composicion <- function()
   
           library(DT)
           datatable(alimento, class = 'cell-border stripe', rownames = FALSE, 
-                    caption = 'Composicion vaca.', filter = 'top'))
+                    caption = 'Composicion vaca.', filter = 'top')
        }  
  else if (n1 == 15)
        {
@@ -525,7 +525,7 @@ alimento.composicion <- function()
   
           library(DT)
           datatable(alimento, class = 'cell-border stripe', rownames = FALSE, 
-                    caption = 'Composicion embutidos.', filter = 'top'))
+                    caption = 'Composicion embutidos.', filter = 'top')
        }
  else if (n1 == 16)
        {
@@ -558,7 +558,7 @@ alimento.composicion <- function()
   
           library(DT)
           datatable(alimento, class = 'cell-border stripe', rownames = FALSE, 
-                    caption = 'Composicion aves.', filter = 'top'))
+                    caption = 'Composicion aves.', filter = 'top')
        }  
  else if (n1 == 17)
        {
@@ -591,6 +591,6 @@ alimento.composicion <- function()
   
           library(DT)
           datatable(alimento, class = 'cell-border stripe', rownames = FALSE, 
-                    caption = 'Composicion caza.', filter = 'top'))
+                    caption = 'Composicion caza.', filter = 'top')
        }   
 }
