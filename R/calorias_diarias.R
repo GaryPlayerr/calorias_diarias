@@ -224,7 +224,7 @@ calorias.diarias <- function(){
   
     print('1 - Conoces las calorias que quemarias en otros tipos de entrenamiento?. :')
     print('2 - NO conoces las calorias que quemarias en otros tipos de entrenamiento?. :')
-    print('Recuerda que puedes consultar la opcion 7 del menu principal para conocerlas calorias de las diferentes actividades')
+    message('Recuerda que puedes consultar la opcion 7 del menu principal para conocerlas calorias de las diferentes actividades')
     print('N - No haces ningun tipo de ejercicio')
     tabla1<-readline(prompt="Introduce una opcion (1/2/N):")
   
@@ -253,6 +253,13 @@ calorias.diarias <- function(){
     if  (depor == 4 & tabla1 == 2)
     {
 
+          n5<-readline(prompt="Ejercicio(1-Poco, 2-Ligero, 3-Moderado, 4-Fuerte, 5-Muy fuerte) : " )
+    
+          while (n5 != 1 & n5 != 2 & n5 != 3 & n5 != 4 & n5 != 5)
+            {
+              n5<-readline(prompt="Ejercicio(1-Poco, 2-Ligero, 3-Moderado, 4-Fuerte, 5-Muy fuerte) : " )
+            }
+      
           if  (n5 == '5')
               {
                 calorias = TMB * 1.9
@@ -334,7 +341,8 @@ calorias.diarias <- function(){
             Distancia <- n7
             Tiempo <- n8
 
-            if  (depor == 4 & tabla1 == 'S'){Actividad <- 'Otros'}
+            if  (depor == 4 & tabla1 == 1){Actividad <- 'Otros, cal conocidas'}
+            else if  (depor == 4 & tabla1 == 2){Actividad <- 'Otros, cal no conocidas'}
             else if  (depor == 1){Actividad <- 'Caminas o Corres'}
             else if (depor == 2){Actividad <- 'Bicicleta'}
             else if (depor == 3){Actividad <- 'Natacion'}  
@@ -373,7 +381,9 @@ calorias.diarias <- function(){
       Distancia <- n7
       Tiempo <- n8
       
-      if  (depor == 4 & tabla1 == 'S'){Actividad <- 'Otros'}
+
+      if  (depor == 4 & tabla1 == 1){Actividad <- 'Otros, cal conocidas'}
+      else if  (depor == 4 & tabla1 == 2){Actividad <- 'Otros, cal no conocidas'}
       else if  (depor == 1){Actividad <- 'Caminas o Corres'}
       else if (depor == 2){Actividad <- 'Bicicleta'}
       else if (depor == 3){Actividad <- 'Natacion'}  
