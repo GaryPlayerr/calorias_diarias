@@ -11,5 +11,5 @@ perfil.usuario <- function()
           library(DT)
 
           datatable(unidades, class = 'cell-border stripe', rownames = FALSE, 
-                    caption = 'Perfil actual del usuario.', filter = 'top')
+                    caption = 'Perfil actual del usuario.')
    }
