@@ -10,5 +10,5 @@ perfil.usuario <- function()
 
           library(DT)
 
-          datatable(unidades)
+          datatable(unidades, class = 'cell-border stripe')
    }
