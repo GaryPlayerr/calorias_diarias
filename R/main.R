@@ -9,6 +9,7 @@ print('4 - Consultar Unidades de Insulina y dietas de dias anteriores:')
 print('5 - Consultar BBDD de alimentos:')
 print('6 - Consultar BBDD de Insulinas')  
 print('7 - Calorias estimadas varias actividades fisicas')  
+print('8 - Recomendaciones Asociacion Americana de Diabeticos')  
 print('8 - Ayuda')
   
 n1<-readline(prompt="Introduce una opcion: " )  
@@ -50,7 +51,11 @@ while (n1 != 0 & n1 != 1 & n1 != 2 & n1 != 3 & n1 != 4 & n1 != 5 & n1 != 6 & n1 
     {
       otros.deportes()
     }
-  else if (n1 == 8)
+    else if (n1 == 8)
+    {
+      recomendaciones.ADA()
+    }
+  else if (n1 == 9)
     {
     
       print('1 - Ayuda Calcular calorias diarias y registrar/modificar perfil :')
