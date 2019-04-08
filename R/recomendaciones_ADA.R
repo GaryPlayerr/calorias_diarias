@@ -25,5 +25,5 @@ datatable(dataf, class = 'cell-border stripe', rownames = FALSE,
         'background-color': '#000',
         'color': '#fff'
       });
-    }"))
+    "))
 }  
