@@ -17,5 +17,6 @@ ADA <- str_split(rec_ADA, '\n')
 ADA <- data.frame(ADA)
 ADA <- ADA[8:16,]
 dataf <- data.frame(Recomendaciones_Asociacion_Americana_Diabeticos =  ADA)
-datatable(dataf)
+datatable(dataf,class = 'cell-border stripe', rownames = FALSE, 
+          caption = 'Insulina ultrarrapida.', filter = 'top')
 }  
