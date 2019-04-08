@@ -1,7 +1,7 @@
 recomendaciones.ADA <- function(){
 
 library(DT)
-install.packages("rvest")
+#install.packages("rvest")
 library(rvest)
 library(stringr)
 
