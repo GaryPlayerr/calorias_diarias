@@ -14,8 +14,8 @@ alimentos.composicion.create <- function(){
   cereales[, (10:50)] <- NULL
   cereales[, (1:1)] <- NULL
 
-  colnames(cereales)[colnames(cereales) == '..2'] <- 'Cereales'
-  colnames(cereales)[colnames(cereales) == '..3'] <- 'Estado'
+  colnames(cereales)[colnames(cereales) == '...2'] <- 'Cereales'
+  colnames(cereales)[colnames(cereales) == '...3'] <- 'Estado'
   colnames(cereales)[colnames(cereales) == 'CAL'] <- 'Calorias'
   colnames(cereales)[colnames(cereales) == 'PR'] <- 'Proteina'
   colnames(cereales)[colnames(cereales) == 'GR'] <- 'Grasas'
@@ -27,8 +27,8 @@ alimentos.composicion.create <- function(){
   leguminosas[, (10:50)] <- NULL
   leguminosas[, (1:1)] <- NULL
 
-  colnames(leguminosas)[colnames(leguminosas) == '..2'] <- 'Leguminosas'
-  colnames(leguminosas)[colnames(leguminosas) == '..3'] <- 'Estado'
+  colnames(leguminosas)[colnames(leguminosas) == '...2'] <- 'Leguminosas'
+  colnames(leguminosas)[colnames(leguminosas) == '...3'] <- 'Estado'
   colnames(leguminosas)[colnames(leguminosas) == 'CAL'] <- 'Calorias'
   colnames(leguminosas)[colnames(leguminosas) == 'PR'] <- 'Proteina'
   colnames(leguminosas)[colnames(leguminosas) == 'GR'] <- 'Grasas'
@@ -40,8 +40,8 @@ alimentos.composicion.create <- function(){
   tuberculos_hortalizas[, (10:50)] <- NULL
   tuberculos_hortalizas[, (1:1)] <- NULL
 
-  colnames(tuberculos_hortalizas)[colnames(tuberculos_hortalizas) == '..2'] <- 'Tuberculos_Hortalizas'
-  colnames(tuberculos_hortalizas)[colnames(tuberculos_hortalizas) == '..3'] <- 'Estado'
+  colnames(tuberculos_hortalizas)[colnames(tuberculos_hortalizas) == '...2'] <- 'Tuberculos_Hortalizas'
+  colnames(tuberculos_hortalizas)[colnames(tuberculos_hortalizas) == '...3'] <- 'Estado'
   colnames(tuberculos_hortalizas)[colnames(tuberculos_hortalizas) == 'CAL'] <- 'Calorias'
   colnames(tuberculos_hortalizas)[colnames(tuberculos_hortalizas) == 'PR'] <- 'Proteina'
   colnames(tuberculos_hortalizas)[colnames(tuberculos_hortalizas) == 'GR'] <- 'Grasas'
@@ -53,8 +53,8 @@ alimentos.composicion.create <- function(){
   frutos_frescos[, (10:50)] <- NULL
   frutos_frescos[, (1:1)] <- NULL
 
-  colnames(frutos_frescos)[colnames(frutos_frescos) == '..2'] <- 'Frutos_frescos'
-  colnames(frutos_frescos)[colnames(frutos_frescos) == '..3'] <- 'Estado'
+  colnames(frutos_frescos)[colnames(frutos_frescos) == '...2'] <- 'Frutos_frescos'
+  colnames(frutos_frescos)[colnames(frutos_frescos) == '...3'] <- 'Estado'
   colnames(frutos_frescos)[colnames(frutos_frescos) == 'CAL'] <- 'Calorias'
   colnames(frutos_frescos)[colnames(frutos_frescos) == 'PR'] <- 'Proteina'
   colnames(frutos_frescos)[colnames(frutos_frescos) == 'GR'] <- 'Grasas'
@@ -66,8 +66,8 @@ alimentos.composicion.create <- function(){
   frutos_secos[, (10:50)] <- NULL
   frutos_secos[, (1:1)] <- NULL
 
-  colnames(frutos_secos)[colnames(frutos_secos) == '..2'] <- 'Frutos_secos'
-  colnames(frutos_secos)[colnames(frutos_secos) == '..3'] <- 'Estado'
+  colnames(frutos_secos)[colnames(frutos_secos) == '...2'] <- 'Frutos_secos'
+  colnames(frutos_secos)[colnames(frutos_secos) == '...3'] <- 'Estado'
   colnames(frutos_secos)[colnames(frutos_secos) == 'CAL'] <- 'Calorias'
   colnames(frutos_secos)[colnames(frutos_secos) == 'PR'] <- 'Proteina'
   colnames(frutos_secos)[colnames(frutos_secos) == 'GR'] <- 'Grasas'
@@ -79,8 +79,8 @@ alimentos.composicion.create <- function(){
   lacteos[, (10:50)] <- NULL
   lacteos[, (1:1)] <- NULL
 
-  colnames(lacteos)[colnames(lacteos) == '..2'] <- 'Lacteos'
-  colnames(lacteos)[colnames(lacteos) == '..3'] <- 'Estado'
+  colnames(lacteos)[colnames(lacteos) == '...2'] <- 'Lacteos'
+  colnames(lacteos)[colnames(lacteos) == '...3'] <- 'Estado'
   colnames(lacteos)[colnames(lacteos) == 'CAL'] <- 'Calorias'
   colnames(lacteos)[colnames(lacteos) == 'PR'] <- 'Proteina'
   colnames(lacteos)[colnames(lacteos) == 'GR'] <- 'Grasas'
@@ -92,8 +92,8 @@ alimentos.composicion.create <- function(){
   Huevos[, (10:50)] <- NULL
   Huevos[, (1:1)] <- NULL
 
-  colnames(Huevos)[colnames(Huevos) == '..2'] <- 'Huevos'
-  colnames(Huevos)[colnames(Huevos) == '..3'] <- 'Estado'
+  colnames(Huevos)[colnames(Huevos) == '...2'] <- 'Huevos'
+  colnames(Huevos)[colnames(Huevos) == '...3'] <- 'Estado'
   colnames(Huevos)[colnames(Huevos) == 'CAL'] <- 'Calorias'
   colnames(Huevos)[colnames(Huevos) == 'PR'] <- 'Proteina'
   colnames(Huevos)[colnames(Huevos) == 'GR'] <- 'Grasas'
@@ -105,8 +105,8 @@ alimentos.composicion.create <- function(){
   Dulces[, (10:50)] <- NULL
   Dulces[, (1:1)] <- NULL
 
-  colnames(Dulces)[colnames(Dulces) == '..2'] <- 'Dulces'
-  colnames(Dulces)[colnames(Dulces) == '..3'] <- 'Estado'
+  colnames(Dulces)[colnames(Dulces) == '...2'] <- 'Dulces'
+  colnames(Dulces)[colnames(Dulces) == '...3'] <- 'Estado'
   colnames(Dulces)[colnames(Dulces) == 'CAL'] <- 'Calorias'
   colnames(Dulces)[colnames(Dulces) == 'PR'] <- 'Proteina'
   colnames(Dulces)[colnames(Dulces) == 'GR'] <- 'Grasas'
@@ -118,8 +118,8 @@ alimentos.composicion.create <- function(){
   aceites_grasas[, (10:50)] <- NULL
   aceites_grasas[, (1:1)] <- NULL
 
-  colnames(aceites_grasas)[colnames(aceites_grasas) == '..2'] <- 'Aceites_Grasas'
-  colnames(aceites_grasas)[colnames(aceites_grasas) == '..3'] <- 'Estado'
+  colnames(aceites_grasas)[colnames(aceites_grasas) == '...2'] <- 'Aceites_Grasas'
+  colnames(aceites_grasas)[colnames(aceites_grasas) == '...3'] <- 'Estado'
   colnames(aceites_grasas)[colnames(aceites_grasas) == 'CAL'] <- 'Calorias'
   colnames(aceites_grasas)[colnames(aceites_grasas) == 'PR'] <- 'Proteina'
   colnames(aceites_grasas)[colnames(aceites_grasas) == 'GR'] <- 'Grasas'
@@ -131,8 +131,8 @@ alimentos.composicion.create <- function(){
   Pescados[, (10:50)] <- NULL
   Pescados[, (1:1)] <- NULL
 
-  colnames(Pescados)[colnames(Pescados) == '..2'] <- 'Pescados'
-  colnames(Pescados)[colnames(Pescados) == '..3'] <- 'Estado'
+  colnames(Pescados)[colnames(Pescados) == '...2'] <- 'Pescados'
+  colnames(Pescados)[colnames(Pescados) == '...3'] <- 'Estado'
   colnames(Pescados)[colnames(Pescados) == 'CAL'] <- 'Calorias'
   colnames(Pescados)[colnames(Pescados) == 'PR'] <- 'Proteina'
   colnames(Pescados)[colnames(Pescados) == 'GR'] <- 'Grasas'
@@ -144,8 +144,8 @@ alimentos.composicion.create <- function(){
   Cerdo[, (10:50)] <- NULL
   Cerdo[, (1:1)] <- NULL
 
-  colnames(Cerdo)[colnames(Cerdo) == '..2'] <- 'Cerdo'
-  colnames(Cerdo)[colnames(Cerdo) == '..3'] <- 'Estado'
+  colnames(Cerdo)[colnames(Cerdo) == '...2'] <- 'Cerdo'
+  colnames(Cerdo)[colnames(Cerdo) == '...3'] <- 'Estado'
   colnames(Cerdo)[colnames(Cerdo) == 'CAL'] <- 'Calorias'
   colnames(Cerdo)[colnames(Cerdo) == 'PR'] <- 'Proteina'
   colnames(Cerdo)[colnames(Cerdo) == 'GR'] <- 'Grasas'
@@ -157,8 +157,8 @@ alimentos.composicion.create <- function(){
   Cordero[, (10:50)] <- NULL
   Cordero[, (1:1)] <- NULL
 
-  colnames(Cordero)[colnames(Cordero) == '..2'] <- 'Cordero'
-  colnames(Cordero)[colnames(Cordero) == '..3'] <- 'Estado'
+  colnames(Cordero)[colnames(Cordero) == '...2'] <- 'Cordero'
+  colnames(Cordero)[colnames(Cordero) == '...3'] <- 'Estado'
   colnames(Cordero)[colnames(Cordero) == 'CAL'] <- 'Calorias'
   colnames(Cordero)[colnames(Cordero) == 'PR'] <- 'Proteina'
   colnames(Cordero)[colnames(Cordero) == 'GR'] <- 'Grasas'
@@ -170,8 +170,8 @@ alimentos.composicion.create <- function(){
   Ternera[, (10:50)] <- NULL
   Ternera[, (1:1)] <- NULL
 
-  colnames(Ternera)[colnames(Ternera) == '..2'] <- 'Ternera'
-  colnames(Ternera)[colnames(Ternera) == '..3'] <- 'Estado'
+  colnames(Ternera)[colnames(Ternera) == '...2'] <- 'Ternera'
+  colnames(Ternera)[colnames(Ternera) == '...3'] <- 'Estado'
   colnames(Ternera)[colnames(Ternera) == 'CAL'] <- 'Calorias'
   colnames(Ternera)[colnames(Ternera) == 'PR'] <- 'Proteina'
   colnames(Ternera)[colnames(Ternera) == 'GR'] <- 'Grasas'
@@ -183,8 +183,8 @@ alimentos.composicion.create <- function(){
   Vaca[, (10:50)] <- NULL
   Vaca[, (1:1)] <- NULL
 
-  colnames(Vaca)[colnames(Vaca) == '..2'] <- 'Vaca'
-  colnames(Vaca)[colnames(Vaca) == '..3'] <- 'Estado'
+  colnames(Vaca)[colnames(Vaca) == '...2'] <- 'Vaca'
+  colnames(Vaca)[colnames(Vaca) == '...3'] <- 'Estado'
   colnames(Vaca)[colnames(Vaca) == 'CAL'] <- 'Calorias'
   colnames(Vaca)[colnames(Vaca) == 'PR'] <- 'Proteina'
   colnames(Vaca)[colnames(Vaca) == 'GR'] <- 'Grasas'
@@ -196,8 +196,8 @@ alimentos.composicion.create <- function(){
   Embutidos[, (10:50)] <- NULL
   Embutidos[, (1:1)] <- NULL
 
-  colnames(Embutidos)[colnames(Embutidos) == '..2'] <- 'Embutidos'
-  colnames(Embutidos)[colnames(Embutidos) == '..3'] <- 'Estado'
+  colnames(Embutidos)[colnames(Embutidos) == '...2'] <- 'Embutidos'
+  colnames(Embutidos)[colnames(Embutidos) == '...3'] <- 'Estado'
   colnames(Embutidos)[colnames(Embutidos) == 'CAL'] <- 'Calorias'
   colnames(Embutidos)[colnames(Embutidos) == 'PR'] <- 'Proteina'
   colnames(Embutidos)[colnames(Embutidos) == 'GR'] <- 'Grasas'
@@ -209,8 +209,8 @@ alimentos.composicion.create <- function(){
   Aves[, (10:50)] <- NULL
   Aves[, (1:1)] <- NULL
 
-  colnames(Aves)[colnames(Aves) == '..2'] <- 'Aves'
-  colnames(Aves)[colnames(Aves) == '..3'] <- 'Estado'
+  colnames(Aves)[colnames(Aves) == '...2'] <- 'Aves'
+  colnames(Aves)[colnames(Aves) == '...3'] <- 'Estado'
   colnames(Aves)[colnames(Aves) == 'CAL'] <- 'Calorias'
   colnames(Aves)[colnames(Aves) == 'PR'] <- 'Proteina'
   colnames(Aves)[colnames(Aves) == 'GR'] <- 'Grasas'
@@ -222,8 +222,8 @@ alimentos.composicion.create <- function(){
   Caza[, (10:50)] <- NULL
   Caza[, (1:1)] <- NULL
 
-  colnames(Caza)[colnames(Caza) == '..2'] <- 'Caza'
-  colnames(Caza)[colnames(Caza) == '..3'] <- 'Estado'
+  colnames(Caza)[colnames(Caza) == '...2'] <- 'Caza'
+  colnames(Caza)[colnames(Caza) == '...3'] <- 'Estado'
   colnames(Caza)[colnames(Caza) == 'CAL'] <- 'Calorias'
   colnames(Caza)[colnames(Caza) == 'PR'] <- 'Proteina'
   colnames(Caza)[colnames(Caza) == 'GR'] <- 'Grasas'
