@@ -7,7 +7,7 @@ ui <- fluidPage(
       
       tabPanel('P&P Insuline', value = 'M',
                h1('Prediction  and  Precision  "I n s u l i n e"'),
-               tags$iframe(src = "logo.png", seamless=NA),
+               img(src='logo.png', align = "center"),
                h2(p(strong('Trabajando en ello...')))),
 
       tabPanel('Perfil de usuario', value = 'U',
