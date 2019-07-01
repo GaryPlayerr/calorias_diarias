@@ -73,7 +73,7 @@ Por ejmplo CEREALES, siempre en MAYUSCULAS.
 
 Posteriormente se introduce un patron de busqueda para ver todas las comidas que contienen ese alimento.
 Cereales patron de busqueda en MAYUSCULAS: por ejemplo ARROZ
-Introducimos la cantidad en gramas. Cantidad en gramos? por ejmplo 80
+Introducimos la cantidad en gramos. Cantidad en gramos? por ejmplo 80
 Obtenemos los siguienbtes resultados, por ejemplo:
 
 	Cereales	         Estado	    Proteina_calorias	Grasas_calorias	Carbohidratos_calorias	FII_food_insulin_index
