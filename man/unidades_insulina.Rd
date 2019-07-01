@@ -133,17 +133,17 @@ unidades.insulina(Unidades)
 
 \examples{
 
--Horario de Comida?(DESAYUNO, ALMUERZO, COMIDA, MERIENDA, CENA, RECENA)
+-Horario de Comida?(DESAYUNO, ALMUERZO, COMIDA, MERIENDA, CENA, RECENA) DESAYUNO
 Obtenemos los siguientes datos de la base de alimentos.
-  -Que alimentos vas ingerir?
-  -Gramos de Carbohidratos?
-  -Calorias Carbohidratos?
-  -Calorias Proteinas?
-  -Calorias Grasas?
--Tipo de Insulina?(RAPIDA/ULTRARRAPIDA)
--Introduce tus comentarios?
--Usuario Nuevo?(S/N)
--Usuario ya registrado. Incorporar registro a BBDD?(S/N)
+  -Que alimentos vas ingerir? LECHE DE VACA FRESCA
+  -Gramos de Carbohidratos? 5
+  -Calorias Carbohidratos? 20
+  -Calorias Proteinas? 12
+  -Calorias Grasas? 27
+-Tipo de Insulina?(RAPIDA/ULTRARRAPIDA) RAPIDA
+-Introduce tus comentarios? Texto libre para comentarios
+-Usuario Nuevo?(S/N)N
+-Usuario ya registrado. Incorporar registro a BBDD?(S/N)S
 
 
 % Add one or more standard keywords, see file 'KEYWORDS' in the
