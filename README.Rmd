@@ -1,0 +1,133 @@
+---
+title: "README"
+author: "ppinsuline"
+date: "26 de junio de 2019"
+output: pdf_document
+---
+
+# Manual de usuario P&p Insuline
+
+> ### Introducción
+
+Esta aplicación ha sido creada por dos expertos en Business
+Analytics como trabajo final.
+El objetivo es ayudar a controlar la cantidad de insulina
+necesaria a inyectar antes de cada comida. Viendo
+como influye en esta cantidad el deporte que se realiza y
+el metabolismo basal basado en género, altura y peso.
+También contamos con bases de datos de alimentos que
+pueden consultarse en la aplicación, además de una
+base de datos de insulina con marcas y sus distintos
+tipos: rápida y ultrarrápida.
+
+***
+
+> ### Como registrarse
+
+Lo primero será crear tu perfil en la aplicación para realizar
+el seguimiento. Esto se consigue en la pestaña regístrate
+del menú.
+Una vez dentro, tendrás que rellenar los campos con tu
+información sobre la diabetes.
+Finalmente estarás registrado cuando aparezca en pantalla
+el mensaje de usuario registrado correctamente.
+
+***
+
+## Accede y completa tu perfil
+
+Una vez que tengas tu usuario
+registrado deberá dirigirte
+a la pestaña accede e
+introducir tu correo electrónico
+y contraseña.
+Una vez dentro, te saldrán
+unas instrucciones muy resumidas
+de los pasos a
+seguir para realizar el calculo
+de insulina antes de tus
+comidas
+
+#### Primer paso, estimación del metabolismo basal:
+
+El menú ahora tendrá opciones
+distintas, ya que estás dentro de
+tu perfil.
+Lo primero será calcular tu metabolismo
+basal en la pestaña Cal
+Met.Basal.
+Aquí solo tendrás que rellenar los
+campos con la información requerida.
+Podrás editar esta información
+en cualquier momento, volviendo
+a rellenar los campos.
+
+Para la estimación de este metabolismo 
+basal de una persona en funcion de su 
+sexo, edad, peso, altura y actividad fisica,
+hemos usado las siguientes fórmulas:
+
+Hombre: $REE = 10 w + 6.25 s -5 a + 5$
+Mujer: $REE = 10 w + 6.25 s - 5 a - 161$
+
+#### Segundo paso, importancia de la actividad física:
+
+Con tu metabolismo basal ya estimado pasamos a la
+pestaña Cal Deporte.
+Aquí rellenaremos los campos donde se ofrecen unas
+cuantas opciones predeterminadas en la opción Actividad.
+
+Si tu opción no se encuentra en el menú de actividades
+predeterminadas, puedes acceder a otros formularios
+mas abajo donde colocar otras actividades.
+
+Al aplicar esta información, tu perfil se actualizará con un
+aumento de las calorias que gastas, añadiéndose a tu
+metabolismo basal. En caso de que conozcas tus
+calorias exactas, tendrás la opción de entrar en otro formulario.
+Conozco exactamente mis calorias.
+
+Si caminas o corres y conoces la distancia y el tiempo de 
+entrenamiento aplicamos la siguiente ecuacion calculada 
+mediante regresion multiple:
+
+$14,26 * tiempo(min) + 46,66 * km/h + 8,55 * peso(kg) - 1164,85$
+
+En caso contrario utilizamos el factor de actividad de acuerdo con Metodo Harris-Benedict:
+
+  1-Sedentario. Factor x 1.2 
+  2-Ligero. Factor x 1.375
+  3-Activo. Factor x 1.55
+  4-Muy activo. Factor x 1.725
+  5-Extremo. Factor x 1.9
+
+#### Tercer paso, calculo de calorias por comida:
+
+Después de obtener las calorias gastadas al realizar actividad
+física, pasamos a la parte de Cal Alimentos,
+donde calcularemos las calorías según los alimentos que
+conformen tu menú en las distintas comidas a lo largo
+del día.
+
+Podremos rellenar el campo del nombre del alimento,
+sus calorias por hidratos, los gramos de hidratos y el
+peso en gramos del alimento a ingerir. Si no conocemos
+alguno de estos valores podemos recurrir a las bases de
+datos de alimentos que se encuentran más abajo.
+
+#### Cuarto paso, tipos de insulina:
+
+Para terminar tendrás que seleccionar el tipo de insulina
+que utilizas y la marca de dicho producto, que podrás
+consultar en la base de datos mas abajo, para un calculo
+óptimo de todas las recomendaciones a seguir.
+
+#### Último paso, llegan las recomendaciones:
+
+Dirígete a la pestaña Recomendaciones para obtener
+datos a raiz de tus dietas, tu glucemia real y tus actividades
+físicas. Recuerda que no somos médicos y esto es solo una estimación.
+
+
+
+
