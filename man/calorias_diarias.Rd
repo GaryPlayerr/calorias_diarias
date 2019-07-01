@@ -40,16 +40,7 @@ Redondeo de las formulas de Harris-Benedict por Mifflin. 1990
   Hombres REE = 10 w + 6.25 s -5 a + 5 
   Mujeres REE = REE = 10 w + 6.25 s - 5 a - 161 
  
-Si caminas o corres y conoces la distancia y el tiempo de entrenamiento aplicamos la siguiente ecuacion calculada mediante regresion multiple:
-  14,26 * tiempo(min) + 46,66 * km/h + 8,55 * peso(kg) - 1164,85
-  
-En caso contrario utilizamos el factor de actividad de acuerdo con Metodo Harris-Benedict
-  1-Sedentario. Factor x 1.2 
-  2-Ligero. Factor x 1.375
-  3-Activo. Factor x 1.55
-  4-Muy activo. Factor x 1.725
-  5-Extremo. Factor x 1.9
- 
+
 Sexo(M/F): M (masculino), F(femenino). Por ejmplo M.
 Edad: numero de anios. Por ejemplo 50.
 Altura: estatura en centimetros. 170.
@@ -64,17 +55,13 @@ Conoces la distancia y el tiempo de entrenamiento? (S/N)
     Se utilizan METs (metabolic equivalent of task)
   Nadas?(S/N)
     Se utilizan METs (metabolic equivalent of task)
-Quieres modificar tus calorias(S/N)?
-  Dividimos las calorias en las procedentes de hidratos de carbono, proteina y grasa:
-    -Proteina: 15 por ciento de las calorias totales diarias.
-    -Hidratos de carbono: 60 por ciento de las calorias totales diarias.
-    -Grasa: 25 por ciento de las calorias totales diarias. 70 por ciento de grasas vegetales y 30 por ciento animales. Las grasas saturadas deben ser < 7 por ciento de las calorias totales.
- 
+Quieres modificar tus calorias(S/N)? S
+
 Puedes registrar tu perfil diariamente en la BBDD:
-    -Si el usuario es nuevo y no esta registrado. Usuario Nuevo?(S/N)
-    -Usuario ya regfistrado. Modificar BBDD?(S/N)
+    -Si el usuario es nuevo y no esta registrado. Usuario Nuevo?(S/N) S
+    -Usuario ya regfistrado. Modificar BBDD?(S/N) S
   
-Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N)  
+Quieres ver las calorias que quemarias en las diferentes actividades fisicas?(S/N)  S
     Se utilizan METs (metabolic equivalent of task) multiplicadas por el peso y tiempo de entrenamiento.
   
 % Add one or more standard keywords, see file 'KEYWORDS' in the
