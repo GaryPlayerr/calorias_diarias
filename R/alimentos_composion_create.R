@@ -7,7 +7,7 @@ alimentos.composicion.create <- function(){
   library("RSQLite")
   library("readxl")
 
-  url1<-'https://github.com/BorjaJorge/calorias_diarias/raw/master/R/ficha_alimentacion.xls'
+  url1<-'https://github.com/BorjaJorge/calorias_diarias/raw/master/INST/ficha_alimentacion.xls'
   p1f <- tempfile()
   download.file(url1, p1f, mode="wb")
   cereales<-read_excel(path = p1f, sheet = "Cereales")
